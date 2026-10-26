@@ -62,3 +62,6 @@ htmlcov/
 
 # Report builder dependencies
 report/src/node_modules/
+
+# Presentation builder dependencies
+presentation/src/node_modules/
