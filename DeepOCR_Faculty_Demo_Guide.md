@@ -7,7 +7,7 @@ A 10-minute live demo script with talking points and fallbacks.
 1. Open PowerShell in the project folder and run `.\start.ps1` (or double-click `start.bat`).
    The first start installs missing packages and builds the UI.
 2. In the browser, run each demo once: **Studio → One-click demos → Handwritten note**,
-   then choose **TrOCR** and press **Re-run**. This caches the PaddleOCR and TrOCR model
+   then choose **TrOCR · fine-tuned** and press **Re-run**. This caches the PaddleOCR and TrOCR model
    weights, so the live demo works offline and starts fast.
 3. Open the **Research** page and check that the comparison table, training curves and
    robustness charts are filled in.
@@ -21,7 +21,7 @@ A 10-minute live demo script with talking points and fallbacks.
 | 2 | **Studio → Handwritten note** demo, engine **DeepOCR · CRNN** | "This is real IAM handwriting from writers the model never saw in training. Our CRNN was trained from scratch on IAM plus synthetic data." Point out the live pipeline animation, then the per-stage timing bar. |
 | 3 | Viewer: switch **Structure → Confidence** | "The heatmap shows the model's per-line confidence, so the reviewer knows where to look." Hover a line to show the tooltip. |
 | 4 | Result tabs: **Lines** and **Review** | "Auto-correct fixes are shown as before → after, never silently. Low-confidence text becomes [Illegible] and joins the review queue." |
-| 5 | **Re-run** with **TrOCR Transformer** | "The advanced model: a Vision Transformer encoder with a Transformer decoder, used through transfer learning. Notice the lower error on the same page." |
+| 5 | **Re-run** with **TrOCR · fine-tuned** | "The advanced model: a Vision Transformer encoder with a Transformer decoder. We started from Microsoft's pretrained TrOCR and fine-tuned it on our data. It reads this page almost perfectly; fine-tuning cut its printed-text error from 20% to 2.6%." |
 | 6 | **Studio → Application form** (PaddleOCR) | "Complex layout: heading detection, form fields, checkbox states rendered as ☑/☐, the ruled fee table rebuilt as a Markdown table, and the signature field flagged." Show the **Reader** tab. |
 | 7 | **Studio → Noisy skewed scan** (deskew + denoise + contrast) | Use the **Before/after** slider and the **stage strip**: "The projection-profile deskew measured about 4° and straightened it before recognition." |
 | 8 | **Compare** page: pick a demo, all engines, paste the true text | "The same page through four models, scored live with CER and WER, with character-level diffs." |

@@ -1,6 +1,7 @@
 """Conservative layout reconstruction for PaddleOCR text and page images."""
 from __future__ import annotations
 
+import math
 import re
 from dataclasses import asdict, dataclass
 
@@ -218,20 +219,44 @@ def _bbox_polygon(bbox: tuple[float, float, float, float]) -> list[list[float]]:
     return [[x1, y1], [x2, y1], [x2, y2], [x1, y2]]
 
 
+def _geometry(region: TextRegion) -> tuple[float, float, float, float]:
+    """Centre x/y, text height and baseline slope of a (possibly rotated) quad."""
+    pts = region.polygon
+    if len(pts) == 4:
+        (x0, y0), (x1, y1), (x2, y2), (x3, y3) = pts
+        height = (math.hypot(x3 - x0, y3 - y0) + math.hypot(x2 - x1, y2 - y1)) / 2
+        dx = ((x1 - x0) + (x2 - x3)) / 2
+        dy = ((y1 - y0) + (y2 - y3)) / 2
+        slope = max(-0.5, min(0.5, dy / dx)) if abs(dx) > 1e-6 else 0.0
+    else:
+        bx1, by1, bx2, by2 = _region_bbox(region)
+        height, slope = by2 - by1, 0.0
+    cx = sum(point[0] for point in pts) / max(1, len(pts))
+    cy = sum(point[1] for point in pts) / max(1, len(pts))
+    return cx, cy, max(1.0, height), slope
+
+
 def _group_lines(regions: list[TextRegion]) -> list[_Line]:
-    ordered = sorted(regions, key=lambda region: (_region_bbox(region)[1], _region_bbox(region)[0]))
+    """Group regions into text lines using their rotated geometry.
+
+    Axis-aligned boxes of tilted text are much taller than the text itself, so
+    neighbouring tilted lines would "overlap"; instead a region joins a line
+    when its centre lies on that line's baseline (extrapolated with the slope).
+    """
+    geometry = {id(region): _geometry(region) for region in regions}
+    ordered = sorted(regions, key=lambda region: (geometry[id(region)][1], geometry[id(region)][0]))
     lines: list[_Line] = []
     for region in ordered:
         x1, y1, x2, y2 = _region_bbox(region)
+        cx, cy, height, _ = geometry[id(region)]
         match = None
         for line in reversed(lines):
-            lx1, ly1, lx2, ly2 = line.bbox
-            if y1 - ly2 > max(12.0, (y2 - y1) * 0.8):
+            if y1 - line.bbox[3] > 3 * height:
                 break
-            overlap = max(0.0, min(y2, ly2) - max(y1, ly1))
-            shorter_height = max(1.0, min(y2 - y1, ly2 - ly1))
-            center_delta = abs((y1 + y2) / 2 - (ly1 + ly2) / 2)
-            if overlap / shorter_height >= 0.35 or center_delta <= shorter_height * 0.45:
+            anchor = min(line.regions, key=lambda member: abs(geometry[id(member)][0] - cx))
+            acx, acy, aheight, aslope = geometry[id(anchor)]
+            predicted = acy + aslope * (cx - acx)
+            if abs(cy - predicted) <= 0.5 * min(height, aheight):
                 match = line
                 break
         if match is None:
@@ -246,7 +271,7 @@ def _group_lines(regions: list[TextRegion]) -> list[_Line]:
             )
     for line in lines:
         line.regions.sort(key=lambda region: _region_bbox(region)[0])
-    return sorted(lines, key=lambda line: (line.bbox[1], line.bbox[0]))
+    return sorted(lines, key=lambda line: (sum(geometry[id(r)][1] for r in line.regions) / len(line.regions), line.bbox[0]))
 
 
 def _cells_for_line(line: _Line) -> list[str] | None:

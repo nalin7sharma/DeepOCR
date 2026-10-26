@@ -30,15 +30,18 @@ class OcrEngine(Protocol):
 class PaddleOcrEngine:
     """CPU PaddleOCR adapter; model construction is intentionally lazy."""
 
-    def __init__(self, language: str = "en") -> None:
+    def __init__(self, language: str = "en", det_box_thresh: float = 0.5) -> None:
         try:
             from paddleocr import PaddleOCR
 
+            # PP-OCR's default box threshold (0.6) drops faint handwritten lines;
+            # 0.5 keeps them without adding noise on printed pages.
             self._ocr = PaddleOCR(
                 use_angle_cls=True,
                 lang=language,
                 use_gpu=False,
                 show_log=False,
+                det_db_box_thresh=det_box_thresh,
             )
         except Exception as exc:
             raise OcrEngineError(
@@ -75,7 +78,8 @@ class PaddleOcrEngine:
 
 @lru_cache(maxsize=1)
 def get_ocr_engine() -> PaddleOcrEngine:
-    return PaddleOcrEngine(language=get_settings().language)
+    settings = get_settings()
+    return PaddleOcrEngine(language=settings.language, det_box_thresh=settings.det_box_thresh)
 
 
 def _normalize_result(result: Any) -> list[TextRegion]:

@@ -29,7 +29,7 @@ const STAGES = [
   {
     icon: Type,
     title: "Deep-learning recognition",
-    body: "Choose an engine: our CNN-BiLSTM baseline or CRNN (both CTC, trained here on IAM + synthetic data), TrOCR (ViT + Transformer, transfer learning), or the PaddleOCR reference.",
+    body: "Choose an engine: our CNN-BiLSTM baseline or CRNN (both CTC, trained here on IAM + synthetic data), TrOCR (ViT + Transformer), either pretrained or fine-tuned on our data, or the PaddleOCR reference.",
     code: "models/ · models/recognizer.py · training/",
   },
   {

@@ -28,6 +28,10 @@
    "crnn_pp": {
     "text": "of their pecence. They just stayed ot him, renin",
     "cer": 0.1569
+   },
+   "trocr_ft": {
+    "text": "of their presence. They just starred at him, turning",
+    "cer": 0.0196
    }
   }
  },
@@ -60,6 +64,10 @@
    "crnn_pp": {
     "text": "essential to caldn rcuna fonwnose",
     "cer": 0.2857
+   },
+   "trocr_ft": {
+    "text": "essential to catch round, fish whose",
+    "cer": 0.0286
    }
   }
  },
@@ -92,6 +100,10 @@
    "crnn_pp": {
     "text": "as we are. Some may be boon night. '",
     "cer": 0.0556
+   },
+   "trocr_ft": {
+    "text": "as we are. Some may be born right. '",
+    "cer": 0.0
    }
   }
  },
@@ -124,6 +136,10 @@
    "crnn_pp": {
     "text": "And the tsitsits hod a message sealed -inside the knots",
     "cer": 0.037
+   },
+   "trocr_ft": {
+    "text": "And the tsitisits had a message sealed inside the knots",
+    "cer": 0.0185
    }
   }
  },
@@ -156,6 +172,10 @@
    "crnn_pp": {
     "text": "first public acts was a herd-hiting bottle with",
     "cer": 0.0625
+   },
+   "trocr_ft": {
+    "text": "first public acts was a hard-hitting battle with",
+    "cer": 0.0
    }
   }
  },
@@ -188,6 +208,10 @@
    "crnn_pp": {
     "text": "tying to bndensteand Jlawis paciest of",
     "cer": 0.3514
+   },
+   "trocr_ft": {
+    "text": "buying to understand Gavin point of",
+    "cer": 0.1081
    }
   }
  },
@@ -220,6 +244,10 @@
    "crnn_pp": {
     "text": "inatitity today with with apusesitty snath",
     "cer": 0.4667
+   },
+   "trocr_ft": {
+    "text": "inability to deal with fifty especially more",
+    "cer": 0.1556
    }
   }
  },
@@ -252,6 +280,10 @@
    "crnn_pp": {
     "text": "\" this that ws pen going ten be honest t ' Sendontion. For. Bleto mrenidad",
     "cer": 0.5395
+   },
+   "trocr_ft": {
+    "text": "\" And that are you going to be about \" it I'm featured, Mr. Roberts scandal",
+    "cer": 0.2895
    }
   }
  },
@@ -282,6 +314,10 @@
     "cer": 0.0
    },
    "crnn_pp": {
+    "text": "balance-sheet must always come",
+    "cer": 0.0
+   },
+   "trocr_ft": {
     "text": "balance-sheet must always come",
     "cer": 0.0
    }
@@ -316,6 +352,10 @@
    "crnn_pp": {
     "text": "who leaves hep",
     "cer": 0.0714
+   },
+   "trocr_ft": {
+    "text": "who leaves her",
+    "cer": 0.0
    }
   }
  },
@@ -348,6 +388,10 @@
    "crnn_pp": {
     "text": "Quite: Mania Smitte",
     "cer": 0.3529
+   },
+   "trocr_ft": {
+    "text": "Date: Maria Smith",
+    "cer": 0.0
    }
   }
  },
@@ -378,6 +422,10 @@
     "cer": 0.0
    },
    "crnn_pp": {
+    "text": "campaign has dismayed a",
+    "cer": 0.0
+   },
+   "trocr_ft": {
     "text": "campaign has dismayed a",
     "cer": 0.0
    }
@@ -412,6 +460,10 @@
    "crnn_pp": {
     "text": "among unorthodox medical men",
     "cer": 0.0
+   },
+   "trocr_ft": {
+    "text": "among unorthodox medical men",
+    "cer": 0.0
    }
   }
  },
@@ -444,6 +496,10 @@
    "crnn_pp": {
     "text": "fuima.wilsonbcollege.edu",
     "cer": 0.12
+   },
+   "trocr_ft": {
+    "text": "fatima. wilson@college.edu",
+    "cer": 0.04
    }
   }
  },
@@ -476,6 +532,10 @@
    "crnn_pp": {
     "text": "ananya.chen@college.edu",
     "cer": 0.0
+   },
+   "trocr_ft": {
+    "text": "ananya.chen@college.edu",
+    "cer": 0.0
    }
   }
  },
@@ -506,6 +566,10 @@
     "cer": 0.0909
    },
    "crnn_pp": {
+    "text": "38 PER CENT",
+    "cer": 0.0
+   },
+   "trocr_ft": {
     "text": "38 PER CENT",
     "cer": 0.0
    }

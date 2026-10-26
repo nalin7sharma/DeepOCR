@@ -31,6 +31,17 @@ What exists, how it was verified, and where to find it.
   the Transformer experiments now use TrOCR fine-tuning.
 - Engine checkpoints hot-reload after retraining, and a failed load is retried instead
   of disabling the engine.
+- On Windows, loading PaddlePaddle before PyTorch made `import torch` fail (WinError 127),
+  which silently disabled the trained engines in the server. The API now loads torch first.
+- TrOCR fine-tuning used the wrong decoder start token and label layout, so its loss sat at
+  random-guess level (~11.7). It now uses token 2 as the start and drops the leading `<s>`
+  from labels (initial loss 0.83).
+- PP-OCR's default detection threshold (0.6) missed faint handwritten lines; it is now
+  0.5 and configurable (`OCR_DET_BOX_THRESH`).
+- Deskew misread uneven lighting as ink (−13° instead of −4.2° on the noisy demo). Skew
+  estimation now flat-fields the page first.
+- Line grouping used axis-aligned boxes, so tilted lines merged into one. It now follows
+  each region's rotated baseline.
 
 ## Verification
 

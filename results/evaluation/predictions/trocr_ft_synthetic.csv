@@ -1,0 +1,601 @@
+image_path,ground_truth,prediction,confidence,cer
+data/processed/synthetic/images/test/000001.png,+91 94065 82140,+91 94065 82140,0.9211,0.0
+data/processed/synthetic/images/test/000003.png,angry uproar. One dealt with the,angry uproar. One dealt with the,0.9975,0.0
+data/processed/synthetic/images/test/000004.png,+91 93919 13887,+91 93919 13887,0.9869,0.0
+data/processed/synthetic/images/test/000007.png,"in June, made it","in June, made it",0.9978,0.0
+data/processed/synthetic/images/test/000008.png,+91 71270 47812,+91 71270 47812,0.8942,0.0
+data/processed/synthetic/images/test/000009.png,"walked together across green fields, and","walked together across green fields, and",0.9487,0.0
+data/processed/synthetic/images/test/000010.png,"Total: $6,930.53","Total: $6,930.53",0.8376,0.0
+data/processed/synthetic/images/test/000012.png,both types had died,both types had died,0.9977,0.0
+data/processed/synthetic/images/test/000013.png,"795 England Street, Act","795 England Street, Act",0.9969,0.0
+data/processed/synthetic/images/test/000015.png,naughty child with,roughly child with,0.6513,0.1667
+data/processed/synthetic/images/test/000016.png,you want to get it from the word,you want to get it from the word,0.998,0.0
+data/processed/synthetic/images/test/000020.png,REMEDIES TO,REMEDIES TO,0.9917,0.0
+data/processed/synthetic/images/test/000022.png,YEARS. DURING THIS PERIOD HE WROTE,YEARS. DURING THIS PERIOD HE WROTE,0.8729,0.0
+data/processed/synthetic/images/test/000023.png,Invoice No: the five,Invoice No. the five,0.9715,0.05
+data/processed/synthetic/images/test/000026.png,by the soldier - a favourable,by the soldier - a favourable,0.9886,0.0
+data/processed/synthetic/images/test/000028.png,Scottish Trades,Scottish Trades,0.996,0.0
+data/processed/synthetic/images/test/000031.png,get tough,get tough,0.9727,0.0
+data/processed/synthetic/images/test/000033.png,rohan.garcia@college.edu,rohan. garcia@college.edu,0.8709,0.0417
+data/processed/synthetic/images/test/000036.png,"September 8, 2016","September 8, 2016",0.9735,0.0
+data/processed/synthetic/images/test/000037.png,"Total: $5,212.30","Total: $5,212-30",0.8138,0.0625
+data/processed/synthetic/images/test/000041.png,towards the dining room.,towards the dining room.,0.9979,0.0
+data/processed/synthetic/images/test/000043.png,people. And tell,people. And tell,0.9919,0.0
+data/processed/synthetic/images/test/000044.png,taken part.,taken part.,0.9957,0.0
+data/processed/synthetic/images/test/000045.png,he himself was being treated under a doctor,he himself was being treated under a doctor,0.9988,0.0
+data/processed/synthetic/images/test/000046.png,Date: Fatima Sharma,Date: Fatima Sharma,0.9951,0.0
+data/processed/synthetic/images/test/000047.png,"March 9, 2022","March 9, 2022",0.9961,0.0
+data/processed/synthetic/images/test/000049.png,in the United Nations,in the United Nations,0.9972,0.0
+data/processed/synthetic/images/test/000052.png,Commons yesterday,Commons yesterday,0.9961,0.0
+data/processed/synthetic/images/test/000053.png,of a,of a,0.9889,0.0
+data/processed/synthetic/images/test/000056.png,of ever being cured. ',"of ever being cared. """,0.9174,0.0909
+data/processed/synthetic/images/test/000058.png,strikers and,strikers and,0.9992,0.0
+data/processed/synthetic/images/test/000059.png,+91 91060 47018,+91 910.60 47018,0.7868,0.0667
+data/processed/synthetic/images/test/000060.png,+91 96810 52354,+91 96810 52354,0.8866,0.0
+data/processed/synthetic/images/test/000061.png,"back a long way, Sir Roy told the","back a long way, Sir Roy told the",0.9966,0.0
+data/processed/synthetic/images/test/000063.png,And try,And try,0.996,0.0
+data/processed/synthetic/images/test/000064.png,"to a record 2,415,000,000. This was","to a record 2,415,000,000. This was",0.9889,0.0
+data/processed/synthetic/images/test/000066.png,10/09/2020,10/09/2020,0.9901,0.0
+data/processed/synthetic/images/test/000068.png,21/12/2021,21/12/2021,0.9378,0.0
+data/processed/synthetic/images/test/000070.png,who acts as a,who acts as a,0.9998,0.0
+data/processed/synthetic/images/test/000071.png,16/01/2020,16/01/2020,0.9889,0.0
+data/processed/synthetic/images/test/000072.png,for each stitch that you learn. When,for each stitch that join learn when,0.8467,0.1389
+data/processed/synthetic/images/test/000073.png,Email: which Naples,Email: which Naples,0.9955,0.0
+data/processed/synthetic/images/test/000074.png,better than,better than,0.9985,0.0
+data/processed/synthetic/images/test/000075.png,"July 25, 2006","July 25, 2006",0.971,0.0
+data/processed/synthetic/images/test/000076.png,will mean a rise in the cost of living.,will mean a rise in the cost of living.,0.9993,0.0
+data/processed/synthetic/images/test/000078.png,Phone: Aarav Smith,Phone: Aarav Smith,0.8934,0.0
+data/processed/synthetic/images/test/000081.png,He wondered what it contained. Probably the remains,He wondered what it contained. Probably the remains,0.9981,0.0
+data/processed/synthetic/images/test/000082.png,+91 88541 59536,+91 88541 59536,0.9178,0.0
+data/processed/synthetic/images/test/000083.png,not like,not like,0.9987,0.0
+data/processed/synthetic/images/test/000084.png,campaign has dismayed a,campaign has dismayed a,0.999,0.0
+data/processed/synthetic/images/test/000087.png,liam.chen@example.org,harm-changing example.org,0.7234,0.4762
+data/processed/synthetic/images/test/000088.png,INV-4316 (25% paid),INV-4316 (25% paid),0.9498,0.0
+data/processed/synthetic/images/test/000090.png,metaphorical braces were visible in the,metaphorical braces were visible in the,0.9976,0.0
+data/processed/synthetic/images/test/000092.png,rohan.gupta@college.edu,rohan.gupta@college.edu,0.9549,0.0
+data/processed/synthetic/images/test/000094.png,busy town,busy town,0.9904,0.0
+data/processed/synthetic/images/test/000095.png,+91 99582 67315,+91 99582 67315,0.9222,0.0
+data/processed/synthetic/images/test/000096.png,"181 Are Street, Yes","181 Are Street, Yes",0.986,0.0
+data/processed/synthetic/images/test/000097.png,has psychology got,has psychology got,0.9985,0.0
+data/processed/synthetic/images/test/000098.png,your own philosopher,your own philosopher,0.9955,0.0
+data/processed/synthetic/images/test/000099.png,left hand she carried,left hand she carried,0.9966,0.0
+data/processed/synthetic/images/test/000100.png,been reserved for her tax.,been reserved for her tax.,0.9994,0.0
+data/processed/synthetic/images/test/000101.png,"been in Britain many times before, were","been in Britain many times before, were",0.9995,0.0
+data/processed/synthetic/images/test/000103.png,"Total: $7,233.25","Total: $7,233.25",0.9759,0.0
+data/processed/synthetic/images/test/000104.png,"FACT,","FACT,",0.9539,0.0
+data/processed/synthetic/images/test/000105.png,It went,It went,0.9807,0.0
+data/processed/synthetic/images/test/000106.png,the time his monthly salary,the time his monthly salary,0.9989,0.0
+data/processed/synthetic/images/test/000107.png,above all of cinematic sense. Much of it has,above all of cinematic sense. Much of it has,0.9839,0.0
+data/processed/synthetic/images/test/000108.png,"not be affected,","not be affected,",0.9927,0.0
+data/processed/synthetic/images/test/000109.png,Account: made and,Account: made and,0.9838,0.0
+data/processed/synthetic/images/test/000110.png,earnest consideration,earnest consideration,0.9895,0.0
+data/processed/synthetic/images/test/000112.png,""" Play of the Week "" series on",""" Play of the Week "" series on",0.9934,0.0
+data/processed/synthetic/images/test/000113.png,effective alleviation of his painful malady.,effective alleviation of his painful malady.,0.9992,0.0
+data/processed/synthetic/images/test/000114.png,OF THE LEADER OF,OF THE LEADER OF,0.9953,0.0
+data/processed/synthetic/images/test/000115.png,", THE DRAMATIST",", THE DRAMA TIT",0.8577,0.1333
+data/processed/synthetic/images/test/000117.png,among unorthodox medical men,among unorthodox medical men,0.9969,0.0
+data/processed/synthetic/images/test/000118.png,"Total: $5,422.84","Total: $5,422.84",0.8732,0.0
+data/processed/synthetic/images/test/000119.png,must have nuclear weapons so long,must have nuclear weapons so long,0.9986,0.0
+data/processed/synthetic/images/test/000123.png,02/03/2020,02/03/2020,0.9879,0.0
+data/processed/synthetic/images/test/000124.png,", THOSE ARE",", THOSE ARE",0.8457,0.0
+data/processed/synthetic/images/test/000128.png,john.smith@gmail.com,john.smith@email.com,0.8802,0.05
+data/processed/synthetic/images/test/000129.png,", M.P. for Leicester",", M.P. for Leicester",0.8773,0.0
+data/processed/synthetic/images/test/000131.png,"August 17, 2021","August 17, 2021",0.998,0.0
+data/processed/synthetic/images/test/000132.png,"very free place to write in, and there's","very free place to write in, and there's",0.9951,0.0
+data/processed/synthetic/images/test/000134.png,"- well, for","- well, for",0.8922,0.0
+data/processed/synthetic/images/test/000135.png,", HE",", 7FE",0.3876,0.5
+data/processed/synthetic/images/test/000136.png,an offence,an offence,0.9939,0.0
+data/processed/synthetic/images/test/000137.png,yet moved by a,yet moved by a,0.9969,0.0
+data/processed/synthetic/images/test/000138.png,going back,going back,0.9945,0.0
+data/processed/synthetic/images/test/000142.png,"has been against me, as there has been much","has been against me, as there has been much",0.9972,0.0
+data/processed/synthetic/images/test/000143.png,played with proper efficiency and,played with proper efficiency and,0.9985,0.0
+data/processed/synthetic/images/test/000144.png,+91 81655 44814,+91 81655 44814,0.9831,0.0
+data/processed/synthetic/images/test/000146.png,"the challenge from Sir Roy Welensky,","the challenge from Sir Roy Welensky,",0.9871,0.0
+data/processed/synthetic/images/test/000147.png,. He,. He,0.9127,0.0
+data/processed/synthetic/images/test/000152.png,known as,known as,0.9461,0.0
+data/processed/synthetic/images/test/000153.png,INV-9605 (53% paid),INV-9605 (53% paid),0.9348,0.0
+data/processed/synthetic/images/test/000154.png,Playwrights Arnold Wesker (The Kitchen),Playwrights Arnold Wesker (The Kitchen),0.9085,0.0
+data/processed/synthetic/images/test/000155.png,ananya.chen@college.edu,ananya.chen@college.edu,0.8429,0.0
+data/processed/synthetic/images/test/000156.png,01/11/2020,01/11/2020,0.7647,0.0
+data/processed/synthetic/images/test/000157.png,show the world that this country does not,show the world that this country does not,0.9996,0.0
+data/processed/synthetic/images/test/000159.png,James has pumped life into a slim,James has pumped life into a slim,0.9959,0.0
+data/processed/synthetic/images/test/000160.png,UTTER INNOCENCE.,UTTER INNOCENCE.,0.8884,0.0
+data/processed/synthetic/images/test/000161.png,"September 27, 1991","September 27, 1991",0.9906,0.0
+data/processed/synthetic/images/test/000162.png,Valet de Chambre that,Valet de Chambre that,0.9928,0.0
+data/processed/synthetic/images/test/000164.png,Date: eleventh port death studied,Date: eleventh part death studied,0.7389,0.0303
+data/processed/synthetic/images/test/000165.png,"good trade unionist since then has, in the","good trade unionist since then has, in the",0.9915,0.0
+data/processed/synthetic/images/test/000166.png,emma.khan@gmail.com,Emma.khan@@qual.com,0.6366,0.2632
+data/processed/synthetic/images/test/000167.png,"irritated, patient","irritated, patient",0.9931,0.0
+data/processed/synthetic/images/test/000168.png,third way,third way,0.9983,0.0
+data/processed/synthetic/images/test/000169.png,. ' You do look tired.,. You do look tired.,0.8937,0.0909
+data/processed/synthetic/images/test/000170.png,wei.sharma@example.org,wei.sharma@example.org,0.8442,0.0
+data/processed/synthetic/images/test/000171.png,The chine is the long,The chine is the long,0.9984,0.0
+data/processed/synthetic/images/test/000176.png,as the boat) springs,"as the boat), springs",0.8407,0.05
+data/processed/synthetic/images/test/000177.png,Total: $267.79,Total: S267.79,0.9003,0.0714
+data/processed/synthetic/images/test/000180.png,is this to be,is this to be,0.9998,0.0
+data/processed/synthetic/images/test/000182.png,INV-88432 (39% paid),INV-88432 (39% paid),0.9271,0.0
+data/processed/synthetic/images/test/000183.png,the end of the month,the end of the month,0.9965,0.0
+data/processed/synthetic/images/test/000184.png,"rest, one feels","rest, one feels",0.9956,0.0
+data/processed/synthetic/images/test/000187.png,Fig. 3). Loop thread round little,Fig. 3). Loop thread round little,0.9839,0.0
+data/processed/synthetic/images/test/000188.png,better from,better from,0.9997,0.0
+data/processed/synthetic/images/test/000191.png,"Total: $9,702.57","Total: $9,702-57",0.9172,0.0625
+data/processed/synthetic/images/test/000195.png,"the Home Secretary, has decided","the Home Secretary, has decided",0.9957,0.0
+data/processed/synthetic/images/test/000196.png,maria.patel@example.org,maria_patel@example.org,0.9593,0.0435
+data/processed/synthetic/images/test/000197.png,German militarism in his replies to,German militarism in his replies to,0.9898,0.0
+data/processed/synthetic/images/test/000198.png,only one way to develop,only one way to develop,0.9991,0.0
+data/processed/synthetic/images/test/000204.png,to create,to create,0.9997,0.0
+data/processed/synthetic/images/test/000205.png,made. India has responded handsomely,made. India has responded handsomely,0.9952,0.0
+data/processed/synthetic/images/test/000206.png,"the Neapolitan, Dr Giuseppe Mauro, whom Anglesey","the Neapolitan, Dr Giuseppe Mauro, whom Anglesey",0.999,0.0
+data/processed/synthetic/images/test/000207.png,Roll No: the,Roll No: the,0.9818,0.0
+data/processed/synthetic/images/test/000208.png,MUCH AS TO THE EXPECTANT,MUCH AS TO THE EXPECTANT,0.8767,0.0
+data/processed/synthetic/images/test/000209.png,an express took him,an express took him,0.99,0.0
+data/processed/synthetic/images/test/000210.png,Phone: advice intimate England,Phone: advice intimate England,0.9977,0.0
+data/processed/synthetic/images/test/000215.png,"EFFECTIVE,","EFFECTIVE,",0.9061,0.0
+data/processed/synthetic/images/test/000216.png,aarav.chen@example.org,aarav.chen@example.org,0.8257,0.0
+data/processed/synthetic/images/test/000217.png,OVERDRAFT. AND,OVERDREAT. AND,0.9283,0.1429
+data/processed/synthetic/images/test/000218.png,"him, he was one of","him, he was one of",0.9971,0.0
+data/processed/synthetic/images/test/000219.png,"by Quentin Lawrence, here, held together","by Quentin Lawrence, here, held together",0.9974,0.0
+data/processed/synthetic/images/test/000220.png,Date of Birth: that,Date of Birth: that,0.9833,0.0
+data/processed/synthetic/images/test/000221.png,anybody's neck to,anybody's neck to,0.9983,0.0
+data/processed/synthetic/images/test/000223.png,distinguished patient and his symptoms.,distinguished patient and his symptoms.,0.9972,0.0
+data/processed/synthetic/images/test/000224.png,dealt with the human,dealt with the human.,0.929,0.05
+data/processed/synthetic/images/test/000225.png,INV-98744 (49% paid),INV-98744 (49% paid),0.9778,0.0
+data/processed/synthetic/images/test/000226.png,cured.,cured.,0.9935,0.0
+data/processed/synthetic/images/test/000227.png,said Sir Roy,said Sir Roy,0.9997,0.0
+data/processed/synthetic/images/test/000229.png,is a pleasant material,is a pleasant material,0.9977,0.0
+data/processed/synthetic/images/test/000231.png,"Total: $6,318.73","Total: $6,318.73",0.9634,0.0
+data/processed/synthetic/images/test/000234.png,with cash.,with cash.,0.9938,0.0
+data/processed/synthetic/images/test/000235.png,with one standard for all,with one standard for all,0.9994,0.0
+data/processed/synthetic/images/test/000236.png,"arrived, which is a","arrived, which is a",0.9987,0.0
+data/processed/synthetic/images/test/000239.png,"Total: $5,340.96","Total: $5,340.96",0.9723,0.0
+data/processed/synthetic/images/test/000241.png,", for it is the aim",", for it is the aim",0.9919,0.0
+data/processed/synthetic/images/test/000243.png,to which he,to which he,0.9975,0.0
+data/processed/synthetic/images/test/000244.png,of a Negro as,of a Negro as,0.9988,0.0
+data/processed/synthetic/images/test/000245.png,a fire...,a fire.,0.9309,0.2222
+data/processed/synthetic/images/test/000246.png,said that all these foods,said that all these foods,0.997,0.0
+data/processed/synthetic/images/test/000247.png,who leaves her,who leaves her,0.9988,0.0
+data/processed/synthetic/images/test/000249.png,INV-18076 (32% paid),INV-18076 (32% paid),0.9475,0.0
+data/processed/synthetic/images/test/000251.png,Phone: Priya Iyer,Phone: Priya Iyer,0.9585,0.0
+data/processed/synthetic/images/test/000253.png,emma.brown@college.edu,Emma.brown@college.edu,0.9203,0.0455
+data/processed/synthetic/images/test/000254.png,left Hammersmith in the late,Left Hammersmith in the late,0.9457,0.0357
+data/processed/synthetic/images/test/000255.png,of the numerous conventional,of the numerous conventional,0.9961,0.0
+data/processed/synthetic/images/test/000256.png,", Monsieur V,",", Monsieur V,",0.9343,0.0
+data/processed/synthetic/images/test/000258.png,"explicably from appreciable motives. The rest,","explicably from appreciable motives. The rest,",0.9889,0.0
+data/processed/synthetic/images/test/000260.png,"705 Violent Street, Other","705 Violent Street, Other",0.9936,0.0
+data/processed/synthetic/images/test/000261.png,", whom Sir Francis Burdett",", whom Sir Francis Burdett",0.9822,0.0
+data/processed/synthetic/images/test/000262.png,19/09/2025,19/09/2025,0.9505,0.0
+data/processed/synthetic/images/test/000267.png,express took him off yesterday. ',express took him off yesterday. ',0.9818,0.0
+data/processed/synthetic/images/test/000268.png,House of Lords should be abolished,House of Lords should be abolished,0.9978,0.0
+data/processed/synthetic/images/test/000269.png,sara.smith@gmail.com,sara.smith@@mail.com,0.7456,0.05
+data/processed/synthetic/images/test/000270.png,27/04/2020,27/04/2020,0.89,0.0
+data/processed/synthetic/images/test/000271.png,+91 82389 52882,+91 82389 52882,0.9517,0.0
+data/processed/synthetic/images/test/000272.png,many of which were incomplete families,many of which were incomplete families,0.9954,0.0
+data/processed/synthetic/images/test/000274.png,place agree with me,place agree with me,0.9943,0.0
+data/processed/synthetic/images/test/000275.png,# otherwise endearing creature,# otherwise endearing creature,0.9157,0.0
+data/processed/synthetic/images/test/000276.png,on the,on. It has,0.5106,0.8333
+data/processed/synthetic/images/test/000277.png,been stopped by,been stopped by,0.9816,0.0
+data/processed/synthetic/images/test/000279.png,"INFATUATION! PERSONALLY I AM INDIFFERENT, BUT","INFATUATION PERSONALLY I AM INDIFERENT, BUT",0.8411,0.0444
+data/processed/synthetic/images/test/000281.png,", that I may be a false",", that I may be a false",0.9904,0.0
+data/processed/synthetic/images/test/000282.png,Name: the school opportunity Leicester,Name: the school opportunity Leicester,0.9974,0.0
+data/processed/synthetic/images/test/000284.png,holding out despite the,holding out despite the,0.9971,0.0
+data/processed/synthetic/images/test/000285.png,john.gupta@gmail.com,john.gupta@qual.com,0.7521,0.15
+data/processed/synthetic/images/test/000286.png,"Committee of 100, the Committee claimed","Committee of 100, the Committee claimed",0.9975,0.0
+data/processed/synthetic/images/test/000289.png,"Total: $5,488.47","Total: $5,488.47",0.847,0.0
+data/processed/synthetic/images/test/000292.png,"This remarkable man of medicine, whom","This remarkable man of medicine, whom",0.9963,0.0
+data/processed/synthetic/images/test/000293.png,Germany were published in Moscow yesterday. They,Germany were published in Moscow yesterday. They,0.9986,0.0
+data/processed/synthetic/images/test/000296.png,"decent, feasible and workable.","decent, feasible and workable.",0.9916,0.0
+data/processed/synthetic/images/test/000297.png,said we could be,said we could be,0.9993,0.0
+data/processed/synthetic/images/test/000298.png,ananya.patel@example.org,ananya.patel@example.org,0.9601,0.0
+data/processed/synthetic/images/test/000301.png,congenial containers in which,congenial containers in which,0.8654,0.0
+data/processed/synthetic/images/test/000304.png,15/06/2004,15/06/2004,0.9629,0.0
+data/processed/synthetic/images/test/000306.png,ANY OF THE OTHER,ANY OF THE OTHER,0.9794,0.0
+data/processed/synthetic/images/test/000307.png,", with occasional stops for an",with occasional stops for an,0.9875,0.0667
+data/processed/synthetic/images/test/000308.png,at the national rally will,at the national rally will,0.9987,0.0
+data/processed/synthetic/images/test/000310.png,much money,much money,0.9868,0.0
+data/processed/synthetic/images/test/000311.png,facts answer,facts answer,0.9941,0.0
+data/processed/synthetic/images/test/000315.png,"doing it to some purpose. John Philpot,","doing it to some purpose. John Philpot,",0.9301,0.0
+data/processed/synthetic/images/test/000316.png,"felt, was","felt, was",0.9352,0.0
+data/processed/synthetic/images/test/000320.png,", and was even outmatched by",", and was even outmatched by",0.9849,0.0
+data/processed/synthetic/images/test/000322.png,"founder,","founder,",0.9584,0.0
+data/processed/synthetic/images/test/000323.png,INV-94555 (53% paid),INV-94555 (53% paid),0.9213,0.0
+data/processed/synthetic/images/test/000324.png,all the,all the,0.9999,0.0
+data/processed/synthetic/images/test/000329.png,+91 99755 86218,+91 99755 86218,0.7884,0.0
+data/processed/synthetic/images/test/000332.png,"July 6, 2010","July 6, 2010",0.9798,0.0
+data/processed/synthetic/images/test/000333.png,"way, to point out,","way, to point out,",0.9742,0.0
+data/processed/synthetic/images/test/000336.png,but played with proper efficiency and,but played with proper efficiency and,0.9995,0.0
+data/processed/synthetic/images/test/000338.png,", was a morality on the not unfamiliar",", was a morality on the not unfamiliar",0.9909,0.0
+data/processed/synthetic/images/test/000339.png,they should not,they should not,0.9993,0.0
+data/processed/synthetic/images/test/000340.png,BEEN AN ELECTION CAMPAIGN WHICH,BEEN AN ELECTION CAMP AIG AIN WHICH,0.7682,0.129
+data/processed/synthetic/images/test/000341.png,HEALTH HAD,HEALTH HAD,0.9945,0.0
+data/processed/synthetic/images/test/000342.png,conventional remedies to which he had been,conventional remedies to which he had been,0.9999,0.0
+data/processed/synthetic/images/test/000343.png,"felt, even","felt, even",0.9499,0.0
+data/processed/synthetic/images/test/000344.png,02/12/1997,02/12/1997,0.9904,0.0
+data/processed/synthetic/images/test/000345.png,IS PERHAPS THE BEST,I Want I Want a,0.1291,0.8421
+data/processed/synthetic/images/test/000346.png,"November 11, 2016","November 11, 2016",0.9743,0.0
+data/processed/synthetic/images/test/000347.png,is the case in Fanny her first lover,is the case in Fanny her first lover,0.9994,0.0
+data/processed/synthetic/images/test/000348.png,+91 70839 77919,+91 70839 77919,0.9676,0.0
+data/processed/synthetic/images/test/000349.png,Signature: unless the,Signature: unless the,0.995,0.0
+data/processed/synthetic/images/test/000352.png,KNOWN FOR SOME TIME TO HAVE FAVOURED A,KNOWN FOR SOME TIME TO HAVE FAVOURED A,0.9405,0.0
+data/processed/synthetic/images/test/000353.png,04/10/2024,04/10/2024,0.9689,0.0
+data/processed/synthetic/images/test/000357.png,as there is a Polaris base in,as there is a Polaris base in,0.9987,0.0
+data/processed/synthetic/images/test/000358.png,"October 20, 2019","October 20, 2019",0.9893,0.0
+data/processed/synthetic/images/test/000360.png,"Moreau, this has been","Moreau, this has been",0.9983,0.0
+data/processed/synthetic/images/test/000363.png,"HUMAN BEING ', HAD",HUMAN BEING ' HAD,0.8796,0.0556
+data/processed/synthetic/images/test/000364.png,. So help me so was I.,. So help me so was I.,0.9959,0.0
+data/processed/synthetic/images/test/000367.png,but I,but I,0.9961,0.0
+data/processed/synthetic/images/test/000368.png,unemployment and an,unemployment and an,0.9812,0.0
+data/processed/synthetic/images/test/000369.png,"has been against me, as there has been","has been against me, as there has been",0.9983,0.0
+data/processed/synthetic/images/test/000371.png,"March 12, 1994","March 12, 1994",0.9845,0.0
+data/processed/synthetic/images/test/000372.png,effective alleviation of his,effective alleviation of his,0.9932,0.0
+data/processed/synthetic/images/test/000374.png,The Government decided,The Government decided,0.9964,0.0
+data/processed/synthetic/images/test/000377.png,them.,them.,0.9789,0.0
+data/processed/synthetic/images/test/000378.png,COMMON POLICY,common policy,0.8221,0.9231
+data/processed/synthetic/images/test/000379.png,INV-40635 (6% paid),INV-40635 (6% paid),0.9298,0.0
+data/processed/synthetic/images/test/000380.png,"YORK'S ST. PATRICK'S DAY PARADE AS A "" DISORDERLY",YORKS ST. PATECH'S DAY PARADE AS A DISORDERLY,0.7741,0.1224
+data/processed/synthetic/images/test/000383.png,"that the Commons House upon a dissolution, which","that the Commons House upon a dissolution, which",0.9996,0.0
+data/processed/synthetic/images/test/000384.png,", THE",", THE",0.981,0.0
+data/processed/synthetic/images/test/000386.png,....,0 000,0.2031,1.25
+data/processed/synthetic/images/test/000388.png,not asked to modulate,not asked to modulate,0.9994,0.0
+data/processed/synthetic/images/test/000389.png,HAD REFUSED TO ATTEND THE TALKS,HAD REFUSED TO ATTEND THE TALKS.,0.8318,0.0323
+data/processed/synthetic/images/test/000390.png,cleaning and then fixed,cleaning and then fixed,0.9978,0.0
+data/processed/synthetic/images/test/000391.png,faith in the way in which Mr.,faith in the way in which Mr.,0.9998,0.0
+data/processed/synthetic/images/test/000395.png,+91 84073 19957,+91 84073 19957,0.9769,0.0
+data/processed/synthetic/images/test/000396.png,must be eliminated. He,must be eliminated. He,0.9996,0.0
+data/processed/synthetic/images/test/000400.png,"a loan, I'm","a loan, I'm",0.9899,0.0
+data/processed/synthetic/images/test/000403.png,+91 90652 59686,+91 90652 59686,0.9355,0.0
+data/processed/synthetic/images/test/000404.png,+91 97763 53032,+91 97763 53032,0.9565,0.0
+data/processed/synthetic/images/test/000406.png,"rare ducks, and","rare ducks, and",0.9948,0.0
+data/processed/synthetic/images/test/000408.png,"punished for his crime, didn't he? '","punished for his crime, didn't he?",0.9334,0.0556
+data/processed/synthetic/images/test/000409.png,"PURPOSES. "" OCCASION WAS GIVEN TO REVIEW THE","purposes. "" Occasion was given to REVIEW THE",0.9258,0.5682
+data/processed/synthetic/images/test/000411.png,"Total: $8,480.13","Total: $8,480.13",0.9706,0.0
+data/processed/synthetic/images/test/000413.png,has made it live. The,has made it live. The,0.9951,0.0
+data/processed/synthetic/images/test/000414.png,of need and,of need and,0.9979,0.0
+data/processed/synthetic/images/test/000416.png,"Total: $9,863.89","Total: $9,863.89",0.9871,0.0
+data/processed/synthetic/images/test/000417.png,INV-91724 (90% paid),INV-91724 (90% paid),0.8659,0.0
+data/processed/synthetic/images/test/000419.png,women but yet moved by a strong maternal instinct to,women but yet moved by a strong maternal instinct to,0.9972,0.0
+data/processed/synthetic/images/test/000421.png,details of plans for,details of plans for,0.9993,0.0
+data/processed/synthetic/images/test/000422.png,and Robert Bolt (The Flowering Cherry) were,and Robert Bolt (The Flowering Cherry) were,0.981,0.0
+data/processed/synthetic/images/test/000423.png,"Total: $7,302.67","Total: $7,302.67",0.8363,0.0
+data/processed/synthetic/images/test/000426.png,'S A VERY FREE PLACE TO,is A VERY FREE PLACE TO,0.9327,0.087
+data/processed/synthetic/images/test/000428.png,seizure and was gravely,seizure and was gravely,0.9996,0.0
+data/processed/synthetic/images/test/000430.png,characters to their background,characters to their background,0.9977,0.0
+data/processed/synthetic/images/test/000432.png,there differences in adjustment to,there differences in adjustment to,0.9971,0.0
+data/processed/synthetic/images/test/000433.png,Egginton cables:,Egginton cables:,0.9354,0.0
+data/processed/synthetic/images/test/000434.png,ACTION.,ACTION.,0.8625,0.0
+data/processed/synthetic/images/test/000438.png,It arose during talks following,It arose during talks following,0.9997,0.0
+data/processed/synthetic/images/test/000439.png,03/01/2019,03/01/2019,0.9961,0.0
+data/processed/synthetic/images/test/000440.png,Signature: long unsatisfac,Signature: long unsatisac,0.8176,0.0385
+data/processed/synthetic/images/test/000441.png,the fact that my personality,the fact that my personality,0.9936,0.0
+data/processed/synthetic/images/test/000442.png,sara.sharma@example.org,sara. Sharma@example.org,0.8479,0.087
+data/processed/synthetic/images/test/000443.png,muster from the 13 States of,muster from the 13 States of,0.9962,0.0
+data/processed/synthetic/images/test/000446.png,ananya.brown@example.org,ananya.brown@example.org,0.9591,0.0
+data/processed/synthetic/images/test/000447.png,"604 The Street, Always","604 The Street, Always",0.9877,0.0
+data/processed/synthetic/images/test/000448.png,"as 1830, when","as 1830, when",0.9943,0.0
+data/processed/synthetic/images/test/000449.png,into the problems that,into the problems that,0.9957,0.0
+data/processed/synthetic/images/test/000450.png,"the system a trial, adding","the system a trial, adding",0.9973,0.0
+data/processed/synthetic/images/test/000451.png,"in July, when, just as","in July, when, just as",0.9965,0.0
+data/processed/synthetic/images/test/000453.png,"over the cot, she","over the cut, she",0.875,0.0588
+data/processed/synthetic/images/test/000454.png,. Hopes,. Hopes,0.923,0.0
+data/processed/synthetic/images/test/000460.png,"National Independence Party (280,000 members","National Independence Party (280,000 members",0.9746,0.0
+data/processed/synthetic/images/test/000463.png,", spread such ghastly havoc",", spread such ghastly havoc",0.9796,0.0
+data/processed/synthetic/images/test/000464.png,Ref: secretary not our from,Ref: secretary not our from,0.9911,0.0
+data/processed/synthetic/images/test/000465.png,yet a unitary world.,Yet a unitary world.,0.9143,0.05
+data/processed/synthetic/images/test/000466.png,"actions of the Nationalists. On the contrary,",actions of the Nationalists. On the contrary.,0.9445,0.0222
+data/processed/synthetic/images/test/000469.png,barrier in,barrier in,0.9991,0.0
+data/processed/synthetic/images/test/000470.png,a wooden floor you can use,a wooden floor you can use,0.9957,0.0
+data/processed/synthetic/images/test/000471.png,riveting on the gunwales so that you do not,riveting on the gunwales so that you do not,0.9964,0.0
+data/processed/synthetic/images/test/000474.png,+91 82448 18644,+91 82448 18644,0.9781,0.0
+data/processed/synthetic/images/test/000476.png,"631 History Street, Writing","631 History Street, Writing",0.9832,0.0
+data/processed/synthetic/images/test/000478.png,"FRIENDS OR STRANGERS, AND A FLURRY OF","FRIENDS OR STRANGERS, AND A FILMRY OF",0.8185,0.0811
+data/processed/synthetic/images/test/000479.png,IN THE GROOVES,IN THE GROUPES,0.8067,0.1429
+data/processed/synthetic/images/test/000480.png,"and underdeveloped countries alike. ""","and underdeveloped countries alike. """,0.9865,0.0
+data/processed/synthetic/images/test/000481.png,"however,","however,",0.9703,0.0
+data/processed/synthetic/images/test/000482.png,installation for,installation for,0.9941,0.0
+data/processed/synthetic/images/test/000485.png,"407 Province Street, Play","407 Province Street, Play",0.9874,0.0
+data/processed/synthetic/images/test/000487.png,YOU SAY,YOU SAY,0.9937,0.0
+data/processed/synthetic/images/test/000489.png,"Total: $4,218.91","Total: $4,218.91",0.8715,0.0
+data/processed/synthetic/images/test/000490.png,WILL BACK WEST GERMANY'S ECONOMIC DOMINATION OF WESTERN,WILL BACK WEST GERMANY'S Economic DOMINATION OF WESTERN,0.9633,0.1273
+data/processed/synthetic/images/test/000493.png,"of Radicalism, & then","of Radicalism, & then",0.9903,0.0
+data/processed/synthetic/images/test/000498.png,"260 Disappointment Street, One",200 disappointment Street One,0.68,0.1
+data/processed/synthetic/images/test/000499.png,INV-72834 (72% paid),INV-72834 (72% paid),0.9377,0.0
+data/processed/synthetic/images/test/000501.png,roped in. The only,roped in. The only,0.9831,0.0
+data/processed/synthetic/images/test/000506.png,was wondering whether Olimpia had been,was wondering whether Olimpia had been,0.9389,0.0
+data/processed/synthetic/images/test/000508.png,"however, a word of advice generally","however, a word of advice generally",0.9968,0.0
+data/processed/synthetic/images/test/000509.png,rohan.garcia@gmail.com,rohan.garcia@small.com,0.6402,0.0909
+data/processed/synthetic/images/test/000512.png,little time and concentration,little time and concentration,0.9658,0.0
+data/processed/synthetic/images/test/000513.png,troops being trained on British soil and Polaris,troops being trained on British soil and Polaris,0.9985,0.0
+data/processed/synthetic/images/test/000515.png,believe all you see and,believe all you see and,0.999,0.0
+data/processed/synthetic/images/test/000518.png,"July 27, 2006","July 27, 2006",0.9983,0.0
+data/processed/synthetic/images/test/000519.png,"October 22, 2012","October 22, 2012",0.9708,0.0
+data/processed/synthetic/images/test/000520.png,20/02/2013,20/02/2013,0.9513,0.0
+data/processed/synthetic/images/test/000521.png,offence punishable with,offence punishable with,0.9496,0.0
+data/processed/synthetic/images/test/000522.png,Delegates from Mr. Kenneth Kaunda's United National Independence,is an in the French female United Nations Budget Secretary,0.2368,0.6406
+data/processed/synthetic/images/test/000525.png,co-operation at all levels in,co-operation at all levels in,0.9975,0.0
+data/processed/synthetic/images/test/000527.png,"Total: $2,653.98","Total: $2,053.98",0.9546,0.0625
+data/processed/synthetic/images/test/000528.png,INV-23063 (44% paid),INV-23063 (44% paid),0.908,0.0
+data/processed/synthetic/images/test/000529.png,his travels it might have been,his travels it might have been,0.9988,0.0
+data/processed/synthetic/images/test/000530.png,you have become proficient in these,you have become proficient in these,0.998,0.0
+data/processed/synthetic/images/test/000531.png,SET MOODS BUT,SET MOODS BUT,0.9086,0.0
+data/processed/synthetic/images/test/000533.png,"flection, it might be that I","flection, it might be that I",0.8636,0.0
+data/processed/synthetic/images/test/000536.png,cheap tools or,cheap tools or,0.9988,0.0
+data/processed/synthetic/images/test/000538.png,+91 84677 38728,+91 84677 38728,0.9629,0.0
+data/processed/synthetic/images/test/000541.png,12/11/2022,12/11/ 2022,0.8459,0.1
+data/processed/synthetic/images/test/000542.png,; the other tried to show that,; the other tried to show that,0.988,0.0
+data/processed/synthetic/images/test/000544.png,year than,year than,0.9987,0.0
+data/processed/synthetic/images/test/000545.png,27/03/2003,27/03/2003,0.9855,0.0
+data/processed/synthetic/images/test/000546.png,OUT PARTS FROM HARDWOOD.,OUT PARTS FROM HARDWOOD.,0.9741,0.0
+data/processed/synthetic/images/test/000547.png,+91 93177 62981,+91 93177 62981,0.8653,0.0
+data/processed/synthetic/images/test/000548.png,close agreement of,close agreement of,0.9992,0.0
+data/processed/synthetic/images/test/000549.png,a dissolution,a dissolution,0.9939,0.0
+data/processed/synthetic/images/test/000550.png,+91 70428 63157,+91 70428/3157,0.9077,0.1333
+data/processed/synthetic/images/test/000551.png,Address: Maria Iyer,Address: Maria Iyer,0.9948,0.0
+data/processed/synthetic/images/test/000552.png,"September 28, 2001","September 28, 2001",0.999,0.0
+data/processed/synthetic/images/test/000553.png,balance-sheet must always come,balance-sheet must always come,0.9967,0.0
+data/processed/synthetic/images/test/000554.png,Phone: Maria Khan,Phone: Maria Khan,0.9918,0.0
+data/processed/synthetic/images/test/000556.png,"fighters "" are in","fighters "" are in",0.9857,0.0
+data/processed/synthetic/images/test/000557.png,on one,on one,0.9876,0.0
+data/processed/synthetic/images/test/000558.png,Date of Birth: Sara Patel,Date of Birth: Sara Patel,0.9932,0.0
+data/processed/synthetic/images/test/000559.png,saw some flats in Hendon for four,saw some flats in Hendon for four,0.9355,0.0
+data/processed/synthetic/images/test/000562.png,"April 24, 2021","April 24, 2021",0.9941,0.0
+data/processed/synthetic/images/test/000563.png,14/04/2005,14/04/2005,0.8763,0.0
+data/processed/synthetic/images/test/000564.png,indeed to be purely scientific in character,indeed to be purely scientific in character,0.9983,0.0
+data/processed/synthetic/images/test/000566.png,may happen....,may happen. ...,0.7243,0.0
+data/processed/synthetic/images/test/000567.png,"Total: $9,529.03","Total: $9,529.003",0.8948,0.0625
+data/processed/synthetic/images/test/000568.png,Should the Herald,Should the Herald,0.9959,0.0
+data/processed/synthetic/images/test/000570.png,Signature: Priya Smith,Signature: Priya Smith,0.9746,0.0
+data/processed/synthetic/images/test/000571.png,INV-59946 (46% paid),INV-59946 (46% paid),0.851,0.0
+data/processed/synthetic/images/test/000572.png,has them,has them,0.9426,0.0
+data/processed/synthetic/images/test/000574.png,nalin.wilson@college.edu,nalin.wilson@college.edu,0.9585,0.0
+data/processed/synthetic/images/test/000575.png,"not only an economic necessity, but","not only an economic necessity, but",0.9677,0.0
+data/processed/synthetic/images/test/000577.png,"rise in the cost of living. ""","rise in the cost of living. """,0.9928,0.0
+data/processed/synthetic/images/test/000579.png,". "" THE OUTBURST SHOCKED",""" THE OUTBURT SHOCKED",0.8089,0.125
+data/processed/synthetic/images/test/000581.png,"293 Two Street, Cent",293 Two Street. Cent.,0.7798,0.1
+data/processed/synthetic/images/test/000584.png,"tuation! Personally I am indifferent, but I really","tuation! Personally I am indifferent, but I really",0.9383,0.0
+data/processed/synthetic/images/test/000585.png,mantis as a pest control in,mantis as a pest control in,0.9993,0.0
+data/processed/synthetic/images/test/000588.png,01/09/1996,01/09/1996,0.8729,0.0
+data/processed/synthetic/images/test/000591.png,"346 Been Street, Emphasizing","346 Been Street, Emphasizing",0.9792,0.0
+data/processed/synthetic/images/test/000592.png,# her daughter,# her daughter,0.9094,0.0
+data/processed/synthetic/images/test/000593.png,a man wrapped in the impenetrable cocoon,a man wrapped in the impenetrable cocoon,0.9951,0.0
+data/processed/synthetic/images/test/000594.png,"and doing it to some purpose. John Philpot,","and doing it to some purpose. John Philpott,",0.9649,0.0233
+data/processed/synthetic/images/test/000595.png,john.brown@gmail.com,john.brown@@mail.com,0.8106,0.05
+data/processed/synthetic/images/test/000598.png,to shift the,to shift the,0.9986,0.0
+data/processed/synthetic/images/test/000599.png,a certain solace from the fact that I did,a certain solace from the fact that I did,0.9975,0.0
+data/processed/synthetic/images/test/000600.png,of Europe.,of Europe.,0.9968,0.0
+data/processed/synthetic/images/test/000602.png,the return,the return,0.9967,0.0
+data/processed/synthetic/images/test/000603.png,Email: Ananya Wilson,Email: Ananya Wilson,0.9605,0.0
+data/processed/synthetic/images/test/000604.png,American administration.,American administration.,0.9983,0.0
+data/processed/synthetic/images/test/000605.png,"people, and what a busy town.","people, and what a busy town.",0.9941,0.0
+data/processed/synthetic/images/test/000606.png,"Mr. Lucas's actions, therefore, arose","Mr. Lucas's actions, therefore, arose",0.997,0.0
+data/processed/synthetic/images/test/000610.png,conferences of,conferences of,0.9947,0.0
+data/processed/synthetic/images/test/000611.png,"easy task, but one in which patience","easy task, but one in which patience",0.9979,0.0
+data/processed/synthetic/images/test/000612.png,"March 25, 2011","March 25, 2011",0.993,0.0
+data/processed/synthetic/images/test/000614.png,compulsory savings scheme which the,compulsory savings scheme which the,0.9983,0.0
+data/processed/synthetic/images/test/000615.png,a widow who knew how to look after the ',a widow who knew how to look after the ',0.9424,0.0
+data/processed/synthetic/images/test/000617.png,SINCE THE SYMPTOMS HAD FIRST,SINCE THE SYMPTOMS HAD FIRST,0.9826,0.0
+data/processed/synthetic/images/test/000619.png,Amount: Priya Garcia,Amount: Priya Garcia,0.9451,0.0
+data/processed/synthetic/images/test/000620.png,38 PER CENT,38 PER CENT,0.943,0.0
+data/processed/synthetic/images/test/000621.png,fatima.khan@gmail.com,Fatima.khan@@grail.com,0.6573,0.1429
+data/processed/synthetic/images/test/000622.png,18/12/1990,18/12/1990,0.9569,0.0
+data/processed/synthetic/images/test/000624.png,It is equally certain that the British Government,It is equally certain that the British Government,0.9904,0.0
+data/processed/synthetic/images/test/000626.png,him down. The strong arm of authority has,him down. The strong arm of authority has,0.999,0.0
+data/processed/synthetic/images/test/000627.png,yet thought of a fire....,yet thought of a fire ....,0.8544,0.0
+data/processed/synthetic/images/test/000631.png,"the editor, always comically abashed","the editor, always comically abashed",0.9968,0.0
+data/processed/synthetic/images/test/000632.png,"basis but rather of energetic and concerned individuals,","basis but rather of energetic and concerned individuals,",0.9974,0.0
+data/processed/synthetic/images/test/000634.png,"ships, are controlled automatically","ships, are controlled automatically",0.8428,0.0
+data/processed/synthetic/images/test/000635.png,". HE WAS HERE, NEAR THE RAILWAY STATION",". He was HERE, near THE RALWAY STATION",0.8406,0.2308
+data/processed/synthetic/images/test/000636.png,6tic douloureux. As early as 1830,6tic douloureux. As easily as 1830,0.87,0.0606
+data/processed/synthetic/images/test/000638.png,"wet pavements, the school play-grounds","wet pavements, the school play-grounds",0.9846,0.0
+data/processed/synthetic/images/test/000640.png,is something,is something,0.9997,0.0
+data/processed/synthetic/images/test/000641.png,top gear,top gear,0.9886,0.0
+data/processed/synthetic/images/test/000643.png,idea that moral regeneration,idea that moral regeneration,0.9989,0.0
+data/processed/synthetic/images/test/000644.png,"474 The Street, Both","474 The Street, Both",0.9954,0.0
+data/processed/synthetic/images/test/000645.png,"myself, "" he says,","myself, "" he says.",0.9063,0.0556
+data/processed/synthetic/images/test/000647.png,DISASTER.,DISASTER.,0.8765,0.0
+data/processed/synthetic/images/test/000648.png,ONE WORD OF ENGLISH. ' WHILE HE WAS WRITING,ONE WORD OF ENGLISH. ' WHILE HE WAS WRITING,0.9009,0.0
+data/processed/synthetic/images/test/000650.png,has been much,has been much,0.9995,0.0
+data/processed/synthetic/images/test/000651.png,supply; it lends itself to making,supply; it lends itself to making,0.9003,0.0
+data/processed/synthetic/images/test/000653.png,06/03/2021,06/03/2021,0.915,0.0
+data/processed/synthetic/images/test/000655.png,"or building societies, for that matter, will","or building societies, for that matter, will",0.9904,0.0
+data/processed/synthetic/images/test/000656.png,". ERIC SAYS: "" WE BELIEVE IN",". ERIC SAYS: "" WE BE BELIEVE IN",0.8717,0.1071
+data/processed/synthetic/images/test/000657.png,"691 Over Street, Chronicle","691 Over Street, Chronicle",0.9825,0.0
+data/processed/synthetic/images/test/000658.png,potted.,potted.,0.8936,0.0
+data/processed/synthetic/images/test/000659.png,drawings. If you have,drawings. If you have,0.999,0.0
+data/processed/synthetic/images/test/000661.png,"condemned "" the pollution of the","condemned "" the pollution of the",0.9896,0.0
+data/processed/synthetic/images/test/000662.png,Account: Liam Wilson,Account: Liam Wilson,0.9934,0.0
+data/processed/synthetic/images/test/000664.png,ever before.,ever before.,0.9981,0.0
+data/processed/synthetic/images/test/000666.png,Date: Maria Smith,Date: Maria Smith,0.9959,0.0
+data/processed/synthetic/images/test/000670.png,THE DOORMAN TURNED,THE DOCRMAN TURNED,0.88,0.0556
+data/processed/synthetic/images/test/000672.png,"Total: $9,480.51","Total: $9,480-51",0.9054,0.0625
+data/processed/synthetic/images/test/000674.png,Signature: Maria Iyer,Signature: Maria Iyer,0.9382,0.0
+data/processed/synthetic/images/test/000675.png,", with fold lying on line",", with fold lying on line",0.986,0.0
+data/processed/synthetic/images/test/000676.png,SIGNALS IN THE AIR,SIGNALS IN THE AIR,0.9194,0.0
+data/processed/synthetic/images/test/000677.png,"February 22, 1999","February 22, 1999",0.8659,0.0
+data/processed/synthetic/images/test/000678.png,06/11/2021,06/11/2021,0.8666,0.0
+data/processed/synthetic/images/test/000679.png,false prophet & that all may go,false prophet & that all may go,0.9993,0.0
+data/processed/synthetic/images/test/000680.png,by a firm specialising in electronics,by a firm specialising in electronics,0.9848,0.0
+data/processed/synthetic/images/test/000682.png,18/04/2017,18/04/2017,0.955,0.0
+data/processed/synthetic/images/test/000683.png,put Vittoria on guard. ' Santa Maria! These,put Vittoria on guard. ' Santa Maria! These,0.9595,0.0
+data/processed/synthetic/images/test/000684.png,05/12/1996,05/12/19%,0.8751,0.2
+data/processed/synthetic/images/test/000686.png,"September 27, 2003","September 27, 2003",0.9966,0.0
+data/processed/synthetic/images/test/000687.png,to discuss Weaver's,to discuss Weaver's,0.9966,0.0
+data/processed/synthetic/images/test/000688.png,AND HE HAS ABANDONED PLANS TO VISIT PRESIDENT DE,AND HE HAS ABANDONED PLANS TO VISIT PRESIDENT DE,0.85,0.0
+data/processed/synthetic/images/test/000689.png,"lively people, and what a busy town. At","lively people, and what a busy town. At",0.9943,0.0
+data/processed/synthetic/images/test/000690.png,of Padley and Crossman is,of Padley and Crossman is,0.9897,0.0
+data/processed/synthetic/images/test/000693.png,03/04/2022,03/04/022,0.8805,0.1
+data/processed/synthetic/images/test/000695.png,they are seeking. African delegates,they are seeking. African delegates,0.997,0.0
+data/processed/synthetic/images/test/000696.png,"THAT HOOEY. ""","THAT HOOLY. """,0.7301,0.0769
+data/processed/synthetic/images/test/000697.png,to advise Anglesey to,to advise Anglesey to,0.9996,0.0
+data/processed/synthetic/images/test/000699.png,DECISIONS.,DECISIONS,0.7694,0.1
+data/processed/synthetic/images/test/000700.png,alone on polite request,alone on polite request,0.9947,0.0
+data/processed/synthetic/images/test/000701.png,Invoice No: the the and,Invoice No: the the and,0.9893,0.0
+data/processed/synthetic/images/test/000702.png,They never are cheap in the,They never are cheap in the,0.9999,0.0
+data/processed/synthetic/images/test/000705.png,+91 87293 60144,+91 87293 60144,0.8855,0.0
+data/processed/synthetic/images/test/000707.png,"969 That Street, Dignified","969 That Street, Dignified",0.8209,0.0
+data/processed/synthetic/images/test/000709.png,"225 Arthur Street, Can","225 Arthur Street, Can",0.981,0.0
+data/processed/synthetic/images/test/000710.png,12/01/2004,12/01/2004,0.9579,0.0
+data/processed/synthetic/images/test/000711.png,will now have to pay,will now have to pay,0.9996,0.0
+data/processed/synthetic/images/test/000714.png,"Health Service "" and placing heavy","Health Service "" and placing heavy",0.9937,0.0
+data/processed/synthetic/images/test/000715.png,the new book partially,the new book partially,0.9985,0.0
+data/processed/synthetic/images/test/000717.png,Account: Fatima Gupta,Account: Fatima Gupta,0.9931,0.0
+data/processed/synthetic/images/test/000719.png,"Boyd-Orr, the Rev.","Boyd-Orr, the Rev.",0.9388,0.0
+data/processed/synthetic/images/test/000720.png,25/08/1995,25/08/1995,0.9645,0.0
+data/processed/synthetic/images/test/000722.png,filmed play. It has,filmed play. It has,0.9983,0.0
+data/processed/synthetic/images/test/000724.png,Union would be prepared to,Union would be prepared to,0.9783,0.0
+data/processed/synthetic/images/test/000726.png,INV-9491 (60% paid),INV-9491 (60% paid),0.7422,0.0
+data/processed/synthetic/images/test/000731.png,an increasing number of disciples among,an increasing number of disciples among,0.9997,0.0
+data/processed/synthetic/images/test/000732.png,said? A moment's reflection reassured,said? A moment's reflection reassured,0.916,0.0
+data/processed/synthetic/images/test/000734.png,Aznavour).,Azhavoir),0.5343,0.3
+data/processed/synthetic/images/test/000735.png,is nothing better they,is nothing better they,0.9998,0.0
+data/processed/synthetic/images/test/000736.png,"Minister of the Central African Federation,","Minister of the Central African Federation,",0.9982,0.0
+data/processed/synthetic/images/test/000737.png,22/02/2024,22/02/202024,0.8978,0.2
+data/processed/synthetic/images/test/000739.png,"Total: $8,619.75","Total: $8,619.75",0.9498,0.0
+data/processed/synthetic/images/test/000740.png,Scarborough is to,Scarborough is to,0.9931,0.0
+data/processed/synthetic/images/test/000741.png,Total: Liam Wilson,Total: Liam Wilson,0.9666,0.0
+data/processed/synthetic/images/test/000744.png,to be on the,to be on the,0.9997,0.0
+data/processed/synthetic/images/test/000747.png,interference by Sir Roy's Federal Government in,interference by Sir Roy's Federal Government in,0.9997,0.0
+data/processed/synthetic/images/test/000748.png,INV-63227 (97% paid),INV-63227 (97% paid),0.9732,0.0
+data/processed/synthetic/images/test/000749.png,FRANTICALLY TO OVERTURN,FRANTICALLY TO OVERTURN,0.8044,0.0
+data/processed/synthetic/images/test/000752.png,"wholly unacceptable """,wholly unique capable,0.5148,0.4286
+data/processed/synthetic/images/test/000754.png,11/10/1991,11/10/1991,0.8738,0.0
+data/processed/synthetic/images/test/000755.png,"'VE NO MORE TO SAY, SO I SUGGEST WE","'VE NO MORE TO SAY, SO I SUGGEST WE",0.8397,0.0
+data/processed/synthetic/images/test/000758.png,Department: Sara Chen,Department: Sara Chen,0.9887,0.0
+data/processed/synthetic/images/test/000759.png,WOULD BE ALTOGETHER CLEARER IN OUR,WOULD BE ALTOGETHER CLEARER IN OUR,0.9285,0.0
+data/processed/synthetic/images/test/000760.png,check was made with the woman's,check was made with the woman's,0.9933,0.0
+data/processed/synthetic/images/test/000763.png,is under construction.,is under construction.,0.98,0.0
+data/processed/synthetic/images/test/000764.png,carried the craft to Ireland. There,carried the craft to Ireland. There,0.9967,0.0
+data/processed/synthetic/images/test/000765.png,Phone: Priya Brown,Phone: Priya Brown,0.9847,0.0
+data/processed/synthetic/images/test/000766.png,their whips to defeat,their whips to defeat,0.9958,0.0
+data/processed/synthetic/images/test/000767.png,They are,They are,0.9998,0.0
+data/processed/synthetic/images/test/000768.png,Invoice No: Ananya Sharma,Invoice No: Ananya Sharma,0.9815,0.0
+data/processed/synthetic/images/test/000769.png,INV-32006 (31% paid),INV-32006 (31% paid),0.9627,0.0
+data/processed/synthetic/images/test/000771.png,"Total: $4,399.39","Total: $4,399.39",0.954,0.0
+data/processed/synthetic/images/test/000773.png,was being cultivated with,was being cultivated with,0.9999,0.0
+data/processed/synthetic/images/test/000774.png,batting averages and all the statistical blight that makes a,batting averages and all the statistical blight that makes a,0.9886,0.0
+data/processed/synthetic/images/test/000776.png,10/08/1993,10/08/1993,0.8795,0.0
+data/processed/synthetic/images/test/000778.png,Total: $317.97,Total: $3.17.97,0.9079,0.0714
+data/processed/synthetic/images/test/000780.png,Account: grip and The scenes,Account: grip and The scenes,0.9739,0.0
+data/processed/synthetic/images/test/000781.png,"even-tempered and sedate, not easily irritated, patient","even-tempered and sedate, not easily irritated, patient",0.9808,0.0
+data/processed/synthetic/images/test/000782.png,+91 75836 80227,+41 75836 80227,0.933,0.0667
+data/processed/synthetic/images/test/000784.png,"January 16, 2003","January 16, 2003",0.9901,0.0
+data/processed/synthetic/images/test/000787.png,of disciples among unorthodox medical men,of disciples among unorthodox medical men,0.9975,0.0
+data/processed/synthetic/images/test/000788.png,"Total: $3,173.52","Total: $3, 173-52",0.8207,0.125
+data/processed/synthetic/images/test/000789.png,Department: and was,Department: and was,0.9964,0.0
+data/processed/synthetic/images/test/000792.png,that the Commons House upon,that the Commons House upon,0.9973,0.0
+data/processed/synthetic/images/test/000793.png,character than caricature. This is also the,character than caricature. This is also the,0.9989,0.0
+data/processed/synthetic/images/test/000794.png,"December 27, 2000","December 27, 2000",0.997,0.0
+data/processed/synthetic/images/test/000795.png,event! ' he,"event! "" he",0.7727,0.0909
+data/processed/synthetic/images/test/000797.png,had asked the Medical Research,had asked the Medical Research,0.9998,0.0
+data/processed/synthetic/images/test/000800.png,"It was last used a year ago, to","It was last used a year ago, to",0.9972,0.0
+data/processed/synthetic/images/test/000801.png,INV-76253 (11% paid),INV-76253 (11% paid),0.9403,0.0
+data/processed/synthetic/images/test/000802.png,Date of Birth: Liam Wilson,Date of Birth: Liam Wilson,0.9966,0.0
+data/processed/synthetic/images/test/000806.png,INV-62515 (87% paid),INV-62515 (87% paid),0.9503,0.0
+data/processed/synthetic/images/test/000807.png,"tea, and talked mainly about Philip, who","tea, and talked mainly about Philip, who",0.9944,0.0
+data/processed/synthetic/images/test/000808.png,WE WOULD GAIN IN THE COMMON,WE WOULD GAIN IN THE COMMON,0.9594,0.0
+data/processed/synthetic/images/test/000809.png,situation calls for an,situation calls for an,0.9969,0.0
+data/processed/synthetic/images/test/000812.png,"Total: $7,269.97","Total: $7,269.97",0.9633,0.0
+data/processed/synthetic/images/test/000815.png,it was being cultivated with extraordinary success,it was being cultivated with extraordinary success,0.9963,0.0
+data/processed/synthetic/images/test/000818.png,for the week-end. Ford Motors are to put,for the week-end. Ford Motors are to put,0.9959,0.0
+data/processed/synthetic/images/test/000822.png,Department: Sara Wilson,Department: Sara Wilson,0.9957,0.0
+data/processed/synthetic/images/test/000823.png,"February 4, 1997","February 4, 1997",0.995,0.0
+data/processed/synthetic/images/test/000824.png,by the soldier -,by the soldier -,0.9267,0.0
+data/processed/synthetic/images/test/000825.png,MY PARTY'S PROPOSAL TO PROSTITUTE THE,WHY PARTY'S PROPOSAL TO PROSTITUTE THE,0.9131,0.0541
+data/processed/synthetic/images/test/000826.png,and his performing chimpanzees,and his performing chimpanzees,0.9957,0.0
+data/processed/synthetic/images/test/000827.png,Note circulation soared for the,Note circulation soared for the,0.9864,0.0
+data/processed/synthetic/images/test/000829.png,"847 Against Street, Here",847 Against Street. Here,0.9958,0.0417
+data/processed/synthetic/images/test/000830.png,commentator. The parade was reviewed by,commentator. The parade was reviewed by,0.9979,0.0
+data/processed/synthetic/images/test/000831.png,+91 92773 71892,+91 92773 71892,0.957,0.0
+data/processed/synthetic/images/test/000832.png,"January 18, 2018","January 18, 2018",0.9959,0.0
+data/processed/synthetic/images/test/000833.png,to visit my young,to visit my young,0.9983,0.0
+data/processed/synthetic/images/test/000834.png,Amount: Economic only half,Amount: Economic only half,0.9917,0.0
+data/processed/synthetic/images/test/000835.png,28/03/2020,28/03/2020,0.9172,0.0
+data/processed/synthetic/images/test/000836.png,Date of Birth: Emma Brown,Date of Birth. Emma Brown,0.9525,0.04
+data/processed/synthetic/images/test/000837.png,the Foot-Griffiths,the Foot-Griffins,0.8787,0.1111
+data/processed/synthetic/images/test/000842.png,one has learned anything. Wicki,one has learned anything. Wicki,0.9918,0.0
+data/processed/synthetic/images/test/000843.png,give the,give the,0.9927,0.0
+data/processed/synthetic/images/test/000844.png,be reserved,be reserved,0.9894,0.0
+data/processed/synthetic/images/test/000846.png,emissaries from the,emissaries from the,0.8569,0.0
+data/processed/synthetic/images/test/000847.png,CURED. ',CKRED.,0.7995,0.375
+data/processed/synthetic/images/test/000848.png,in large Baskerville type,in large Baskerville type,0.985,0.0
+data/processed/synthetic/images/test/000849.png,broken a,broken a,0.995,0.0
+data/processed/synthetic/images/test/000850.png,", or",", or",0.7299,0.0
+data/processed/synthetic/images/test/000852.png,The trouble about such debates is,The trouble about such debates is,0.9912,0.0
+data/processed/synthetic/images/test/000855.png,the discontent: The austerity Budget,the discontent: The austerity Budget,0.9917,0.0
+data/processed/synthetic/images/test/000858.png,you are looking for,you are looking for,0.9971,0.0
+data/processed/synthetic/images/test/000859.png,"Total: $1,943.24","Total: $1,943.24",0.8844,0.0
+data/processed/synthetic/images/test/000863.png,OF EUROPE. ONE OF,OF EUROPE. ONE OF,0.9924,0.0
+data/processed/synthetic/images/test/000864.png,"IT WAS A NAKEDNESS OF NAI""VETY TO BE","IT WAS A NAMEDNESS OF NAL""VETY TO BE",0.8478,0.0556
+data/processed/synthetic/images/test/000865.png,", who played for Elvis on",", who played for Elvis on",0.9871,0.0
+data/processed/synthetic/images/test/000866.png,disliked by their,disliked by their,0.9982,0.0
+data/processed/synthetic/images/test/000868.png,. Said Mr. Nkumbula last night:,. Said Mr. Nkumbula last night:,0.9235,0.0
+data/processed/synthetic/images/test/000870.png,officials quickly point out,officials quickly point out.,0.9389,0.037
+data/processed/synthetic/images/test/000871.png,Roll No: has political only,Roll No: has political only,0.9949,0.0
+data/processed/synthetic/images/test/000874.png,wei.garcia@example.org,"wei. Garcia Ocean, he.org",0.7155,0.4545
+data/processed/synthetic/images/test/000875.png,nalin.chen@college.edu,nalin.chen@college.edu,0.976,0.0
+data/processed/synthetic/images/test/000876.png,THEY JOKE,THEY JOKE,0.9839,0.0
+data/processed/synthetic/images/test/000880.png,"BELGIUM,","BELGIUM,",0.8329,0.0
+data/processed/synthetic/images/test/000881.png,getting an,getting an,0.9989,0.0
+data/processed/synthetic/images/test/000882.png,LACE BORDER TO A,I've I heard he to a,0.491,1.0625
+data/processed/synthetic/images/test/000883.png,+91 78088 65520,+91 78088 65520,0.9341,0.0
+data/processed/synthetic/images/test/000884.png,"this to be wondered at, for even today,","this to be wondered at, for even today,",0.9832,0.0
+data/processed/synthetic/images/test/000885.png,", always comically grotesque",", always comically grotesque",0.9803,0.0
+data/processed/synthetic/images/test/000888.png,INV-61879 (75% paid),INV-61879 (75% paid),0.867,0.0
+data/processed/synthetic/images/test/000890.png,THE MURDERS WERE,THE MURDERS WERE,0.9648,0.0
+data/processed/synthetic/images/test/000891.png,INV-15565 (49% paid),INV-15565 (49% paid),0.9927,0.0
+data/processed/synthetic/images/test/000892.png,principle of an all-Regular army.,principle of an all-Regular army.,0.9943,0.0
+data/processed/synthetic/images/test/000893.png,nalin.garcia@example.org,nalin. garcia@example.org,0.8494,0.0417
+data/processed/synthetic/images/test/000896.png,+91 95553 30357,+91 95553 30357,0.8499,0.0
+data/processed/synthetic/images/test/000900.png,"1830, WHEN ANGLESEY BELIEVED","1830, WHEN ANGLESS EY BELIEVED",0.7079,0.0714
+data/processed/synthetic/images/test/000902.png,"HIM BY POST ON JUNE 22, ONLY TWO","HIM BY POST ON JUNE 22, ONLY TWO",0.9704,0.0
+data/processed/synthetic/images/test/000903.png,"their bluster, they let many a big","their bluster, they let many a big",0.9665,0.0
+data/processed/synthetic/images/test/000904.png,fatima.wilson@college.edu,fatima. wilson@college.edu,0.8158,0.04
+data/processed/synthetic/images/test/000906.png,"give the system a trial, adding that it","give the system a trial, adding that it",0.9952,0.0
+data/processed/synthetic/images/test/000907.png,Date: Liam Gupta,Date: Liam Gupta,0.996,0.0
+data/processed/synthetic/images/test/000909.png,"Total: $4,015.17","Total: $4,015.17",0.8572,0.0
+data/processed/synthetic/images/test/000911.png,"January 24, 2007","January 24, 2007",0.965,0.0
+data/processed/synthetic/images/test/000912.png,"husband made her clean his uniform, wins","husband made her clean his uniform, wins",0.9934,0.0
+data/processed/synthetic/images/test/000913.png,retirement and,retirement and,0.9994,0.0
+data/processed/synthetic/images/test/000914.png,"414 Aged Street, Touch","414 Aged Street, Teach",0.7519,0.0909
+data/processed/synthetic/images/test/000916.png,"', had","', had",0.9097,0.0
+data/processed/synthetic/images/test/000917.png,reaction of the,reaction of the,0.9996,0.0
+data/processed/synthetic/images/test/000922.png,+91 92621 96525,+91 92621 96525,0.9686,0.0
+data/processed/synthetic/images/test/000923.png,INV-3738 (9% paid),INV-3738 (9% paid),0.9346,0.0
+data/processed/synthetic/images/test/000924.png,Amount: Fatima Sharma,Amount. Fatima Sharma,0.9091,0.0476
+data/processed/synthetic/images/test/000927.png,button for nuclear warfare.,button for nuclear warfare.,0.9895,0.0
+data/processed/synthetic/images/test/000928.png,Powerful units have,Powerful units have,0.9992,0.0
+data/processed/synthetic/images/test/000929.png,Total: for think for,Total: for think for,0.995,0.0
+data/processed/synthetic/images/test/000930.png,scrap of evidence -,scrap of evidence -,0.9865,0.0
+data/processed/synthetic/images/test/000931.png,"284 Notice Street, Life","284 Notice Street, Life",0.8976,0.0
+data/processed/synthetic/images/test/000932.png,AT A QUICK,ATA QUICK,0.8918,0.1
+data/processed/synthetic/images/test/000933.png,not be too,not be too,0.9998,0.0
+data/processed/synthetic/images/test/000934.png,""" growing anger "" the",""" growing anger "" the",0.9695,0.0
+data/processed/synthetic/images/test/000935.png,liam.smith@gmail.com,liam.smith@ email.com,0.7709,0.1
+data/processed/synthetic/images/test/000936.png,answer. George Brown,answer. George Brown,0.9968,0.0
+data/processed/synthetic/images/test/000938.png,"January 12, 2022","January 12, 2022",0.9905,0.0
+data/processed/synthetic/images/test/000939.png,"herrings in this "" Find-the-body "" thriller.","herrings in this "" Find-the-body "" thriller.",0.9707,0.0
+data/processed/synthetic/images/test/000940.png,"scenes effective,","scenes effective,",0.9846,0.0
+data/processed/synthetic/images/test/000942.png,not take any,not take any,0.9961,0.0
+data/processed/synthetic/images/test/000943.png,"303 Providing Street, Much","303 Providing Street, Much",0.9918,0.0
+data/processed/synthetic/images/test/000944.png,whether at Holy Loch or elsewhere on,whether at Holy Loch of elsewhere on,0.8632,0.0278
+data/processed/synthetic/images/test/000946.png,rent riots. Today,rent riots. Today,0.997,0.0
+data/processed/synthetic/images/test/000947.png,: Phones were being tapped,: Phones were being tapped,0.9861,0.0
+data/processed/synthetic/images/test/000948.png,"321 London Street, Said","321 London Street, Said",0.9812,0.0
+data/processed/synthetic/images/test/000949.png,"Total: $6,554.14","Total: $6,554.14",0.8668,0.0
+data/processed/synthetic/images/test/000950.png,"for the trouble,","for the trouble,",0.9615,0.0
+data/processed/synthetic/images/test/000953.png,"doctor who had studied under its founder, the","doctor who had studied under its founder, the",0.9986,0.0
+data/processed/synthetic/images/test/000954.png,23/03/2015,23/03/2015,0.9743,0.0
+data/processed/synthetic/images/test/000955.png,right! Congratulations! And away,right! Congratulations! And away,0.9593,0.0
+data/processed/synthetic/images/test/000956.png,Subject: Nalin Garcia,Subject: Malin Garcia,0.9171,0.0476
+data/processed/synthetic/images/test/000958.png,resume today. PRESIDENT KENNEDY today,resume today. PRESIDENT KENNEDY today,0.9887,0.0
+data/processed/synthetic/images/test/000959.png,+91 97218 13690,+41 97218 13690,0.9234,0.0667
+data/processed/synthetic/images/test/000961.png,is it,is it,0.9965,0.0
+data/processed/synthetic/images/test/000962.png,the rubbish strewn canals - even the worn,the rubbish strewn canals - even the worn,0.9358,0.0
+data/processed/synthetic/images/test/000963.png,03/12/2017,03/12/2017,0.8264,0.0
+data/processed/synthetic/images/test/000964.png,"July 9, 2009","July 9, 2009",0.9768,0.0
+data/processed/synthetic/images/test/000965.png,"December 17, 2007","December 17, 2007",0.994,0.0
+data/processed/synthetic/images/test/000966.png,against the South,against the South,0.9986,0.0
+data/processed/synthetic/images/test/000968.png,making not only,making not only,0.999,0.0
+data/processed/synthetic/images/test/000970.png,"182 With Street, Laughable","182 With Street, Laughable",0.8613,0.0
+data/processed/synthetic/images/test/000972.png,there had opened a new,there had opened a new,0.9996,0.0
+data/processed/synthetic/images/test/000973.png,"282 Ann Street, The","282 Ann Street, The",0.9793,0.0
+data/processed/synthetic/images/test/000974.png,of mind akin to the atoms of matter,of mind akin to the atoms of matter,0.9888,0.0
+data/processed/synthetic/images/test/000975.png,The urge came from a conference of activists of,The urge came from a conference of activists of,0.9976,0.0

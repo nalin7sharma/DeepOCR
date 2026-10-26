@@ -185,6 +185,34 @@
         "ms_per_line": 27.29,
         "mean_confidence": 0.9265
       }
+    },
+    "trocr_ft": {
+      "_info": {
+        "label": "TrOCR Transformer (fine-tuned)",
+        "architecture": "ViT encoder + Transformer decoder",
+        "type": "pretrained + fine-tuned on our data",
+        "parameters": 61596672,
+        "input": "384x384 RGB",
+        "pretrained": "C:\\Users\\LENOVO\\.dev\\DeepOCR\\checkpoints\\trocr_finetuned"
+      },
+      "iam": {
+        "cer": 6.732,
+        "wer": 16.785,
+        "accuracy": 37.833,
+        "cer_raw": 8.734,
+        "samples": 600,
+        "ms_per_line": 464.67,
+        "mean_confidence": 0.8726
+      },
+      "synthetic": {
+        "cer": 2.588,
+        "wer": 10.815,
+        "accuracy": 84.333,
+        "cer_raw": 2.607,
+        "samples": 600,
+        "ms_per_line": 365.81,
+        "mean_confidence": 0.944
+      }
     }
   },
   "test_sets": {
@@ -199,7 +227,7 @@
       "samples": 600
     }
   },
-  "generated_at": "2026-10-26T15:16:04",
+  "generated_at": "2026-10-26T16:13:52",
   "notes": [
     "CER/WER/accuracy are averaged per line on the held-out test partitions; lower CER/WER is better.",
     "Transcriptions are normalised (IAM's tokenised spacing before punctuation is removed) for every model alike; cer_raw keeps the original spacing.",

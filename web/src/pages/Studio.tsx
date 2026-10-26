@@ -194,7 +194,7 @@ export function Studio({ engines, samples, onEnginesChanged }: Props) {
             </p>
             <ul className="hero-points">
               <li><ShieldCheck size={16} /> In-memory processing. Nothing is stored.</li>
-              <li><Zap size={16} /> Four engines, including models trained for this project.</li>
+              <li><Zap size={16} /> Five engines, including three trained or fine-tuned for this project.</li>
             </ul>
           </div>
 

@@ -695,5 +695,7 @@ kbd { padding: 1px 6px; border-radius: 5px; border: 1px solid var(--border-stron
   .run-row { flex-direction: column-reverse; align-items: stretch; }
   .file-identity strong { max-width: 70vw; }
   .timeline-index { display: none; }
+  .rotator { min-width: 0; display: inline-grid; }
+  .rotator > span { white-space: normal; }
 }
 .run-cards.single { grid-column: auto; align-content: center; grid-template-columns: 1fr; }

@@ -37,7 +37,7 @@ function DiffView({ prediction, reference }: { prediction: string; reference: st
 export function Compare({ engines, samples }: { engines: EnginesResponse | null; samples: SampleDoc[] }) {
   const engineList = engines?.engines ?? [];
   const [file, setFile] = useState<File | null>(null);
-  const [selection, setSelection] = useState<string[]>(() => ["paddle", "cnn_bilstm", "crnn", "trocr"]);
+  const [selection, setSelection] = useState<string[]>(() => ["paddle", "cnn_bilstm", "crnn", "trocr_ft"]);
   const [preprocess, setPreprocess] = useState<string[]>(["deskew"]);
   const [correct, setCorrect] = useState(false);
   const [reference, setReference] = useState("");

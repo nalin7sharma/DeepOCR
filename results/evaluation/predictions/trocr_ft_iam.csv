@@ -1,0 +1,601 @@
+image_path,ground_truth,prediction,confidence,cer
+data/processed/iam/images/test/000002.png,"I don't think he will storm the charts with this one , but it 's a good start .","I don't think he will storm the charts with this one, but it's a good start.",0.9855,0.0
+data/processed/iam/images/test/000003.png,"CHRIS CHARLES , 39 , who lives in Stockton-on-Tees , is an accountant .","CHRISTS CHARLES, 39, who lives in Stockton-on - Tees, is an accountant.",0.8753,0.0597
+data/processed/iam/images/test/000007.png,He is also a director of a couple of garages . And he finds time as well to be a lyric,He is also a director of a couple of garages. And he finds time as well to be a lyric,0.9804,0.0
+data/processed/iam/images/test/000009.png,"The numbers include "" Scotland the Brave , "" "" Men of Harlech , ""","The numbers include ' Scotland the Brave, "" "" Men of Harbeck, """,0.8398,0.0476
+data/processed/iam/images/test/000014.png,"( B B C , 10.15 ) .","CBBE, 10. 15).",0.6026,0.3333
+data/processed/iam/images/test/000015.png,""" McNamara's Band , "" "" Greensleeves "" and "" English Rose . """,""" Mr Vamara's band, "" "" ' Everywhere "" and "" English base. """,0.7793,0.2712
+data/processed/iam/images/test/000023.png,"success last night in I T V's "" Private Potter , "" his","success last night in ITV's "" Private Potter, "" his",0.8609,0.0377
+data/processed/iam/images/test/000027.png,essay on soldiering which stated that a fighting,essay on soldiering which stated that a fighting,0.8829,0.0
+data/processed/iam/images/test/000030.png,affairs . The Wesker interview will be seen at a later,officers. The Wester Interview will be seen at a later-,0.8431,0.1321
+data/processed/iam/images/test/000033.png,"Potter screamed during an action , and was arrested . He","Potter screened during an action, and was arrested. He",0.93,0.037
+data/processed/iam/images/test/000039.png,to the European Common Market .,to the European Common Market,0.9884,0.0333
+data/processed/iam/images/test/000040.png,"scene , ranging from pubs , the Eton wall game ,","scenes ranging from pubs, the 6ton wall game,",0.8869,0.0444
+data/processed/iam/images/test/000048.png,Britain was slipping behind ... .,Britain was skipping behind.,0.9087,0.129
+data/processed/iam/images/test/000061.png,ALSO present is a London journalist who,Also present is a London journalist who,0.8648,0.0769
+data/processed/iam/images/test/000080.png,simple and coherent plan . To understand how,simple and coherent plan. To understand how,0.9985,0.0
+data/processed/iam/images/test/000087.png,text with absolute precision .,"text with absolute precision,",0.9319,0.0345
+data/processed/iam/images/test/000097.png,the original of the Gospel would be unmarked . The,the original of the Gospel would be unworked. The,0.8575,0.0408
+data/processed/iam/images/test/000101.png,columns . This is the invariable practice of ancient,columns. This is the unvariable practice of ancient,0.8731,0.0196
+data/processed/iam/images/test/000102.png,"whether paragraphed or not , would be laid out in","whether paragrapher met, would be said out in",0.83,0.125
+data/processed/iam/images/test/000103.png,"original of the Gospel , whether written on a roll or codex ,","original at the Europe, whether written on a roll or catch,",0.77,0.1864
+data/processed/iam/images/test/000109.png,and the sheet wound round this central pin . The roll made,and the sheet wound round this central pain. the roll made,0.8265,0.0351
+data/processed/iam/images/test/000114.png,The other form of book was the codex . In this the,The other form of book was the earlier. In this the,0.9419,0.1224
+data/processed/iam/images/test/000123.png,might be bulky . It is sometimes possible to tell,might be bulky. It is sometimes possible to tell,0.9681,0.0
+data/processed/iam/images/test/000129.png,while one whole side of his roll was unused .,while one whole side of his roll was unuczed.,0.7421,0.0455
+data/processed/iam/images/test/000131.png,"The verso of the roll was blank , and one","The verse of the roll was blank, and one",0.8924,0.025
+data/processed/iam/images/test/000132.png,"in the case of the single-sheet quire , an extra","in the case of the single-sheet quite, an extra",0.9223,0.0213
+data/processed/iam/images/test/000148.png,"all his heart , and with all his soul and",all his heart and with all his soul-and,0.8881,0.05
+data/processed/iam/images/test/000157.png,"This man is the worm , the creature that",This man is the worn the creature that,0.9561,0.0513
+data/processed/iam/images/test/000159.png,Such a Shamir possesses the real acid,such a Shamir possesses the real acid,0.8925,0.027
+data/processed/iam/images/test/000163.png,cuts and polishes Altar-Stones . Such,cuts and polishes Alter-stones. Such,0.8672,0.0556
+data/processed/iam/images/test/000164.png,heart of stone . This Shamir helps,heart of Stone. This Shamir helps,0.8678,0.0303
+data/processed/iam/images/test/000172.png,"refused , but it is to become the head-stone","refused, but it is to become the head-stone",0.971,0.0
+data/processed/iam/images/test/000178.png,"through the Shamir : "" That the earth shall be","through the Shamir: "" That the earth shall be",0.9122,0.0
+data/processed/iam/images/test/000181.png,They make us the Altar for God to emit,They awake us the letter for God to emit,0.7513,0.1579
+data/processed/iam/images/test/000182.png,a deep impression on our feelings and senses .,a deep impression on our feelings and senses.,0.8887,0.0
+data/processed/iam/images/test/000188.png,"the eve of the Sabbath , to bring the","the eve of the Sabbath, to bring the",0.9971,0.0
+data/processed/iam/images/test/000190.png,come across human Shamirs and they leave,come across hunger Shamirs and they leave,0.8002,0.1
+data/processed/iam/images/test/000193.png,"your soul . "" This may seem very good , but there","your soul. "" This only seen very good, but there",0.9077,0.0851
+data/processed/iam/images/test/000206.png,"individual "" .",individual ',0.8486,0.1538
+data/processed/iam/images/test/000208.png,"for himself only , instead of all to help to gather your","for himself only, instead of all to help to gather your",0.953,0.0
+data/processed/iam/images/test/000209.png,"and visionary power is not united , man will remain in his heart","and visionary power is not united, man will remain in his heart",0.9959,0.0
+data/processed/iam/images/test/000222.png,"that your heart be not deceived , and 1ye turn","that your heart be not deceived, and Iyer turn",0.9478,0.0444
+data/processed/iam/images/test/000230.png,yield not her fruit and lest 1ye perish quickly from off the,yield not her fruit and lost eye perish quickly from off the,0.8505,0.0333
+data/processed/iam/images/test/000233.png,"up these my words in your heart and in your soul . "" The text",up these my words in your heart and in your soul. ' the text,0.8035,0.0333
+data/processed/iam/images/test/000235.png,your heart and with all your soul and with all your might,your heart and with all your soul and with all your might,0.9621,0.0
+data/processed/iam/images/test/000238.png,"shall teach them to your children . "" And as we have go-","shall teach them to your children "" And as we have go-",0.9037,0.0182
+data/processed/iam/images/test/000240.png,them without visionary power .,them without visionary power.,0.9935,0.0
+data/processed/iam/images/test/000241.png,"to bind them for a sign upon your hand , that","the bird them for a sign upon your hand, that",0.8772,0.0682
+data/processed/iam/images/test/000242.png,"ne through the mill , we need not teach them","we through the will, we need not teach them",0.9499,0.0465
+data/processed/iam/images/test/000249.png,And the tsitsits had a message sealed inside the knots,And the tsitisits had a message sealed inside the knots,0.7629,0.0185
+data/processed/iam/images/test/000250.png,Charauses ( a kind of fruit mixture in likeness of the,Charasses ( a kind of fruit mixture in likeness of the,0.8275,0.0189
+data/processed/iam/images/test/000256.png,"We eat it . We accept it , to show we have self-control","We eat it. We accept it, to show we have self-control",0.9437,0.0
+data/processed/iam/images/test/000261.png,"facts "" together and explains them , represents the Oral","' acts "" together and explains them, represents the oral",0.7335,0.0545
+data/processed/iam/images/test/000263.png,Self-control gives us : Freedom to worship God . ( 3 ) Salt Water and Charauses :,Self-called gives us freedom to worship God. (3) Salt Water and Charauson.,0.7425,0.1447
+data/processed/iam/images/test/000264.png,ourselves and have peace with one-another . And the sweet,ourselves and have peace with one-author And the suret,0.8886,0.1071
+data/processed/iam/images/test/000272.png,"delight themselves in the abundance of Peace "" ( Psalm 37 ,","delighted themselves in the abundance of Peace ( Psalm it,",0.7197,0.1053
+data/processed/iam/images/test/000277.png,how to live and accept all the bitterness,how to live and accept all the bitterness,0.8964,0.0
+data/processed/iam/images/test/000279.png,is called : The Feast of Matzos . The,is called: The feast of Matzor. The,0.8466,0.0571
+data/processed/iam/images/test/000281.png,represents Remez ; ( 3 ) Dipping-in represents,represents (3) Boeing-in represents,0.6063,0.2558
+data/processed/iam/images/test/000282.png,that is hurled against us . The Salt-water,that is hurled against us. The Salt-water,0.9804,0.0
+data/processed/iam/images/test/000284.png,( 1 ) Matzo represents Peshat ; ( 2 ) Moraur,QI Matzo represents Peshat; QIMorour,0.6162,0.2051
+data/processed/iam/images/test/000285.png,Bitter-Herbs represent the spiritual,Bitter-Herbs represent the spiritual,0.9382,0.0
+data/processed/iam/images/test/000287.png,"freedoms "" which are Divine . There are four ways of","freedoms "" which are Divine. There are four ways of",0.8915,0.0
+data/processed/iam/images/test/000291.png,without which Society cannot make progress . And we drink,without which society cannot make progress. And we drive,0.9759,0.0536
+data/processed/iam/images/test/000293.png,burdens of Egypt : How was it that Israel was,burdens of Egypt. How was it that Israel was,0.9962,0.0227
+data/processed/iam/images/test/000298.png,brought out from under the burdens of Egypt ?,brought out from under the burdens of Egypt?,0.9694,0.0
+data/processed/iam/images/test/000299.png,"eating Matzos in Egypt and the "" Feast of Matzos ""","eating Matzos in Egypt and the "" Feast of Hatzos'",0.783,0.06
+data/processed/iam/images/test/000301.png,"James had grown up in Presbyterian Scotland ,","James had grown up in Presbyterian Scotland,",0.9974,0.0
+data/processed/iam/images/test/000309.png,They objected to the word Confirmation . So the phrase,They divided to the word Kauffman. She phrase,0.6185,0.3208
+data/processed/iam/images/test/000318.png,verily and indeed taken and received by the,# verify and indict taken and received by the,0.7965,0.1395
+data/processed/iam/images/test/000323.png,faithful in the Lord's Supper . ' It could hardly be more,faithful in the Lord's Supper. ' It could hardly be more,0.9479,0.0
+data/processed/iam/images/test/000327.png,In that year Shakespeare had just turned,In that year Shakespeare had just turned,0.9828,0.0
+data/processed/iam/images/test/000329.png,before . Bacon was at work and Milton was,before. Bacon was at work and Milton was,0.9431,0.0
+data/processed/iam/images/test/000331.png,"Charles , in whose reign came the Scottish","Charles, in whose reign came the Scottish",0.9963,0.0
+data/processed/iam/images/test/000336.png,first public acts was a hard-hitting battle with,first public acts was a hard-hitting battle with,0.8982,0.0
+data/processed/iam/images/test/000348.png,"altars and not any broken down , transportable","allars and not any broken down, transpartable",0.6858,0.0444
+data/processed/iam/images/test/000351.png,"to face their fears , to see through them and come out on the",to face their fears to see through them and come out on the,0.8633,0.0167
+data/processed/iam/images/test/000357.png,"that their fears are groundless , indeed to us they appear laughable ,","that their four are grandfather, indeed to us they appear laughable,",0.7401,0.1618
+data/processed/iam/images/test/000373.png,later chapter there are some situations,later chapter there are some situations,0.9456,0.0
+data/processed/iam/images/test/000379.png,"finally defeat us . More than that , that God","finally defeat Mr. More than that, that God",0.9684,0.0465
+data/processed/iam/images/test/000380.png,In Gethsemane He prayed that the cup,In Gentlemene He prayed that the cup,0.8377,0.1111
+data/processed/iam/images/test/000383.png,the way to face life . To see all the latent,the way to face life. To see all the latent,0.9205,0.0
+data/processed/iam/images/test/000384.png,"that , with Him , there is nothing that can","that with him, there is nothing that can",0.8919,0.0488
+data/processed/iam/images/test/000387.png,should pass from Him . Jesus shows us,should pass from this. Jesus shows us,0.8649,0.0833
+data/processed/iam/images/test/000397.png,"seen to be allies and not enemies and that ,",seem to be allies and not enemies are that.,0.7139,0.093
+data/processed/iam/images/test/000398.png,"nature knows better than we do , what it is to","mature known better than we do, what it is",0.8734,0.1111
+data/processed/iam/images/test/000402.png,"we face life boldly , many of the shadows are",we face like boldly many of the shadows are,0.8478,0.0455
+data/processed/iam/images/test/000404.png,only a disturbed tossing and turning,only a disturbed tossing and turning,0.9766,0.0
+data/processed/iam/images/test/000410.png,to understand this a little better when we,to understand this a little better whenever,0.9412,0.0714
+data/processed/iam/images/test/000414.png,a mother has news late at night that her,a mother has never look at myself that her,0.8688,0.3
+data/processed/iam/images/test/000419.png,noting the effect of a new stimulus on some-,asking the upset of a new film who on some-,0.8139,0.3182
+data/processed/iam/images/test/000420.png,bring on an almost immediate feeling of,bring on an almost immediate feeling of,0.9284,0.0
+data/processed/iam/images/test/000422.png,veritable surge of energy . Many a girl who,veritable surge of energy. Many a girl who,0.9923,0.0
+data/processed/iam/images/test/000425.png,up with no apparent tiredness at all when,up with no apparent tiredness at all when,0.8981,0.0
+data/processed/iam/images/test/000436.png,As we are unable to cure our own bodies,As we are unable to cure our own bodies,0.9224,0.0
+data/processed/iam/images/test/000437.png,They drag themselves around and can become,They drag themselves around and can become,0.922,0.0
+data/processed/iam/images/test/000439.png,"inability to deal with life , especially under",inability to deal with fifty especially more,0.6849,0.1556
+data/processed/iam/images/test/000443.png,One of the greatest steps forward that has been,One of the product star forward that has been,0.7377,0.1915
+data/processed/iam/images/test/000445.png,no major complication but results from an,a major completion but really from an,0.6454,0.2195
+data/processed/iam/images/test/000448.png,made this century is the way in which illness,made this century in Harvey in which illino,0.6475,0.2444
+data/processed/iam/images/test/000450.png,"months , even a Prime Minister could go to","months, even a Prime Minister could go to",0.987,0.0
+data/processed/iam/images/test/000457.png,far greater simplicity than their successors .,far greater simplicity than their successors.,0.9966,0.0
+data/processed/iam/images/test/000459.png,lived and died within the boundaries of,lived and died within the boundaries of,0.966,0.0
+data/processed/iam/images/test/000470.png,"In many cases , their homes know little of","In many cases, their homes know little of",0.9448,0.0
+data/processed/iam/images/test/000473.png,a ' double ' life without ever deliberately,a double life without ever deliberately,0.8782,0.093
+data/processed/iam/images/test/000474.png,of what is going on . It is easier to live life in,of what is going on its easier to live life in,0.8878,0.0816
+data/processed/iam/images/test/000492.png,The housewife would find life far less tiring,The humanity would find fifty for her hiring,0.6454,0.3111
+data/processed/iam/images/test/000496.png,aimlessly along is more wearying than any-,similarly along in more annoying than any-,0.8034,0.2381
+data/processed/iam/images/test/000498.png,I am more than conscious of this . How anybody,I am more than conscious of his. Now anybody,0.836,0.0444
+data/processed/iam/images/test/000511.png,"in a predetermined groove , I would","in a precise manned groove, I would",0.6875,0.1765
+data/processed/iam/images/test/000512.png,which it engenders . But I am not arguing,which it engenders. But I am not arguing,0.9771,0.0
+data/processed/iam/images/test/000516.png,knowing exactly what the subject,knowing exactly what the subject,0.9905,0.0
+data/processed/iam/images/test/000522.png,week being the same with a pupil,week being the same with a pupil,0.9961,0.0
+data/processed/iam/images/test/000523.png,Monday to Friday were days one,Monday to Friday were days one,0.9948,0.0
+data/processed/iam/images/test/000526.png,sympathy with the young wife,sympathy with the young wife,0.9969,0.0
+data/processed/iam/images/test/000536.png,the washing on a Monday .,he washing on a Monday,0.658,0.0833
+data/processed/iam/images/test/000537.png,"do , note the order in which they can most conveniently be","do, note the order in which they can must conveniently be",0.8707,0.0175
+data/processed/iam/images/test/000542.png,done ( or must be done because of other predetermined factors,done for must be done because of other predetermined factors,0.9481,0.0167
+data/processed/iam/images/test/000543.png,"the day without becoming exhausted , she will be well advised to","the day without becoming exhausted, she will be advised to",0.9266,0.0794
+data/processed/iam/images/test/000547.png,put all our energies into the particular,yet all our unfair into the particular,0.8592,0.2
+data/processed/iam/images/test/000551.png,the comment of Rami bar Rabh is quoted,the comment of Rami bar Rabb is quoted,0.8523,0.0263
+data/processed/iam/images/test/000567.png,( This is probably to be understood as a well-,It is is probably to be understood as a well-,0.9017,0.0667
+data/processed/iam/images/test/000572.png,There is no reference to the Mishnah here,There is no reference to the Mishnah here,0.8941,0.0
+data/processed/iam/images/test/000575.png,Name and the Gemara here quotes the,Name and the general were quotes the,0.8859,0.1429
+data/processed/iam/images/test/000586.png,expression appears to have been framed in,expression appears to have been framed in,0.973,0.0
+data/processed/iam/images/test/000604.png,a familiar interpretation which had,a familiar interpretation which had,0.9989,0.0
+data/processed/iam/images/test/000605.png,"itself was quoted , almost as if it were a","itself was greeted, almost as if it were a",0.9469,0.0976
+data/processed/iam/images/test/000607.png,and the court of Solomon . ' The place of this,and the court of Solomon. ' The place of this,0.963,0.0
+data/processed/iam/images/test/000611.png,"Palestinian teacher , R. Eleazar ( 3rd Cent. ) :","Palestinian teacher, R. Eleazar ( 3rd Cent. ).",0.8494,0.0227
+data/processed/iam/images/test/000618.png,has even stepped into the field of high fashion .,has even stepped into the field of high fashion.,0.9348,0.0
+data/processed/iam/images/test/000626.png,the ground as well as in midwater and,he ground as well as in mindwalker and,0.7946,0.1081
+data/processed/iam/images/test/000627.png,during the swim ( the swim at East Anglia,during the union ( the swim at East Topeka,0.7501,0.225
+data/processed/iam/images/test/000634.png,Thus we can see that herring,Thus we can see that heming,0.8138,0.0714
+data/processed/iam/images/test/000635.png,the herring spawn along the northern,her burning span along the northern,0.6744,0.1667
+data/processed/iam/images/test/000637.png,"shots are taken on the edges ) , the Gut ,","she's are taken on the edges, the Guy",0.6178,0.1282
+data/processed/iam/images/test/000645.png,spawning herring are always found .,spanning herring are always found.,0.9722,0.0294
+data/processed/iam/images/test/000647.png,"they migrate easterly to the Norwegian side , or westerly , until","they migrate easterly to the Norwegian side, or wertal, until",0.6859,0.0635
+data/processed/iam/images/test/000648.png,in the shallower water the mile wide layers disappear from the,in the challenger water the mile wide larger disappear from the,0.8696,0.1129
+data/processed/iam/images/test/000652.png,The joint evidence of echo-sounders,The joint evidence of echo-searchers,0.8745,0.1429
+data/processed/iam/images/test/000653.png,going to travel a hundred,going to travel a hundred,0.9859,0.0
+data/processed/iam/images/test/000654.png,shoals that gather at the Knoll or,should that gather at the hull or,0.7686,0.1471
+data/processed/iam/images/test/000656.png,"Drift Effects . At East Anglia , for instance ,","Drift effects. At East Anglia, for violence",0.6977,0.1591
+data/processed/iam/images/test/000662.png,So the arrival of any particular shoal,to the arrival of any particular school,0.9809,0.0789
+data/processed/iam/images/test/000666.png,fish at a certain spawning ground may,held at a certain spawning ground may,0.7033,0.1081
+data/processed/iam/images/test/000667.png,in ensuring that the fry after hatching,in measuring that the day after watching,0.7016,0.1282
+data/processed/iam/images/test/000670.png,the robin who gets back exactly may be,the role in who gets back exactly may be,0.9037,0.0789
+data/processed/iam/images/test/000675.png,be replaced by an underflow bringing,he replaced by an undelivery bringing,0.8042,0.1944
+data/processed/iam/images/test/000677.png,different winds . Strong westerlies,different winds. Strong weeklies,0.9237,0.0882
+data/processed/iam/images/test/000682.png,"course - one breeze will not do it ,","course - one lineage said not do it,",0.7789,0.2571
+data/processed/iam/images/test/000696.png,"wind you will "" set "" out - or drift to the east-","wind you will "" set "" out-or drift to the east-",0.9293,0.0408
+data/processed/iam/images/test/000701.png,in the constancy of this great herring fishery .,in the conspiracy of this great herring fishery.,0.8319,0.0851
+data/processed/iam/images/test/000713.png,The evidence suggest that the fish are,The evidence suggest that the fish are,0.9117,0.0
+data/processed/iam/images/test/000721.png,"the footrope , and presumably out of its","the factory, and apparently out of this",0.7663,0.4103
+data/processed/iam/images/test/000726.png,"field of disturbance , or bow wave . This suggests","field of disturbance, or how was. This regard",0.7467,0.2083
+data/processed/iam/images/test/000732.png,essential to catch round fish whose,"essential to catch round, fish whose",0.8928,0.0286
+data/processed/iam/images/test/000735.png,"small , a matter of a foot or two . With round","small, a matter of a foot or two with round",0.7826,0.0455
+data/processed/iam/images/test/000752.png,woman had been engaged once before - to a barman,woman had been engaged once before-to a borman,0.7989,0.0625
+data/processed/iam/images/test/000762.png,been broken off after one particular,been broken off after one particular,0.7068,0.0
+data/processed/iam/images/test/000778.png,sinister in the idea of tunnels . The building of,sinister in the idea of tunnels. The building of,0.9949,0.0
+data/processed/iam/images/test/000779.png,solution emerged . There has always been something,solution emerged. There has always been something,0.9932,0.0
+data/processed/iam/images/test/000780.png,yet so strange were the circumstances that it was,yet so strange were the circumstances that it was,0.9947,0.0
+data/processed/iam/images/test/000785.png,a further seven years before even a ghost of a,a further seven years before even a ghost of a,0.9981,0.0
+data/processed/iam/images/test/000786.png,them was one of the most dangerous jobs con-,than was one of the most dangerous jobs con-,0.9636,0.0455
+data/processed/iam/images/test/000788.png,Some thought that the result would be all,Some thought that the result would be all,0.9984,0.0
+data/processed/iam/images/test/000792.png,sorts of horrible illnesses brought on by the,sorts of horrible illnesses brought on by the,0.996,0.0
+data/processed/iam/images/test/000797.png,gave others a feeling of danger . A medical journal,gave others a feeling of danger. A medical journal,0.9067,0.0
+data/processed/iam/images/test/000808.png,"For all that , as far as England is concerned ,","For all that, as far as England is concerned,",0.9816,0.0
+data/processed/iam/images/test/000815.png,no doubt that the woman had been the victim,no doubt that the woman had been the victim,0.9758,0.0
+data/processed/iam/images/test/000816.png,"of foul play , the verdict brought in was that there","of fall play, the verdict & rough, in was that there",0.8609,0.098
+data/processed/iam/images/test/000818.png,Though in the minds of most people there was,Though in the minds of most people there was,0.9912,0.0
+data/processed/iam/images/test/000824.png,"Was it a case of suicide , where some unhappy soul","Was it a case of suicide, where some unhappy soul",0.9292,0.0
+data/processed/iam/images/test/000834.png,"almost tight enough to strangle her , and the ends","almost tight enough to strangle her, and the ends",0.9313,0.0
+data/processed/iam/images/test/000837.png,"this stretch of line , but no information was","this stretch of line, but no information was",0.9768,0.0
+data/processed/iam/images/test/000859.png,"Hone , that she was going for a walk , but would not be","Hove, that she was going for a walk, but would not be",0.8946,0.0189
+data/processed/iam/images/test/000861.png,"gone for long . According to Miss Hone , she had not been","gone for long. According to Miss House, she had not been",0.8946,0.0364
+data/processed/iam/images/test/000863.png,to which the Frenchman would not,to which the Frenchman would not-,0.9591,0.0312
+data/processed/iam/images/test/000865.png,SOME years ago a contemporary philosopher,SOME years ago a contemporary philosopher,0.996,0.0
+data/processed/iam/images/test/000868.png,told us that there was nothing an En-,told us that there was nothing an Eun-,0.7871,0.027
+data/processed/iam/images/test/000871.png,nothing the German would not covet ; and,"nothing the German would not covet, and",0.9788,0.0256
+data/processed/iam/images/test/000874.png,say ; nothing an Italian would not sing ; no,say nothing an Italian would not sing-no,0.752,0.0714
+data/processed/iam/images/test/000876.png,music to which the Frenchman would not dance ;,"music to which the Frenchman would not dance, '",0.9533,0.0667
+data/processed/iam/images/test/000877.png,SOME years ago a contemporary philosopher,Some years ago a contemporary philosopher,0.9735,0.0732
+data/processed/iam/images/test/000878.png,"many centuries ago , in some cave or hilly","many centuries ago, in some cave or hilly",0.9503,0.0
+data/processed/iam/images/test/000882.png,homely and protecting flame .,homely and protecting fame.,0.7351,0.0357
+data/processed/iam/images/test/000892.png,"in Paris , and even later our attractive young","in Paris, and even later our attraction young",0.9314,0.0444
+data/processed/iam/images/test/000896.png,important than the casual meetings of the present,important than the casual meetings of the present,0.9537,0.0
+data/processed/iam/images/test/000897.png,"persisted down the ages , the motive that preserved","persisted down the ages, the motion that preserved",0.9807,0.04
+data/processed/iam/images/test/000899.png,day ; the desire to share something more intimate,"day, the devil to share your living more intimate",0.7918,0.2292
+data/processed/iam/images/test/000900.png,them has always been the same . Apart from the need,than has always been the same. Great from the need,0.8234,0.12
+data/processed/iam/images/test/000903.png,"for nourishment , the instinct of hospitality has",for nourishment the instinct of hospitality has,0.9335,0.0208
+data/processed/iam/images/test/000912.png,The truth is that good food offers a,The truth is that good food affairs a,0.9955,0.0833
+data/processed/iam/images/test/000914.png,arts around them the diners were little,arts around them the dinner were little,0.8792,0.0513
+data/processed/iam/images/test/000915.png,"tongues ; unreasonable surfeit , too , in the","tongues, unreasonable surfeit, to, in the",0.801,0.0476
+data/processed/iam/images/test/000921.png,"those days , as ever , ate sparingly , but","those days, as ever, are sparingly, but",0.9401,0.0256
+data/processed/iam/images/test/000933.png,monstrous .,monstrous.,0.8781,0.0
+data/processed/iam/images/test/000934.png,grossness and delicacy - sought inspiration at last from,grasses and delicacy - sought inspiration at last from,0.9358,0.0536
+data/processed/iam/images/test/000938.png,intelligent selection and comparative,intelligent selection and comparative,0.9883,0.0
+data/processed/iam/images/test/000939.png,delicacy - sought inspiration at last from,delicacy- sought inspiration at Eastern,0.6166,0.1429
+data/processed/iam/images/test/000943.png,"Epicures and gourmands , sated by the","Epicures and downwards, sated by the",0.9012,0.1389
+data/processed/iam/images/test/000948.png,"make water hot by dropping a red-hot poker into it ,","make water hot by dropping a red-hot poker into it,",0.9558,0.0
+data/processed/iam/images/test/000953.png,then we hear of the fleshpots of Egypt after,then we hear of the fleshpots of Egypt after,0.9136,0.0
+data/processed/iam/images/test/000954.png,"Does one , however , know who first thought","Does one, however know who first thought",0.9739,0.0244
+data/processed/iam/images/test/000961.png,but Jacob must have had one that,but Jacobs must have had one that,0.9919,0.0312
+data/processed/iam/images/test/000963.png,"by dropping a red-hot poker into it ,","by dropping a red-hot polar into it,",0.855,0.0556
+data/processed/iam/images/test/000964.png,When Achilles gave a royal feast the principal dish,When Achilles gave a royal feast the principal dish,0.9887,0.0
+data/processed/iam/images/test/000969.png,way of cooking meat except by roasting and boiling .,way of cooking meat except by roasting and boiling,0.981,0.0196
+data/processed/iam/images/test/000970.png,embers wide ; Above the coals the smoking,embers wide: Above the coals the smoking,0.9046,0.025
+data/processed/iam/images/test/000975.png,"turns , And sprinkles sacred salt","turns, And sprinkles sacred salt",0.9483,0.0
+data/processed/iam/images/test/000978.png,from lifted urns .,from lifted units.,0.7322,0.1765
+data/processed/iam/images/test/000980.png,Above the coals the smoking fragment,Above-tho coals the smoking fragment,0.8385,0.0556
+data/processed/iam/images/test/000981.png,"dish was a grill , which he cooked himself ,","dish was a girl, which he coached himself,",0.8867,0.119
+data/processed/iam/images/test/000987.png,to their aid .,to their aid.,0.9968,0.0
+data/processed/iam/images/test/000996.png,By delicate application of odours and richly-distilled,By delicate application of odours and richly-distitled,0.9358,0.0185
+data/processed/iam/images/test/001000.png,of fruits .,of fruits.,0.9964,0.0
+data/processed/iam/images/test/001001.png,fainting appetite and added a more exquisite and,fainting appetite and added a more exquisite and,0.9355,0.0
+data/processed/iam/images/test/001003.png,ethereal enjoyment to the grosser pleasures of the,ethereal enjoyment to the grasser pleasures of the,0.9482,0.02
+data/processed/iam/images/test/001004.png,board . The gratification of the sense of smelling,board. The gratification of the sense of smelling,0.9926,0.0
+data/processed/iam/images/test/001009.png,"According to Pliny , and others , certain herbs","According to Pling, and others, certain hertas",0.6721,0.0667
+data/processed/iam/images/test/001011.png,is said that there is nothing new under,is said that there is nothing new under,0.9927,0.0
+data/processed/iam/images/test/001013.png,piece of resistance .,piece of resistance.,0.9987,0.0
+data/processed/iam/images/test/001016.png,A number of newly-born white mice served,A number of newly-born white mice served,0.9009,0.0
+data/processed/iam/images/test/001017.png,like a prairie oyster is considered a,like a prairie oyster is considered a,0.9579,0.0
+data/processed/iam/images/test/001019.png,"alive , dipped in treacle and swallowed","alive, dropped in Treoche and swallowed",0.8263,0.1316
+data/processed/iam/images/test/001021.png,roasted on the point of a spear are,roasted on the point of a repeat are,0.9032,0.0857
+data/processed/iam/images/test/001023.png,as an article of diet . So have the Japanese,"as an article of duet, So have the Japanese",0.8916,0.0465
+data/processed/iam/images/test/001024.png,Among the natives of Northern Australia lizards,Among the natives of Northern Australia Linzards,0.9804,0.0426
+data/processed/iam/images/test/001029.png,"it and dry it , in which form , dusted","it and dry it, in which form, dusted",0.7985,0.0
+data/processed/iam/images/test/001030.png,activities to a greater extent than is usually assumed .,activities to a greater extent than is usually assumed.,0.9742,0.0
+data/processed/iam/images/test/001044.png,celebrate the victory against the Turks in 1683 . Spanish,celebrate the victory against the Turks in 1683. Spanish,0.9611,0.0
+data/processed/iam/images/test/001062.png,proportion as exists among her,proportion as exists among her,0.9622,0.0
+data/processed/iam/images/test/001069.png,of good food and the gusto which they,of good food and the gusto which they,0.9956,0.0
+data/processed/iam/images/test/001070.png,There is the same finesse about their,There is the same finesse about their,0.9863,0.0
+data/processed/iam/images/test/001073.png,the gusto which they derive from gastronomy is intellectual,the gusto which they derive from gastronomy is intellectual,0.961,0.0
+data/processed/iam/images/test/001077.png,The French have an inborn appreciation of good food and,The French have an unborn appreciation of good food and,0.9768,0.0182
+data/processed/iam/images/test/001079.png,"The "" pot-au-feu "" is as much a national","The "" pot-au-feu"" is as much a national",0.8744,0.025
+data/processed/iam/images/test/001082.png,baisse and sang - This Bouillabaisse,basis. and sang - This Bouillabaisse,0.6194,0.0833
+data/processed/iam/images/test/001084.png,"a noble dish is , A sort of soup , or","a noble clash is, A sort of soup, or",0.9757,0.0857
+data/processed/iam/images/test/001085.png,"broth , or brew , A hotch-potch of all","broth, or brevo, A hatch-patch of all",0.9028,0.1111
+data/processed/iam/images/test/001086.png,among ourselves and it is prepared at,among ourselves and it is prepared at,0.9991,0.0
+data/processed/iam/images/test/001087.png,"could outdo ; Green herbs , red peppers ,","could out do, Green herbs, red peppers,",0.9018,0.0526
+data/processed/iam/images/test/001088.png,sorts of fishes That Greenwich never,sorts of fishes That Greenwich never,0.9811,0.0
+data/processed/iam/images/test/001093.png,"The "" pot-au-feu "" is as much a national institution","The "" got-au-fen"" is as much a national institution",0.8258,0.0577
+data/processed/iam/images/test/001094.png,"never could outdo ; Green herbs , red peppers , mussels ,","never could outto; been hurts, red peppers, mussels,",0.6971,0.0943
+data/processed/iam/images/test/001097.png,"household . Thackeray , of course , waxed enthusiastic","household. Thackeray, of course, waxed enthusiastic",0.9344,0.0
+data/processed/iam/images/test/001106.png,A fascinating study also opens up in,A fascinating study also opens up in,0.9992,0.0
+data/processed/iam/images/test/001113.png,welcomed by men of genius as well as the foods for,welcomed by men of genius as well as the foods for,0.8966,0.0
+data/processed/iam/images/test/001116.png,Dante Gabriel Rossetti had simple tastes,Dante Gabriel Rossetti had simple tastes,0.9121,0.0
+data/processed/iam/images/test/001125.png,without going through the formality of having his turbot,without going through the formality of having his twist,0.853,0.0714
+data/processed/iam/images/test/001127.png,dinner he is said to have been blind to the charms of,dinner he is said to have been blind to the shows of,0.8514,0.0755
+data/processed/iam/images/test/001134.png,"with Dickens says the menu was Whitstable oysters , a brown","with Dickens says the mean was whiteable oyster, a brain",0.7065,0.1379
+data/processed/iam/images/test/001136.png,placing his food in his mouth and gulping it down as,placing his food in his mouth and gulping it down as,0.8855,0.0
+data/processed/iam/images/test/001139.png,but all the Chelsea philosopher did in return was to,but all the fallen philosopher did in which was to,0.8249,0.2115
+data/processed/iam/images/test/001140.png,that he had dined with Longfellow told the sage a,that he had dined with Songfellow told the sage a,0.8015,0.0204
+data/processed/iam/images/test/001141.png,very funny story which made Carlyle absolutely laugh ;,very funny story which made Carlyle absolutely laugh;,0.8706,0.0
+data/processed/iam/images/test/001142.png,ask if his guest would have a cup of tea !,ask if his great would have a crypto tea!,0.6323,0.1463
+data/processed/iam/images/test/001144.png,It was naturally a highly popular victory with the,It was normally a highly popular victory with the,0.8916,0.08
+data/processed/iam/images/test/001155.png,"an elusive foe , and , afraid to return home without","an elusive fine, and, afraid to return home without",0.8954,0.04
+data/processed/iam/images/test/001163.png,fame and glory . Gaunt was compelled to return,fame and glory. Count was compelled to return,0.8039,0.0444
+data/processed/iam/images/test/001168.png,"plate and mail of French knights , a brilliant","later and much of Touch Knights, a brilliant",0.604,0.2222
+data/processed/iam/images/test/001169.png,became mere marauding route marches .,became more expanding route marches.,0.8553,0.1389
+data/processed/iam/images/test/001171.png,"after the event . It seems obvious that , though","after the event. It seems obvious that, though.",0.9654,0.0217
+data/processed/iam/images/test/001176.png,of the French war was a navy in unquestioned,of the French war was a very in UFOocotoms,0.6646,0.2955
+data/processed/iam/images/test/001186.png,In this cruel process which was,In this cruel process which was,0.9946,0.0
+data/processed/iam/images/test/001201.png,set aside . A modern government needs,set aside. A modern government needs,0.994,0.0
+data/processed/iam/images/test/001203.png,social services . A mediaeval oligarchy,social services. A medieval oligarchy,0.9163,0.0263
+data/processed/iam/images/test/001212.png,was quite alien to mediaeval thought - its,was quite alien to medical thought - its,0.9231,0.0714
+data/processed/iam/images/test/001216.png,"booty , a new group of Lords might oust","booty, a new group of Lords might oust",0.9738,0.0
+data/processed/iam/images/test/001223.png,When ' his ' war did not bring victory and,When ' his' war did not bring victory and,0.9234,0.0238
+data/processed/iam/images/test/001227.png,"towns , and the retainers and men-at-arms","towns, and the retainers and men-at-arms",0.971,0.0
+data/processed/iam/images/test/001229.png,' knaves ' - were villeins still tied to the,'knowes' - were villains still tied to the,0.9277,0.1136
+data/processed/iam/images/test/001231.png,journeymen and small tradesmen of the,journeymen and small tradesmen of the,0.9974,0.0
+data/processed/iam/images/test/001233.png,feudal obligations of work or villeins who,feudal obligations of work or villains who,0.9179,0.0238
+data/processed/iam/images/test/001240.png,"prices , quality and tax could be efficiently su-","prices, quality and have could be efficiently ru-",0.7479,0.0833
+data/processed/iam/images/test/001245.png,"the foreign merchants , with whom the King's","He foreign merchants, which whom the King's",0.8657,0.093
+data/processed/iam/images/test/001251.png,There were two other sources of public revenue -,there were two other sources of public revenue -,0.8877,0.0208
+data/processed/iam/images/test/001260.png,financial benefits of his position at the head,financial benefits of his position at the hood,0.871,0.0435
+data/processed/iam/images/test/001263.png,borders between private and public purse were,"borders between private and public, quite were",0.7466,0.0889
+data/processed/iam/images/test/001267.png,But this time there was a very interesting,Bad this time there was a very interesting,0.9258,0.0476
+data/processed/iam/images/test/001272.png,"of Canterbury and York were to pay ten marks ,","of Canterbury and York were to pay ten males,",0.9387,0.0444
+data/processed/iam/images/test/001277.png,Again the resentment was widespread and,Again the resentment was wide spread and,0.9751,0.0256
+data/processed/iam/images/test/001285.png,from the chronicles that this was a sordid,from the chronicles that this was a sordid,0.9851,0.0
+data/processed/iam/images/test/001286.png,merchants who could tempt court and,merchants who could tempt court and,0.9941,0.0
+data/processed/iam/images/test/001287.png,baronage with rarer luxuries than those,baronage with rarer luxuries than those,0.9386,0.0
+data/processed/iam/images/test/001289.png,those charged with the crime . It is clear,those charged with the crime. It is clear,0.9353,0.0
+data/processed/iam/images/test/001293.png,"John de Kyrkby , a Londoner , was one of","John de Kyrkby, a Londoner, was one of",0.9667,0.0
+data/processed/iam/images/test/001296.png,"carrying it into effect , and a subordinate","carrying it into effect, and a subordinate",0.758,0.0
+data/processed/iam/images/test/001300.png,objections to the first two poll-taxes was,objections to the first two full-twas was,0.7097,0.119
+data/processed/iam/images/test/001310.png,its ventricles decrease in volume and it expels its,its ventricles decrease in volume and it expels its,0.9375,0.0
+data/processed/iam/images/test/001320.png,"and of the artery-like vein , and expulsion of the","and of the artery-like vein, and expulsion of the",0.9912,0.0
+data/processed/iam/images/test/001328.png,of blood from the wound . Arterial diastole is,of blood from the ward. Arterial diastole is,0.8286,0.0667
+data/processed/iam/images/test/001329.png,"hindered by compression , infarction or inter-","hindered by compression, injunction or inter-",0.863,0.0667
+data/processed/iam/images/test/001337.png,ventricular one slowly and,ventricular one slowly but and,0.682,0.1538
+data/processed/iam/images/test/001345.png,"of the working class to control their own destiny , and","of working later to control there own destiny, and",0.8032,0.1852
+data/processed/iam/images/test/001353.png,"mix 100 stone of bread in 12 hours , and Kate served in the","mix too stone of bread in 1840ours, and Kate settled in the",0.6755,0.1552
+data/processed/iam/images/test/001354.png,Soon they were good enough to sing at meetings .,Soon they were good enough to sing at meetings,0.8522,0.0213
+data/processed/iam/images/test/001356.png,"clothing , with which they wore a white tie","clothing, or with which they wore a white Die",0.9151,0.0952
+data/processed/iam/images/test/001357.png,One of the helpful by-products was that,One of the helpful by products was that,0.9574,0.0256
+data/processed/iam/images/test/001361.png,"better appearance . Later , on many a sunny Sunday","better appearance. Later, on many a sunny Sunday",0.943,0.0
+data/processed/iam/images/test/001367.png,As they became known the Choir went to working-,as they became known the choir went to working-,0.8794,0.0426
+data/processed/iam/images/test/001373.png,"George , and another the dark-haired","George, and another the dark-haired",0.9342,0.0
+data/processed/iam/images/test/001376.png,"He christened the babies . Also , when","He christened the ladies, who, when",0.7734,0.1667
+data/processed/iam/images/test/001379.png,little granddaughter of Charlie Grant .,' little granddaughter of & Charlie Grant.,0.6488,0.1053
+data/processed/iam/images/test/001385.png,"Conrad Noel , the eloquent leader of","Counsel took, he eloquent best lands of",0.5444,0.4571
+data/processed/iam/images/test/001390.png,mined and obdurate in their attitude that,unused and obstinate in their attitude that,0.9087,0.1951
+data/processed/iam/images/test/001394.png,"had said , ' Mr. Barton would go to the poll .","had said, Mr. Barton would go to the poll.",0.9606,0.0455
+data/processed/iam/images/test/001405.png,"with a book on the life of Marx ,","will a look on the life of black,",0.6284,0.2188
+data/processed/iam/images/test/001409.png,into it .,into it.,0.9739,0.0
+data/processed/iam/images/test/001416.png,"co-operated , we made the little side chapel a place","co-operated, we made the little side chapel a place",0.9763,0.0
+data/processed/iam/images/test/001430.png,found many to help . Gifts of candlesticks and,found many to help. Gifts of candlesticks and,0.9366,0.0
+data/processed/iam/images/test/001433.png,such a beautiful building with suitable fittings ; I made,such a beautiful building with suitable fittings. I-made,0.9123,0.0357
+data/processed/iam/images/test/001439.png,It was very interesting to have the privilege of filling,It was very interesting to have the privilege of filling,0.9963,0.0
+data/processed/iam/images/test/001449.png,in the winter of 1914 and 1915 the matter of War Pensions,in the winter of 1914 and 1915 the matter of War Pensions,0.9776,0.0
+data/processed/iam/images/test/001452.png,"the Committee . We had a splendid body of local residents ,",the Committee. We had a splendid body of local residents,0.9693,0.0175
+data/processed/iam/images/test/001456.png,life .,life.,0.9316,0.0
+data/processed/iam/images/test/001466.png,to Douglas Kinnaird saying that it was incorrect,to Douglas Claimwind saying that it was incorrect,0.8909,0.1458
+data/processed/iam/images/test/001471.png,"knew perfectly well that Byron , as early","knew perfectly well that Byron, as early",0.8931,0.0
+data/processed/iam/images/test/001482.png,became great sighs of ecstacy .,because a good nails of extravagant,0.4698,0.7
+data/processed/iam/images/test/001483.png,"and came into the livingroom , where","and come into the living room, where",0.786,0.0571
+data/processed/iam/images/test/001487.png,"his entrance . He came , almost falling","his evidence. He came, whom falling",0.7934,0.2432
+data/processed/iam/images/test/001492.png,"forward in an ungainly shuffle , neck","found in an ungainly she, the neck",0.8374,0.2778
+data/processed/iam/images/test/001494.png,""" They have come ! "" he said reverently , gripping his","they have come ! "" he said reverently, gripping his",0.8941,0.0577
+data/processed/iam/images/test/001495.png,"transcendent event , the exalted desire of all","transcendent event, the exalted desire of all",0.9839,0.0
+data/processed/iam/images/test/001513.png,"Deadly stillness , deadly portent !","Deadly stillness, deadly portent!",0.8129,0.0
+data/processed/iam/images/test/001514.png,Steve awakened early and switched on,Steve awakened early and switched on,0.9628,0.0
+data/processed/iam/images/test/001517.png,Coming around the great mass of the Chateau,Coming around the great mass of the Chateau,0.9487,0.0
+data/processed/iam/images/test/001530.png,people - who are probably falling all over them-,people - who are probably falling all over them-,0.9412,0.0
+data/processed/iam/images/test/001532.png,Thetans discover our mental independence,Mechanisms discover our mental independence,0.4813,0.175
+data/processed/iam/images/test/001551.png,working out . It occurred to Steve that this may,working out. It occurred to Steve that this may,0.9812,0.0
+data/processed/iam/images/test/001553.png,"preoccupied , and it seemed that the","preoccupied, and it seemed that the",0.9813,0.0
+data/processed/iam/images/test/001555.png,to offer any greeting . He was deeply,to offer any greting. He was deeply,0.734,0.0278
+data/processed/iam/images/test/001557.png,foot to Dan's house . Dan came,foot to Dan's house. Dan came,0.9579,0.0
+data/processed/iam/images/test/001564.png,"of their presence . They just stared at him , turning","of their presence. They just starred at him, turning",0.8961,0.0196
+data/processed/iam/images/test/001567.png,their heads like tennis spectators as he walked up and,their heads like tennis spectators as he walked up and,0.9899,0.0
+data/processed/iam/images/test/001569.png,"down , up and down .","down, up and down.",0.9075,0.0
+data/processed/iam/images/test/001573.png,communication and of a vague,communication and of a vague,0.9458,0.0
+data/processed/iam/images/test/001577.png,impatience pending an awaited,impotience penciling an avail,0.5593,0.2759
+data/processed/iam/images/test/001578.png,"Finally , being so obviously on their own ,","Finally, being so obviously on their own,",0.9957,0.0
+data/processed/iam/images/test/001600.png,"Heaven alone knew when , if ever , he would be","Heaven alone knew nothing, I ever, he would be",0.7702,0.1591
+data/processed/iam/images/test/001621.png,sphere of the sun . A matter which on Earth would hardly,where of the sure. I matter which on Earth could hardly,0.8002,0.1091
+data/processed/iam/images/test/001622.png,penetrate beyond the minds of astronomers was of general,",evaluate beyond the minds of astronomers was of general",0.795,0.0893
+data/processed/iam/images/test/001633.png,"used in the last few wars , but it seemed very probable",used in the last day for were. but I seemed very probable,0.6833,0.2037
+data/processed/iam/images/test/001635.png,"Sally "" - here she had dropped her voice in homage to the","Sally "" here she had dropped her voice in homage to the",0.8565,0.0351
+data/processed/iam/images/test/001636.png,"country lawyer , and we were very small 4microdebs , weren't we ,","country lawyer, and we were very small Africans, when two,",0.8078,0.2097
+data/processed/iam/images/test/001637.png,"duties and his wife , in the manner of middle-brow","duties and his wife, in the manner of middle-brow",0.8701,0.0
+data/processed/iam/images/test/001638.png,we might get GO a bit better if he entered politics .,we might get 670 a bit better if he entered politics.,0.9187,0.0577
+data/processed/iam/images/test/001643.png,"at the same time a door banged - "" but don't","at the same time a door banged - "" but don't",0.9262,0.0
+data/processed/iam/images/test/001644.png,"got all these lovely things "" - she waved a","got all these lovely things "" - she waved a",0.8837,0.0
+data/processed/iam/images/test/001649.png,"say a word about it , Lester wants his","say a word about it, Lester wants his",0.9977,0.0
+data/processed/iam/images/test/001650.png,"That 's how he got the votes , that 's how","That's how he got the votes, that's how",0.9979,0.0
+data/processed/iam/images/test/001654.png,"openness and freshness , though perhaps not the same","openness and freshness, though perhaps not the same",0.857,0.0
+data/processed/iam/images/test/001664.png,which might in time become social fact,which might in time become social fact,0.9869,0.0
+data/processed/iam/images/test/001665.png,The political life of Aristotle looked more and more,The political life of Aristotle looked more and more,0.9198,0.0
+data/processed/iam/images/test/001668.png,first two centuries ?,girl too centuries?,0.7406,0.2
+data/processed/iam/images/test/001670.png,trans-economic .,knowing - even on it.,0.4252,0.9333
+data/processed/iam/images/test/001673.png,neurosis and not in some eruption from those,new basis and not in some eruption from these a,0.691,0.1591
+data/processed/iam/images/test/001684.png,of the jungle . ' Think there 's Indians,of the jungle. Think there's Indians,0.9529,0.0526
+data/processed/iam/images/test/001687.png,edge ... did you notice ? And the mules,edge. .. did you notice ? And the mules,0.8386,0.0
+data/processed/iam/images/test/001689.png,carefully casual . ' The servants are all on,"carefully casual, "" The servants are all on",0.8163,0.0465
+data/processed/iam/images/test/001698.png,"feeling , like I always get when something","feeling, the I always get when something",0.8103,0.0732
+data/processed/iam/images/test/001700.png,on the cosmic handiwork . ' All those stars . But I 'm,on the cosmic handiwork. ' All those stars. But I'm,0.8635,0.0
+data/processed/iam/images/test/001704.png,shadows beyond the river . ' Something moved . ',shadows beyond the river. ' Something moved. ',0.8899,0.0
+data/processed/iam/images/test/001718.png,would be inopportune ; and with the idea came,"would be inoperative, and will be idea come",0.763,0.25
+data/processed/iam/images/test/001719.png,Mr Septimus stood in the same case as,Mr Septimus stood in the same case as,0.9873,0.0
+data/processed/iam/images/test/001723.png,"Sally and of course Mrs Septimus , for surely","Sally and of course Mrs Septimus, for surely",0.9866,0.0
+data/processed/iam/images/test/001729.png,"thoughtful , but that was his habit . Indeed","thoughtful, but that was his habit. Indeed",0.9474,0.0
+data/processed/iam/images/test/001730.png,"for such protection as our presence , or Mrs",for such protection as our presence. or Mrs,0.8915,0.0233
+data/processed/iam/images/test/001732.png,"mood . Even the Indian servants relaxed , knowing ,","mood. Even the Indian servants released, knowing,",0.7979,0.0417
+data/processed/iam/images/test/001733.png,observation I permitted myself unruffled ;,"observation I permitted myself unruffled,",0.8674,0.0244
+data/processed/iam/images/test/001734.png,"so Mr Gilberto told us , that the wild and","so Mr Gilberts told us, that the wild and",0.8839,0.0244
+data/processed/iam/images/test/001735.png,But after what Mrs Caine had said it was never,But after what Mrs Caine had crucial it was never,0.8546,0.1304
+data/processed/iam/images/test/001742.png,heart that Morfydd was leaving him as surely as she was leaving Dinas .,heart that halflift was having been as rarely as she was being studied.,0.5413,0.3571
+data/processed/iam/images/test/001748.png,"on those fifteen miles of mountain roads , it disappeared from the earthly","on three fifteen miles of mountain roads, it disappeared from the earthly",0.6665,0.0274
+data/processed/iam/images/test/001752.png,""" Don't want to take too much notice of those old timetables , "" Ifor said ,",""" Isn't sent to talks too much notice of those old triathletes, "" Her mind,",0.6351,0.2568
+data/processed/iam/images/test/001755.png,"supposed to leave at two-twenty . "" "" Who says so ? "" "" Your timetable . ""","supposed to have at two-trusty. "" "" novels says so "" "" you turn trouble, """,0.4894,0.3099
+data/processed/iam/images/test/001761.png,""" And what are you going to do about it ? "" Tendentious , Mr. Roberts sounded .",""" And that are you going to be about "" it I'm featured, Mr. Roberts scandal",0.578,0.2895
+data/processed/iam/images/test/001766.png,"robbers , or being whisked off to Emergency","robbers, or being whisked off to Emergency",0.984,0.0
+data/processed/iam/images/test/001767.png,"was , as he feared , departed out of his life ,","was, as he feared, departed out of his life,",0.9501,0.0
+data/processed/iam/images/test/001780.png,""" Where are we going , Mam ? "" inquired little",""" Where are we going, Mann? "" inquired little",0.8383,0.0455
+data/processed/iam/images/test/001781.png,""" Damned if I know , boy , "" said the driver .","' Damned if I know, boy "" said the driver.",0.9491,0.0465
+data/processed/iam/images/test/001787.png,"happened , if you ask me . ""","happened, if you ask me. """,0.943,0.0
+data/processed/iam/images/test/001788.png,""" Where are we going ? "" he echoed Cadwallader .",""" Where are we going? "" he echoed Cadwallade.",0.7136,0.0217
+data/processed/iam/images/test/001795.png,"he cried . "" Never mind your immortal","he cried. "" Never mind your immortal",0.9351,0.0
+data/processed/iam/images/test/001802.png,""" It 's all very well , "" commented",""" It's all very well, "" commented",0.9908,0.0
+data/processed/iam/images/test/001810.png,though half an hour ago she had,though half an hour ago she had,0.99,0.0
+data/processed/iam/images/test/001812.png,Morfydd Owen was silent . But she,Morfydd Owen was silent. But she,0.9003,0.0
+data/processed/iam/images/test/001813.png,would never see her Dai again . And,would never see her Dai again. And,0.9932,0.0
+data/processed/iam/images/test/001816.png,weep ...,every. ...,0.2516,0.7143
+data/processed/iam/images/test/001827.png,"Joy . At last he caught up Mr. Roberts ,","Joy. At last he caught up Mr. Roberts,",0.9321,0.0
+data/processed/iam/images/test/001838.png,"herself up proper ... Getting dark , now .","herself up proper. .. Getting dark, now.",0.8383,0.0
+data/processed/iam/images/test/001840.png,brooding in her shroud of mist .,brooding in her shroud of mist.,0.989,0.0
+data/processed/iam/images/test/001844.png,"looked at his forlorn flock . "" What","looked at his forlorn Glock. "" What",0.9413,0.0286
+data/processed/iam/images/test/001850.png,On the back seat Stan Hayball embraced,On the Irish seat Stan Playball embraced,0.7198,0.1842
+data/processed/iam/images/test/001858.png,"They looked at him , sullen . His heart","They looked at him, seldom. His heart",0.9056,0.1081
+data/processed/iam/images/test/001859.png,hurrying blur that was past and gone,hurrying their that was part and gone,0.9192,0.1389
+data/processed/iam/images/test/001864.png,"through empty space . "" Thank you , "" the Rev.","through empty space. "" Thank you, "" He Rev.",0.9035,0.0455
+data/processed/iam/images/test/001866.png,"Edwards said courteously . "" Secondly , we must","Edwards said controversy. "" Secondly, we must",0.7958,0.1556
+data/processed/iam/images/test/001870.png,"Stared back did Price the Provisions , unwinking .","Stand back did Price the Promised, unwisiding.",0.6097,0.2083
+data/processed/iam/images/test/001873.png,""" Now , who has any food ? "" he asked hopefully .",""" Now, who has any food? "" he asked hope fully.",0.8272,0.0217
+data/processed/iam/images/test/001878.png,"list , pushed his glasses up on his nose , and","list, quoted his glasses up on his more, and",0.8813,0.1136
+data/processed/iam/images/test/001880.png,"two pounds marge , one tin pineapple , one York ham . ""","he found, maize, one his pineapple, one York Ham. """,0.6789,0.1923
+data/processed/iam/images/test/001882.png,the Heavy World become changed . Some die . Most live,the Heavy World become changed. Some die Most live,0.9656,0.0196
+data/processed/iam/images/test/001886.png,"rays , not seen or felt , which change our bodies .","rays, not seen or felt, which change our bodies",0.9684,0.0208
+data/processed/iam/images/test/001894.png,"change . ' ' I cannot know what he says , ' Haris said","change. ' "" I cannot know what he says, ' ' Harris said",0.8272,0.0769
+data/processed/iam/images/test/001895.png,heedlessly thrown down their souls .,Needless thrown down their souls.,0.9219,0.0857
+data/processed/iam/images/test/001903.png,as we are . Some may be born right . ',as we are. Some may be born right. ',0.9456,0.0
+data/processed/iam/images/test/001904.png,babies may be born with wings . ' The Captive with,babies may be born with wings. ' The Captive with,0.977,0.0
+data/processed/iam/images/test/001905.png,"the boneless arms added , ' Some may be born wrong ,","the boness arms added, ' Some may be born wrong,",0.8886,0.04
+data/processed/iam/images/test/001909.png,in life . To know is also good . Because we cannot move,in life. To know is also good. Because we cannot move,0.9054,0.0
+data/processed/iam/images/test/001913.png,Chief Captive said . Suddenly his second head roused,Chief Captive said. Suddenly his second head roused,0.9711,0.0
+data/processed/iam/images/test/001918.png,Captives rule the True World ? ' Lily-yo asked,Captives rule the True World? ' Lily-yo asked,0.9632,0.0
+data/processed/iam/images/test/001928.png,from harm . ',from harn.',0.6413,0.1667
+data/processed/iam/images/test/001937.png,"asked . ' What else ? Flor and Lily-yo , you arrive","asked ' What else? Flor and Lily-yo, you arrive",0.9069,0.0208
+data/processed/iam/images/test/001938.png,gasped Flor . ' Yes . We plan to attack the Heavy,gasped Flor. Yes. We plan to attack the Heavy,0.9884,0.0426
+data/processed/iam/images/test/001939.png,World . You must help to lead our force . ' The long,world. You must help to lead our farce. ' The long,0.92,0.04
+data/processed/iam/images/test/001945.png,new flesh and tendon strengthened . To sail up in the,new flesh and tendon strengthened. To sail up in the,0.9959,0.0
+data/processed/iam/images/test/001947.png,and Haris there were many events . Chief of these was,and Haris there were many events. Chief of these was,0.9541,0.0
+data/processed/iam/images/test/001953.png,"the creatures participating in them . For Lily-yo , Flor","the creatures participating in them. For Lily-yo, Flor",0.9908,0.0
+data/processed/iam/images/test/001972.png,uneventful life had he come across a girl who,un eventful life had become a corsage who,0.6781,0.2444
+data/processed/iam/images/test/001985.png,physical features were distinguishable solely by,physical features were distinguished solely by,0.9696,0.0833
+data/processed/iam/images/test/001989.png,ground immediately ahead .,ground immediately ahead.,0.9987,0.0
+data/processed/iam/images/test/001990.png,make a direct comparison between the radar,make a direct comparison between the radar,0.999,0.0
+data/processed/iam/images/test/001991.png,"left , Milan . The directional angle of the","left, Milan. The directional angle of the",0.7724,0.0
+data/processed/iam/images/test/001994.png,In the exceptional clarity he was even able to,In the exceptional charity he was even able to,0.9904,0.0217
+data/processed/iam/images/test/002002.png,"He was able to pick out towns , unrecognisable to the","He was able to pick out towns, unrecognizable to the",0.9786,0.0192
+data/processed/iam/images/test/002022.png,"thought he could recognise the route of N12 ,",thought he could recognise the right of Native,0.7102,0.2045
+data/processed/iam/images/test/002025.png,of the journey back to the place where every,"of the journey back to the place where, every",0.943,0.0227
+data/processed/iam/images/test/002045.png,"He told her nonchalantly , as he led the way to his","He told her nonchalantly, as he led the way to his",0.9983,0.0
+data/processed/iam/images/test/002051.png,for me and fetch her . He brought her to the party,for me and fetch her. He brought her to the party,0.8988,0.0
+data/processed/iam/images/test/002060.png,Hubert would have betaken himself and his well-,Hubert would have beaten himself and his well-,0.8557,0.0426
+data/processed/iam/images/test/002068.png,For the time being Beryl was content to let,For the time being Beryl was content to let,0.9198,0.0
+data/processed/iam/images/test/002070.png,it out with Piers when a reasonable,it out with Piers when a reasonable,0.9656,0.0
+data/processed/iam/images/test/002071.png,learn that he could not treat her,Learn that he could not treat her,0.9873,0.0303
+data/processed/iam/images/test/002073.png,her great disappointment at being,her great disappointment at her,0.8051,0.1212
+data/processed/iam/images/test/002078.png,"conversation that evening , for when","conversation that evening, for when",0.8821,0.0
+data/processed/iam/images/test/002080.png,"Blanche and Jack left , he went with","Blanche and Jack left, he what with",0.8943,0.0571
+data/processed/iam/images/test/002081.png,on his taking her out in the jeep -,on his talking her out in the jeep-,0.9619,0.0571
+data/processed/iam/images/test/002087.png,"With an air of resignation he sent Judy , his","With an air of resignation he sent Judy, his",0.9931,0.0
+data/processed/iam/images/test/002088.png,"like an ineffective imbecile . ""","like an ineffective umbrella. """,0.97,0.1613
+data/processed/iam/images/test/002094.png,you the best way I can by getting hold of Jack,you the best way I can by getting told of Jack,0.9221,0.0217
+data/processed/iam/images/test/002095.png,"fault . ""","fault. """,0.8537,0.0
+data/processed/iam/images/test/002106.png,to understand all the whys and,to understand all the whys and,0.9981,0.0
+data/processed/iam/images/test/002112.png,""" As your employee it 's not my business",""" As your employee it's not my business",0.9945,0.0
+data/processed/iam/images/test/002120.png,"idyllic surroundings . "" "" How dare you say","idyllic surroundings. "" "" How dare you say",0.9283,0.0
+data/processed/iam/images/test/002122.png,"such a thing ? "" she blazed . "" For goodness'",such a thing ! ' she blazed. ' For goodness ',0.8538,0.093
+data/processed/iam/images/test/002130.png,"time originally arranged , Sir John would","time originally arranged, Sir John could",0.8911,0.025
+data/processed/iam/images/test/002136.png,"flamingoes our first morning on the island . ""","them ignores our first morning on the island. """,0.6952,0.1556
+data/processed/iam/images/test/002142.png,Graybury is one of Mr. Hewson's most,brewery is one of Mr. Hecosse's most,0.6462,0.25
+data/processed/iam/images/test/002162.png,put her interests before my own .,put her interests before any occom.,0.7371,0.1875
+data/processed/iam/images/test/002167.png,"and warm sympathy , as she explained","and warm sympathy, as she explained",0.9984,0.0
+data/processed/iam/images/test/002168.png,to have been guests at yesterday's,to have been guests at yesterday's,0.9979,0.0
+data/processed/iam/images/test/002173.png,Their air of smiling somnolence showed them,Their air of smiling somulence showed them,0.8512,0.0465
+data/processed/iam/images/test/002176.png,"toothless mouth stretched in a wide grin , told her","toothless manth stretched in a wide gain, told her",0.811,0.06
+data/processed/iam/images/test/002182.png,"And then she received a jolt . Old Hubert , standing","and then she received a jolt. Old Hubert, standing",0.9131,0.02
+data/processed/iam/images/test/002188.png,"took the highest pride in keeping her word . "" I","took the highest pride in keeping her word. "" I",0.9414,0.0
+data/processed/iam/images/test/002197.png,"judge always had on the table at dinner , he",judge ations had on the table at dinner the,0.661,0.1395
+data/processed/iam/images/test/002200.png,"of a mile and a half , came the yawl under her full","of a mile and a half, came the girl marks his full",0.8148,0.2
+data/processed/iam/images/test/002203.png,close to the rocks that it would be dashed,close to the roads that it would be dashed,0.8294,0.0476
+data/processed/iam/images/test/002206.png,What does time mean when weighed against the life of,What does the man when weighed against the life of,0.8839,0.0577
+data/processed/iam/images/test/002208.png,"two human beings ? "" Not until he was certain that the","two human bearings? "" Not until he was certain that the",0.9133,0.0377
+data/processed/iam/images/test/002209.png,"by trying to come home now , even if he did promise ?","by trying to come home now, even if he did promise?",0.9496,0.0
+data/processed/iam/images/test/002210.png,empty his lungs of stifling air and refill them,empty his lungs of stiff air and refill them,0.6898,0.0851
+data/processed/iam/images/test/002213.png,yawl recover .,yast recover.,0.7068,0.1538
+data/processed/iam/images/test/002215.png,black eyes showing any emotion . With a,black eyes shosing any emotion. With a,0.8181,0.0263
+data/processed/iam/images/test/002221.png,jibbing the boom to which he had the,jibbing the boom to which he had the,0.8692,0.0
+data/processed/iam/images/test/002223.png,It seemed to the frightened judge,It seemed to the frightened judge,0.8798,0.0
+data/processed/iam/images/test/002226.png,"with the tiller still hard over , brought","with the killer still hard over, brought",0.9393,0.025
+data/processed/iam/images/test/002233.png,"that were a little unsteady , they","that were a little unsteady, they",0.9887,0.0
+data/processed/iam/images/test/002234.png,"He plenty smart though . "" As they","be plenty smart thoughts. "" As they",0.7172,0.0909
+data/processed/iam/images/test/002235.png,"reached the pier , the judge on legs","reached the pier, the judge an legs",0.7936,0.0286
+data/processed/iam/images/test/002245.png,water in her . I wouldn't be,wrote in her. I wouldn't be,0.8252,0.1111
+data/processed/iam/images/test/002252.png,Buck would be wetter if he,God would be writes if he,0.6992,0.2692
+data/processed/iam/images/test/002255.png,"man at catch 'em than Injun , Judge .","man at catch 'em than Arjun, Judge.",0.7979,0.0571
+data/processed/iam/images/test/002260.png,You look . Little one more as fifteen,You look. Little one more as fifteen,0.9585,0.0
+data/processed/iam/images/test/002262.png,With four doing the job and the waves,With four doing the jobs and the waves,0.9061,0.027
+data/processed/iam/images/test/002264.png,few moments later the yawl was upside,few moments later the youth was again,0.8412,0.2432
+data/processed/iam/images/test/002267.png,""" By George , that is a beautiful string of fish ! ""","By George, that is a beautiful or large of fish. """,0.7652,0.2
+data/processed/iam/images/test/002269.png,"with tears . "" It 's so unfair , "" she said .","with fears. "" It's own fairy "" she said.",0.8037,0.1463
+data/processed/iam/images/test/002271.png,"don't you ? "" John gave a short laugh . "" I did , "" he","don't you? "" John gave a short laugh. "" I did, ' he",0.8677,0.0196
+data/processed/iam/images/test/002272.png,"said ; "" but I 'd better stop thinking that now .","said ; "" but I'd better shop thinking that man.",0.8137,0.087
+data/processed/iam/images/test/002277.png,""" That little beast Robbie Munyard spent six",""" That little last Robbie Munyard open to six",0.7553,0.1136
+data/processed/iam/images/test/002282.png,bombs during the last war . Having deposited his,bombs during the last ever. Having deposited his,0.9134,0.0638
+data/processed/iam/images/test/002284.png,"empty , save for the lady known by all habitue","empty, save for the Lady Ransom by all habitue",0.808,0.1333
+data/processed/iam/images/test/002290.png,"*?2s as ' Seaweed ' , and a youngish , sharp-eyed","# 2, As "" Seaseed ', and a youngish, sharp-eyed",0.6495,0.1277
+data/processed/iam/images/test/002294.png,"memory was good , so was this stranger's .","money was good, so was this stranger's",0.8833,0.125
+data/processed/iam/images/test/002298.png,must have been worth a great deal to the proprietors,must have been worth a great deal to the proprietors,0.9753,0.0
+data/processed/iam/images/test/002299.png,glance at him . Evidently the other occupant,glance at him. Evidently the other occupant,0.9839,0.0
+data/processed/iam/images/test/002300.png,"gin ? "" He turned to Seaweed -","gin? "" He turned to Seaweed-",0.7819,0.0345
+data/processed/iam/images/test/002307.png,inside a submarine casing to defuse a Jerry,inside a submarine causing to defuse a Jerry,0.9165,0.0233
+data/processed/iam/images/test/002316.png,was . I 'm Ian Bawley . Does that mean anything,was. Tom Ian Hawley. Does that mean anything,0.9158,0.0682
+data/processed/iam/images/test/002324.png,"otherwise than take it . "" Pleased to meet you ,","otherwise than take it. ' Pleased to meet you,",0.8597,0.0217
+data/processed/iam/images/test/002332.png,a Lieutenant-Commander . Perhaps we could,a Lieutenant-Commander. Perhaps we could,0.963,0.0
+data/processed/iam/images/test/002334.png,all else . We pride ourselves about accuracy on,all else. We pride ourselves about accuracy on,0.9395,0.0
+data/processed/iam/images/test/002339.png,the Courier .,the Courier.,0.9977,0.0
+data/processed/iam/images/test/002358.png,"right ? "" "" Who told you ? "" "" Little bird .","right? "" Who told you? "" Feele bird.",0.7823,0.1951
+data/processed/iam/images/test/002361.png,"'em up , darling ! ""","ren up, darling. """,0.6773,0.1667
+data/processed/iam/images/test/002362.png,"shook his head . "" All paid for by His Lordship , ""","shook his hand. "" All paid for by His Lordship: """,0.7781,0.0612
+data/processed/iam/images/test/002365.png,your substance on a complete stranger . Set,your substance on a complete stranger. But,0.968,0.0476
+data/processed/iam/images/test/002372.png,"in the shiny papers ? """,in the shiny papers?,0.8722,0.0909
+data/processed/iam/images/test/002373.png,"of course . "" "" On one condition , "" said John .","of course "" "" On one condition, "" said John",0.9415,0.0444
+data/processed/iam/images/test/002376.png,"have dinner with me ? On His Lordship ,","have dinner with me. On this Lordship,",0.8603,0.0811
+data/processed/iam/images/test/002379.png,"Regard this as a softening-up process , and",guard this as a softening up process and,0.8539,0.119
+data/processed/iam/images/test/002386.png,""" You mean Munyard ? "" "" Sure . Very useful","Yan mean Munyard? "" Sure. Very useful",0.8302,0.1463
+data/processed/iam/images/test/002391.png,"tell George to bring in the 6carte du jour . ""","tell George to bring in the barte du jour. """,0.9028,0.0444
+data/processed/iam/images/test/002393.png,passed all too quickly . As they parted in,passed all too quickly. As they parted in,0.9838,0.0
+data/processed/iam/images/test/002395.png,the vestibule the two men were well,"the vest'bule, the two man were well",0.8336,0.0857
+data/processed/iam/images/test/002409.png,Black and grimly businesslike they both looked and,Place and grimly businessmen they both looked and,0.9416,0.12
+data/processed/iam/images/test/002410.png,Glad I met you . Don't forget to give me a ring -,Glad I met you. Don't forget to give me a ring-,0.9819,0.0208
+data/processed/iam/images/test/002411.png,"Master bloody Munyard . "" THERE were six submarines ,","Master bloody Munyard. "" THERE were six submarines,",0.9234,0.0
+data/processed/iam/images/test/002414.png,"any time - knock twice and ask for Bawley , what ? ""","anytime - knock twice and ask for 'Basley, what? """,0.817,0.06
+data/processed/iam/images/test/002419.png,A light wind wafted the smoke of diesel exhaust in,A light wind suffered the smoke of diesel exhaust in,0.9108,0.1
+data/processed/iam/images/test/002436.png,must continue as before . During this period the Captain,must continue as before. During this period the Captain,0.9972,0.0
+data/processed/iam/images/test/002438.png,if nothing unusual has happened . Harry Turton had,if nothing unusual has happened. Harry Turton had,0.9277,0.0
+data/processed/iam/images/test/002441.png,"Jeannie 'll be on that coach , Dan . ""","Jeannie ""ll he on that coach, Dan. """,0.8307,0.0857
+data/processed/iam/images/test/002443.png,"near me . "" Yes , "" I said . "" It 'll be here to-","never me. "" Yes, "" I said. "" It'll be here to-",0.8983,0.0444
+data/processed/iam/images/test/002444.png,He rode down to where I was waiting . I was,He rode down to where I was waiting. I was,0.9634,0.0
+data/processed/iam/images/test/002454.png,"flying she might be in danger . "" "" That 's so .","flying the night he in danger. "" "" Thars so.",0.8516,0.1111
+data/processed/iam/images/test/002466.png,Dead . Shuffled out of the deck . Blasted,Dead. shuffled out of the check. Blasical,0.6827,0.1795
+data/processed/iam/images/test/002473.png,man who 'd brought us into this business .,man who'd brought us into this business.,0.9424,0.0
+data/processed/iam/images/test/002478.png,country that lay all round Gilburg Crossing .,country than lay all round gutters Crony.,0.5708,0.25
+data/processed/iam/images/test/002485.png,could see far over west and north for many,could see for were and worth for many,0.8219,0.1905
+data/processed/iam/images/test/002495.png,"So we swung west , making slow going over","so he swung west, making slow going over",0.9248,0.05
+data/processed/iam/images/test/002496.png,"rough country , sliding on shale , climbing down","roofs could, sliding on whole, dirty down",0.6306,0.3478
+data/processed/iam/images/test/002497.png,gratefully by a small creek where we watered,gratefully by a small week where he watered,0.9529,0.0682
+data/processed/iam/images/test/002504.png,over a fairly wide area working singly or,over a fairy middle area working singy or,0.6237,0.122
+data/processed/iam/images/test/002506.png,in pairs .,in pairs,0.7636,0.1111
+data/processed/iam/images/test/002518.png,of the diggings there was a roughly-built,of the digging there was a roughly-built,0.8849,0.0244
+data/processed/iam/images/test/002534.png,of the church where there was a small open,of the church where there was a small open,0.9758,0.0
+data/processed/iam/images/test/002537.png,and forks and tidying up implements . It might,and feels and tidging up implements. It might,0.8126,0.0889
+data/processed/iam/images/test/002542.png,dly decadence and absorption in debase-,ally characterize and absorption in defense-,0.7884,0.359
+data/processed/iam/images/test/002545.png,"canery and corruption , the growth of the dea-","comes and corruption, the growth of the tea-",0.8009,0.1111
+data/processed/iam/images/test/002562.png,"as the dawn was breaking , and","as the dawn was breaking, cured",0.8942,0.1379
+data/processed/iam/images/test/002571.png,There were few passengers on the plane and Gavin was,There were few passengers on the plane and Gavin was,0.9914,0.0
+data/processed/iam/images/test/002575.png,of despair Gay knew that of course,of despair Gay knew that of course,0.9787,0.0
+data/processed/iam/images/test/002577.png,off the plane with him were talking .,off the plane with him were talking,0.909,0.0278
+data/processed/iam/images/test/002582.png,He was writing something in his,He was writing something in his,0.9873,0.0
+data/processed/iam/images/test/002585.png,He gestured towards the bay where the full,He gestured towards the bay where the full,0.7146,0.0
+data/processed/iam/images/test/002601.png,sitting just inside having coffee .,sitting just inside having coffee.,0.9418,0.0
+data/processed/iam/images/test/002604.png,"alone . "" "" I 've booked a table at the","alone. "" "" I've booked a table at the",0.8764,0.0
+data/processed/iam/images/test/002605.png,"Gay , a little puzzled , went through","Gay, a little puzzled, went thorough",0.8968,0.0286
+data/processed/iam/images/test/002609.png,As Gay watched he offered the girl a,as Gay watched he offered the girl a,0.8586,0.0278
+data/processed/iam/images/test/002611.png,"then caught her breath , a cold hand","then caught her breath, a cold hand",0.804,0.0
+data/processed/iam/images/test/002618.png,the terrace thinking that perhaps Gavin,the terrace thinking that perhaps Gavin,0.9005,0.0
+data/processed/iam/images/test/002620.png,"but she turned away , giving a little","but she turned away, giving a little",0.986,0.0
+data/processed/iam/images/test/002622.png,"run upstairs to her room , knowing that","All upstairs to her noon, knocking that",0.5814,0.1842
+data/processed/iam/images/test/002625.png,decided to go back and join Lilyan and,"decided to go back, and join Libyan and",0.9494,0.0526
+data/processed/iam/images/test/002626.png,"Larry's advice flashed through her mind ,","Lorny's advice finished through her mind,",0.6211,0.125
+data/processed/iam/images/test/002628.png,that he had only met a few minutes before .,that he had only met a few minutes before.,0.9615,0.0
+data/processed/iam/images/test/002632.png,The others were all dancing and,The others were all dancing and,0.9984,0.0
+data/processed/iam/images/test/002634.png,trying to understand Gavin's point of,buying to understand Gavin point of,0.8527,0.1081
+data/processed/iam/images/test/002635.png,view and remembering the advice,view and remembering the advice,0.9734,0.0
+data/processed/iam/images/test/002638.png,"to help her control her feelings . "" Come and","to help her control her feeling. "" Come and",0.8795,0.0227
+data/processed/iam/images/test/002645.png,not wanting to smoke but needing some action,not wanting to smoke but needing some action,0.9634,0.0
+data/processed/iam/images/test/002647.png,"would make love to the French girl on the sands ,","would make love to the French girl on the sonak,",0.9406,0.0625
+data/processed/iam/images/test/002653.png,moment in disgust . She was fully aware that Gavin,moment in disgust. She was fully aware that Gavin,0.9328,0.0
+data/processed/iam/images/test/002655.png,Sentence Database P02-109,Sentence Database.,0.5357,0.32
+data/processed/iam/images/test/002662.png,"may consider him a man , I would say he was a","may consider him a man, I would say he was a",0.9974,0.0
+data/processed/iam/images/test/002666.png,"fine girl , intelligent , and pretty , and I had","fine girl, intelligent, and pretty, and I had",0.9873,0.0
+data/processed/iam/images/test/002671.png,married life going to be like ?,married life going to be like 2.,0.929,0.1
+data/processed/iam/images/test/002682.png,""" So glad that you are having such a lovely time , dearie , """,""" So glad that you are having such a lovely time, deceive, """,0.9307,0.0508
+data/processed/iam/images/test/002685.png,I can for him so that she can get out to do her shopping .,I can for him so that she can get out to do her shopping.,0.9585,0.0
+data/processed/iam/images/test/002692.png,to the man she had spent so much time,to the man she had spent so much time,0.9951,0.0
+data/processed/iam/images/test/002702.png,Because she was second best . The others came back,Because she was second best. The other came back to,0.9064,0.0816
+data/processed/iam/images/test/002703.png,"knowing that they were real friends , even if they were new ones .","knowing that they were seal, even it they were new ones",0.8595,0.1719
+data/processed/iam/images/test/002707.png,was hurt for herself .,was hard for herself.,0.9499,0.0952
+data/processed/iam/images/test/002709.png,I don't think I 'd go to Edinburgh un-,I don't think I'd go to Edinburgh un-,0.9762,0.0
+data/processed/iam/images/test/002713.png,""" There are all sorts of wonder-",""" There are all sorts of wonder-",0.909,0.0
+data/processed/iam/images/test/002721.png,"a slip of the tongue when Nigel had said , only last","a slip of the tongue when Nigel had said, only last last",0.9152,0.098
+data/processed/iam/images/test/002736.png,had there not been some give and take,had there not been given and take,0.9528,0.1622
+data/processed/iam/images/test/002738.png,had told her about taking Luke's,had told her about taking Luke's,0.9895,0.0
+data/processed/iam/images/test/002744.png,asked hopefully .,Asked Hopefully.,0.7445,0.125
+data/processed/iam/images/test/002746.png,"Junior Medical Officer . "" You won't be free about nine , I","Junior Marion Officer. "" You must be fast about nine, I",0.5083,0.2105
+data/processed/iam/images/test/002754.png,"though they 're standing on one another's toes ,","though they've standing on one another's trees,",0.9394,0.0652
+data/processed/iam/images/test/002755.png,"been at the Load of Trouble roadhouse ,","been at the Lord of. Trouble road house,",0.8305,0.0789
+data/processed/iam/images/test/002766.png,"my lad . "" "" It was Nigel's car , anyway .","my bad. "" It was first's car, anyway.",0.886,0.1795
+data/processed/iam/images/test/002770.png,Gubbins boy thought he saw you at the Load of Trouble .,Gullins boy thought he saw you at the land of Trimble.,0.7199,0.1296
+data/processed/iam/images/test/002772.png,handsome at other times .,handsome at offer tunes,0.7204,0.2083
+data/processed/iam/images/test/002782.png,""" Don't be such a baby ! "" They were going",""" Don't be such a shaky, "" They were going",0.9141,0.0976
+data/processed/iam/images/test/002788.png,"any minute , and she knew it .","himte, and she knew it.",0.6502,0.25
+data/processed/iam/images/test/002792.png,"kissing somebody else's girl , "" he decided wickedly ,","kissing somebody else's girl, "" he decided wickedly,",0.9596,0.0
+data/processed/iam/images/test/002800.png,"out of his sight . "" Mine , "" Nigel Lester had","out of his sight. "" Mine, "" Nigel Lester had",0.9734,0.0
+data/processed/iam/images/test/002805.png,"so had left him , on her dignity and not","so had left him, on her dignity and not",0.961,0.0
+data/processed/iam/images/test/002809.png,"there was just time to smoke a cigarette ,","there was just time to smoke a cigarette,",0.8728,0.0
+data/processed/iam/images/test/002819.png,words . ' I wonder you dared trust,"words. "" I wonder, and trust",0.7253,0.2424
+data/processed/iam/images/test/002828.png,room filled him with a re-,from filled him with a re-,0.861,0.0769
+data/processed/iam/images/test/002854.png,a hand and grasped hers .,a hand and grasped her.,0.9721,0.0417
+data/processed/iam/images/test/002860.png,"words : ' I love you - oh , you","words : I love you - oh, you",0.8256,0.069
+data/processed/iam/images/test/002862.png,She went back to Philip . But,the event back to Philip. But,0.9447,0.1071
+data/processed/iam/images/test/002865.png,what they were saying . Sandra,what they were saying. Sandra,0.8786,0.0
+data/processed/iam/images/test/002868.png,talking to Nicholas and wondering,talking to Nicholas and wondering,0.9237,0.0
+data/processed/iam/images/test/002873.png,He looked nervous . It had been,He looked in von. It had been,0.7567,0.1667
+data/processed/iam/images/test/002878.png,no matter how one might want to,no matter how one might want to,0.9755,0.0
+data/processed/iam/images/test/002879.png,Her eyes darkened in torment . ' Are,Hes eyes darkened in torment. Are,0.8394,0.0857
+data/processed/iam/images/test/002880.png,touched him after the cold wind,touched him after the cold wind,0.9905,0.0
+data/processed/iam/images/test/002888.png,then Philip was so certain that Nicholas,then Philip was so certain that Nicholas,0.9796,0.0
+data/processed/iam/images/test/002891.png,future happiness . Had ever circum-,future happiness. Had ever circum-,0.7884,0.0
+data/processed/iam/images/test/002892.png,he 'll confine himself to the nervous,he'll continue himself to the nervous,0.8214,0.0556
+data/processed/iam/images/test/002893.png,would never betray him . He loved,would never betray him. He loved,0.9864,0.0
+data/processed/iam/images/test/002903.png,the deceit . The lies . ',the decree is ' Theties',0.6362,0.4348
+data/processed/iam/images/test/002909.png,"His digressions too , seemed to have no other","His depressions too, seemed to have no other",0.8888,0.0455
+data/processed/iam/images/test/002914.png,"the result being somehow as ineffective , not","He arell being some boo as ineffective, not",0.6118,0.2045

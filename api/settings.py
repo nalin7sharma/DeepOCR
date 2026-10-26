@@ -19,6 +19,7 @@ class Settings:
     max_total_pixels: int = 100_000_000
     pdf_render_scale: float = 2.0
     review_confidence_threshold: float = 0.45
+    det_box_thresh: float = 0.5
     language: str = "en"
     default_engine: str = "paddle"
     trocr_model: str = "microsoft/trocr-small-handwritten"
@@ -40,6 +41,7 @@ class Settings:
             review_confidence_threshold=float(
                 os.getenv("OCR_REVIEW_CONFIDENCE_THRESHOLD", "0.45")
             ),
+            det_box_thresh=float(os.getenv("OCR_DET_BOX_THRESH", "0.5")),
             language=os.getenv("OCR_LANGUAGE", "en").strip(),
             default_engine=os.getenv("OCR_DEFAULT_ENGINE", "paddle").strip(),
             trocr_model=os.getenv("OCR_TROCR_MODEL", "microsoft/trocr-small-handwritten").strip(),
@@ -57,6 +59,8 @@ class Settings:
             settings.max_total_pixels,
         ) < 1 or not math.isfinite(settings.pdf_render_scale) or settings.pdf_render_scale <= 0:
             raise ValueError("OCR resource limits and PDF render scale must be positive.")
+        if not math.isfinite(settings.det_box_thresh) or not 0 < settings.det_box_thresh < 1:
+            raise ValueError("OCR_DET_BOX_THRESH must be between 0 and 1.")
         if not settings.language.strip():
             raise ValueError("OCR_LANGUAGE must not be empty.")
         if (

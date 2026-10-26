@@ -48,7 +48,7 @@ def estimate_skew(image: np.ndarray, max_angle: float = 12.0, step: float = 0.25
     h, w = gray.shape
     scale = min(1.0, 900 / max(h, w))
     small = cv2.resize(gray, (max(1, int(w * scale)), max(1, int(h * scale))), interpolation=cv2.INTER_AREA)
-    ink = cv2.threshold(small, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)[1]
+    ink = _ink_mask(small)
     if np.count_nonzero(ink) < 50:
         return 0.0
     sh, sw = ink.shape
@@ -62,9 +62,27 @@ def estimate_skew(image: np.ndarray, max_angle: float = 12.0, step: float = 0.25
 
     coarse = np.arange(-max_angle, max_angle + 1e-6, 1.0)
     best = max(coarse, key=score)
-    fine = np.arange(best - 1.0, best + 1.0 + 1e-6, step)
+    fine = np.arange(max(-max_angle, best - 1.0), min(max_angle, best + 1.0) + 1e-6, step)
     best = max(fine, key=score)
     return float(round(best, 2))
+
+
+def _ink_mask(gray: np.ndarray) -> np.ndarray:
+    """Binary text mask that is robust to shadows, uneven lighting and speckle noise.
+
+    The paper is estimated with a grey-level dilation (a max filter wider than
+    any stroke) and divided out (flat-field correction) before Otsu
+    thresholding, so a dark shading gradient is not mistaken for ink.
+    """
+    if float(np.median(gray)) < 127:  # light text on a dark background
+        gray = 255 - gray
+    k = max(15, (min(gray.shape[:2]) // 25) | 1)
+    paper = cv2.dilate(gray, cv2.getStructuringElement(cv2.MORPH_RECT, (k, k)))
+    paper = cv2.blur(paper, (k, k))
+    flat = cv2.divide(gray, np.maximum(paper, 1), scale=255)
+    flat = cv2.medianBlur(flat, 3)
+    ink = cv2.threshold(flat, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)[1]
+    return cv2.morphologyEx(ink, cv2.MORPH_OPEN, np.ones((2, 2), np.uint8))
 
 
 def rotate_page(image: np.ndarray, angle: float) -> np.ndarray:

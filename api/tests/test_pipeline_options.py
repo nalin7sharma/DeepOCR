@@ -163,3 +163,16 @@ def test_torch_is_loaded_before_paddle():
     import api  # noqa: F401
 
     assert "torch" in sys.modules
+
+
+def test_skew_estimation_survives_shading_and_noise():
+    # Regression: a dark lighting gradient used to be thresholded as ink (estimate -13°).
+    page = np.full((700, 1000, 3), 240, np.uint8)
+    for row in range(8):
+        cv2.putText(page, "Notice of the annual meeting text", (40, 70 + row * 75), cv2.FONT_HERSHEY_SIMPLEX, 1.1, (30, 30, 30), 2)
+    tilted = rotate_page(page, 4.0).astype(np.float32)
+    h, w = tilted.shape[:2]
+    tilted *= np.linspace(1.0, 0.55, w)[None, :, None]
+    tilted += np.random.default_rng(1).normal(0, 14, tilted.shape)
+    degraded = np.clip(tilted, 0, 255).astype(np.uint8)
+    assert abs(estimate_skew(degraded) + 4.0) < 1.0

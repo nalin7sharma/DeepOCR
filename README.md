@@ -11,13 +11,13 @@ The project trains and compares three recognition approaches, as planned in the 
 | --- | --- | --- |
 | Baseline | **CNN + BiLSTM + CTC** | Implemented and trained from scratch in this repository |
 | Model 2 | **CRNN** (Shi et al., 2016) | Implemented and trained from scratch in this repository |
-| Advanced | **Transformer OCR** (TrOCR: ViT encoder + Transformer decoder) | Pretrained by Microsoft; evaluated zero-shot and fine-tuned on our data (transfer learning) |
+| Advanced | **Transformer OCR** (TrOCR: ViT encoder + Transformer decoder) | Pretrained by Microsoft, evaluated zero-shot, then fine-tuned on our data (transfer learning) |
 | Reference | PaddleOCR (PP-OCR) | Industrial pretrained engine, used as the detector and as a comparison point |
 
 <!-- RESULTS:START -->
 ## Results
 
-Measured with `scripts/evaluate.py` (2026-10-26T15:16:04) on **IAM handwriting**: 600 held-out test lines; **Synthetic printed + script**: 600 held-out test lines.
+Measured with `scripts/evaluate.py` (2026-10-26T16:13:52) on **IAM handwriting**: 600 held-out test lines; **Synthetic printed + script**: 600 held-out test lines.
 CER, WER and accuracy are percentages averaged per line (lower CER/WER is better). ms/line is CPU time.
 
 | Model | Architecture | IAM handwriting CER | WER | Acc | Synthetic printed + script CER | WER | Acc | ms/line |
@@ -27,6 +27,7 @@ CER, WER and accuracy are percentages averaged per line (lower CER/WER is better
 | CRNN | CRNN (VGG + BiLSTM + CTC) | 21.66 | 61.47 | 0.50 | 5.25 | 18.54 | 63.17 | 15.9 |
 | CRNN + post-processing | CRNN (VGG + BiLSTM + CTC) | 20.55 | 50.99 | 3.17 | 5.00 | 16.13 | 67.00 | 40.5 |
 | TrOCR Transformer (zero-shot) | ViT encoder + Transformer decoder | 6.97 | 16.40 | 40.67 | 20.37 | 54.68 | 53.83 | 1829.2 |
+| TrOCR Transformer (fine-tuned) | ViT encoder + Transformer decoder | 6.73 | 16.79 | 37.83 | 2.59 | 10.81 | 84.33 | 415.2 |
 | PaddleOCR | PP-OCR recogniser | 28.84 | 72.50 | 1.50 | 3.89 | 21.09 | 66.17 | 478.1 |
 
 - CER/WER/accuracy are averaged per line on the held-out test partitions; lower CER/WER is better.
@@ -144,6 +145,7 @@ Structured output             Markdown / text / JSON, review UI (web/)
 | CNN-BiLSTM | 4 conv blocks (32→64→128→256, BN, ReLU, pooling) → 2-layer BiLSTM (192) → linear → CTC | 2.4 M | 32×512 grey |
 | CRNN | 7-layer VGG-style CNN with asymmetric (2×1) pooling → 2× BiLSTM (192) → CTC | 2.8 M | 32×512 grey |
 | TrOCR-small | DeiT/ViT encoder (16×16 patches) + Transformer decoder, word-piece tokens | 61 M | 384×384 RGB |
+| TrOCR-small, fine-tuned | The same model after 300 AdamW steps (lr 3e-5, batch 8, 50/50 IAM and synthetic, light augmentation) | 61 M | 384×384 RGB |
 
 The CTC models were trained on CPU because no GPU was available, which is why their
 channel widths are reduced (the CRNN paper uses 64–512). The topologies match the
@@ -151,6 +153,8 @@ papers; widths are set in `configs/model.yaml`. A custom ViT encoder-decoder is 
 implemented (`models/transformer_ocr.py`, `CustomViTOCR`). The experiments use
 pretrained TrOCR instead, because a Transformer trained from scratch needs far more
 data and compute than a CPU allows (the proposal's "transfer learning where appropriate").
+Fine-tuning TrOCR on our training data (`scripts/finetune_trocr.py`, 45 minutes on CPU)
+cut its printed-text CER from 20.4% to 2.6% while keeping its handwriting accuracy.
 
 Training details: Adam (lr 1e-3, weight decay 1e-4), cosine schedule, gradient
 clipping 5, batch 32, early stopping on validation CER, and on-the-fly augmentation
@@ -190,7 +194,7 @@ exact model. Training logs and curves go to `results/training/` and `results/plo
 
 | Method | Path | Purpose |
 | --- | --- | --- |
-| `POST` | `/api/v1/ocr` | OCR a multipart upload: `file`, optional `engine` (`paddle`, `crnn`, `cnn_bilstm`, `trocr`), `preprocess` (`deskew,denoise,contrast,binarize`), `correct` (`true`/`false`) |
+| `POST` | `/api/v1/ocr` | OCR a multipart upload: `file`, optional `engine` (`paddle`, `crnn`, `cnn_bilstm`, `trocr`, `trocr_ft`), `preprocess` (`deskew,denoise,contrast,binarize`), `correct` (`true`/`false`) |
 | `GET` | `/api/v1/engines` | Engine availability, model info and evaluation metrics |
 | `GET` | `/api/v1/metrics` | Evaluation summary, training histories, robustness and sample predictions |
 | `GET` | `/api/v1/samples` | Built-in demo documents |

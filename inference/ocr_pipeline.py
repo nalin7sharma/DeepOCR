@@ -57,7 +57,8 @@ class PaddleLineDetector:
             x0, y0 = max(0, x - pad), max(0, y - pad)
             x1 = min(image.shape[1], x + w + pad)
             y1 = min(image.shape[0], y + h + pad)
-            detections.append({"bbox": (x0, y0, x1 - x0, y1 - y0), "score": 1.0, "type": "text_line"})
+            detections.append({"bbox": (x0, y0, x1 - x0, y1 - y0), "score": 1.0, "type": "text_line",
+                               "polygon": polygon})
         detections.sort(key=lambda d: (d["bbox"][1], d["bbox"][0]))
         return detections
 
@@ -97,6 +98,7 @@ class OCRPipeline:
         corrector: TextCorrector | None = None,
         device: torch.device | str = "auto",
         recognizer=None,
+        deskew: bool = True,
     ) -> None:
         if device == "auto":
             device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -120,6 +122,7 @@ class OCRPipeline:
         self.corrector = corrector or TextCorrector()
         self.checkpoint_loaded = False
         self.model_name = getattr(recognizer, "model_name", "custom")
+        self.deskew = deskew
 
     # ------------------------------------------------------------------
     # Factory
@@ -185,9 +188,17 @@ class OCRPipeline:
         timings: dict[str, float] = {}
 
         original_bgr = self._load_image(image)
-        h_img, w_img = original_bgr.shape[:2]
 
         mark = time.perf_counter()
+        # Straighten the page first so detection and line crops see horizontal text.
+        deskew_angle = 0.0
+        if self.deskew:
+            from api.preprocess import estimate_skew, rotate_page
+
+            deskew_angle = estimate_skew(original_bgr)
+            if abs(deskew_angle) >= 0.3:
+                original_bgr = rotate_page(original_bgr, deskew_angle)
+        h_img, w_img = original_bgr.shape[:2]
         preprocessed = self.preprocessor.process(original_bgr)
         timings["preprocess_ms"] = (time.perf_counter() - mark) * 1000
 
@@ -199,13 +210,20 @@ class OCRPipeline:
 
         mark = time.perf_counter()
         layout_blocks = self.layout.analyze(detections, image_width=w_img, image_height=h_img)
+        polygons = {tuple(d["bbox"]): d.get("polygon") for d in detections}
         timings["layout_ms"] = (time.perf_counter() - mark) * 1000
 
         mark = time.perf_counter()
         crops, kept = [], []
         for block in layout_blocks:
             x, y, bw, bh = block.bbox
-            crop = original_bgr[y: y + bh, x: x + bw]
+            polygon = polygons.get(tuple(block.bbox))
+            if polygon is not None:
+                from api.engines import crop_polygon
+
+                crop = crop_polygon(original_bgr, polygon)  # rectified along the text line
+            else:
+                crop = original_bgr[y: y + bh, x: x + bw]
             if crop.size:
                 crops.append(crop)
                 kept.append(block)
@@ -247,6 +265,7 @@ class OCRPipeline:
             "bbox_image": bbox_img,
             "inference_ms": round((time.perf_counter() - t0) * 1000, 1),
             "timings": {key: round(value, 1) for key, value in timings.items()},
+            "deskew_angle": deskew_angle,
             "checkpoint_loaded": self.checkpoint_loaded,
         }
 
