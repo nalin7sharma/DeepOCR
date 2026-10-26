@@ -33,11 +33,19 @@ CORRECTABLE_KINDS = {"text", "heading", "title"}
 MAX_STAGE_PREVIEW_PAGES = 3
 
 
+class WordVote(BaseModel):
+    text: str
+    support: float | None = None
+    sources: list[str] = Field(default_factory=list)
+    alternatives: dict[str, float] = Field(default_factory=dict)
+
+
 class RegionResponse(BaseModel):
     polygon: list[list[float]]
     text: str
     confidence: float = Field(ge=0, le=1)
     review_required: bool = False
+    words: list[WordVote] | None = None
 
 
 class CorrectionResponse(BaseModel):
@@ -59,6 +67,7 @@ class BlockResponse(BaseModel):
     checkbox_state: str | None = None
     original_text: str | None = None
     corrections: list[CorrectionResponse] = Field(default_factory=list)
+    words: list[WordVote] | None = None
 
 
 class StageResponse(BaseModel):
@@ -239,6 +248,7 @@ def _process_document(
                         text=region.text,
                         confidence=min(1.0, max(0.0, region.confidence)),
                         review_required=region.confidence < settings.review_confidence_threshold,
+                        words=region.words,
                     )
                     for region in regions
                 ],

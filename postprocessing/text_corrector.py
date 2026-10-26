@@ -185,8 +185,9 @@ class TextCorrector:
         if not candidates:
             return core
         best = max(candidates, key=checker.word_usage_frequency)
-        # Capitalised unknown words are often names: only fix them towards common words.
-        if core[0].isupper() and checker.word_usage_frequency(best) < 1e-6:
+        # Capitalised unknown words are usually names ("Iyer", "Tolchard"): only accept a
+        # letter swap ("Teh" -> "The"), never a deletion or substitution.
+        if core[0].isupper() and sorted(best) != sorted(lower):
             return core
         return _match_case(core, best)
 

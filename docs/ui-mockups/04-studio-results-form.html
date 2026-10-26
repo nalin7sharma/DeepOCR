@@ -1,0 +1,96 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1440"><link rel="stylesheet" href="mockup.css"><style>
+.work { padding: 20px 28px 40px; }
+.work-head { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
+.wh-file { display: flex; align-items: center; gap: 10px; }
+.wh-file div { display: flex; flex-direction: column; }
+.wh-file b { font-size: 15px; }
+.wh-file .muted { font-size: 12.5px; }
+.file-ic { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); }
+.wh-actions { margin-left: auto; display: flex; gap: 8px; }
+.wh-actions .btn b { font-weight: 650; color: var(--accent); }
+.strip { display: grid; grid-template-columns: 1.3fr repeat(4, 1fr) 1.6fr; padding: 0; margin-bottom: 14px; }
+.sv { display: flex; flex-direction: column; gap: 6px; padding: 12px 18px; }
+.sv + .sv { border-left: 1px solid var(--border); }
+.sv b { font-size: 20px; line-height: 1; font-weight: 600; }
+.sv b.warn { color: var(--warning); }
+.mini, .stack { display: flex; height: 5px; border-radius: 5px; background: var(--muted); overflow: hidden; }
+.mini i { background: var(--success); border-radius: 5px; }
+.stack i { height: 100%; }
+.wgrid { display: grid; grid-template-columns: 120px minmax(0, 1fr) 470px; gap: 14px; align-items: start; }
+.rail { padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+.pthumb { position: relative; border-radius: 8px; overflow: hidden; border: 2px solid var(--accent); height: 110px; background: #fff; }
+.pthumb img { width: 100%; height: 100%; object-fit: cover; object-position: top left; }
+.pthumb span { position: absolute; right: 4px; bottom: 4px; background: var(--accent); color: #fff; font: 600 10px/1 var(--mono); padding: 3px 5px; border-radius: 4px; }
+.rail-note { display: flex; gap: 6px; align-items: flex-start; font-size: 12px; line-height: 16px; color: var(--text-3); }
+.doc-foot { display: flex; align-items: center; gap: 14px; justify-content: space-between; padding: 10px 14px; border-top: 1px solid var(--border); font-size: 12px; }
+.rail-note svg { color: var(--success); }
+.docp { overflow: hidden; }
+.doc-tools { display: flex; align-items: center; gap: 14px; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+.legend { display: flex; align-items: center; gap: 6px; color: var(--text-2); font-size: 12px; }
+.lg { width: 10px; height: 10px; border-radius: 3px; display: inline-block; margin-left: 10px; }
+.lg:first-child { margin-left: 0; }
+.lg.hi { background: #17b26a; } .lg.mid { background: #f79009; } .lg.lo { background: #f04438; }
+.zoom { margin-left: auto; display: flex; align-items: center; gap: 6px; color: var(--text-2); font-size: 12px; }
+.zoom .icon-btn { width: 30px; height: 30px; }
+.stage { background: var(--muted); padding: 28px; display: grid; place-items: center; min-height: 560px; }
+.paper { position: relative; background: #fff; box-shadow: var(--sh-lg); border-radius: 3px; }
+.paper img { display: block; width: 100%; }
+.paper svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.textp { display: flex; flex-direction: column; overflow: hidden; }
+.ttabs { display: flex; gap: 2px; padding: 0 10px; border-bottom: 1px solid var(--border); }
+.ttab { position: relative; display: inline-flex; align-items: center; gap: 7px; padding: 13px 10px; color: var(--text-3); font-weight: 550; font-size: 13.5px; }
+.ttab.on { color: var(--text); }
+.ttab.on::after { content: ""; position: absolute; left: 6px; right: 6px; bottom: -1px; height: 2px; background: var(--accent); border-radius: 2px; }
+.ttab .badge { height: 19px; font-size: 11px; padding: 0 6px; }
+.tbody { padding: 14px; flex: 1; }
+.tfoot { display: flex; gap: 8px; padding: 12px 14px; border-top: 1px solid var(--border); background: var(--subtle); }
+.tfoot .btn:last-child { margin-left: auto; }
+
+    .subbar { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-bottom: 1px solid var(--border); background: var(--subtle); font-size: 12px; }
+    .subbar .seg span { height: 26px; font-size: 12px; }
+    .stage { min-height: 0; }
+    .paper { width: 560px; }
+    .doc-text { font-size: 14px; line-height: 22px; }
+    .doc-text h3 { margin: 2px 0 10px; font: 600 19px/1.3 var(--display); letter-spacing: -0.01em; }
+    .doc-text p { margin: 0 0 6px; }
+    .cb { display: flex; align-items: center; gap: 8px; }
+    .box { width: 18px; height: 18px; border-radius: 5px; border: 1.5px solid var(--border-strong); display: grid; place-items: center; color: #fff; }
+    .box.on { background: var(--accent); border-color: var(--accent); }
+    .box svg { width: 12px; height: 12px; stroke-width: 3; }
+    table { width: 100%; border-collapse: collapse; margin: 8px 0 14px; font-size: 13px; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+    th, td { padding: 7px 10px; text-align: left; border-bottom: 1px solid var(--border); }
+    th { background: var(--subtle); font-weight: 600; color: var(--text-2); }
+    td:last-child, th:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+    .fixed { display: flex; align-items: center; gap: 8px; }
+    .fix { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; color: var(--accent); background: var(--accent-soft); padding: 1px 6px; border-radius: 999px; }
+    .fixbar { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; padding: 9px 14px; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); font-size: 13px; color: var(--text-2); box-shadow: var(--sh-xs); }
+    .fixbar > svg:first-child { color: var(--accent); }
+    .fixbar del { color: var(--danger); } .fixbar ins { color: var(--success); text-decoration: none; font-weight: 600; }
+    .fixbar .sep { width: 1px; height: 20px; background: var(--border); margin: 0 6px; }
+    .fixbar svg:not(:first-child) { color: var(--warning); }
+    .fixbar .btn svg { color: inherit; }
+    </style></head><body><header class="topbar"><span class="brand"><svg width="28" height="28" viewBox="0 0 32 32"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs><rect x="2" y="2" width="28" height="28" rx="8" fill="url(#lg)"/><rect x="9" y="10" width="14" height="2.4" rx="1.2" fill="#fff"/><rect x="9" y="15" width="10" height="2.4" rx="1.2" fill="#fff" opacity=".8"/><rect x="9" y="20" width="12" height="2.4" rx="1.2" fill="#fff" opacity=".6"/></svg><span>Deep<b>OCR</b></span></span><nav class="tabs"><span class="tab on"><svg class="i " viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8h8"/><path d="M7 12h10"/><path d="M7 16h6"/></svg>Studio</span><span class="tab "><svg class="i " viewBox="0 0 24 24"><circle cx="5" cy="6" r="3"/><path d="M12 6h5a2 2 0 0 1 2 2v7"/><path d="m15 9-3-3 3-3"/><circle cx="19" cy="18" r="3"/><path d="M12 18H7a2 2 0 0 1-2-2V9"/><path d="m9 15 3 3-3 3"/></svg>Compare</span><span class="tab "><svg class="i " viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg>Research</span><span class="tab "><svg class="i " viewBox="0 0 24 24"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg>How it works</span></nav><div class="top-right"><span class="status"><i class="dot"></i>5 engines ready</span><span class="icon-btn" title="API docs"><svg class="i " viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span></div></header><main class="work">
+    <div class="work-head">
+      <span class="btn ghost sm"><svg class="i sm" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>New document</span>
+      <div class="wh-file"><span class="file-ic"><svg class="i " viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg></span><div><b>application_form.png</b><span class="muted">1 page · PaddleOCR · auto-correct on</span></div></div>
+      <div class="wh-actions"><span class="btn"><svg class="i sm" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>Re-run with <b>PaddleOCR</b><svg class="i sm" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span><span class="btn primary"><svg class="i sm" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>Export<svg class="i sm" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></div>
+    </div>
+    <div class="card strip"><div class="sv"><span class="label">Confidence</span><b class="mono ">99%</b><span class="mini"><i style="width:99%"></i></span></div><div class="sv"><span class="label">Lines</span><b class="mono ">14</b></div><div class="sv"><span class="label">Words</span><b class="mono ">89</b></div><div class="sv"><span class="label">To review</span><b class="mono warn">5</b></div><div class="sv"><span class="label">Auto-fixes</span><b class="mono ">1</b></div><div class="sv"><span class="label">Time</span><b class="mono ">2.1 s</b><span class="stack"><i style="width:1.0%;background:#98a2b3" title="decode"></i><i style="width:94.5%;background:#4f46e5" title="recognition"></i><i style="width:1.1%;background:#06aed4" title="layout"></i><i style="width:0.0%;background:#16b364" title="postprocess"></i></span></div></div>
+    <div class="fixbar"><svg class="i sm" viewBox="0 0 24 24"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"/><path d="m14 7 3 3"/><path d="M5 6v4"/><path d="M19 14v4"/><path d="M10 2v2"/><path d="M7 8H3"/><path d="M21 16h-4"/><path d="M11 3H9"/></svg><span><b>1 automatic fix:</b> <del>ananya.iyerOcollege.edu</del> → <ins>ananya.iyer@college.edu</ins></span><span class="btn sm ghost"><svg class="i sm" viewBox="0 0 24 24"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/></svg>Undo</span><span class="sep"></span><svg class="i sm" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><span><b>5 items to review:</b> 3 checkboxes, 1 table, 1 signature field</span><span class="btn sm">Start review</span></div>
+    <div class="wgrid">
+      <aside class="rail card">
+        <span class="label">Pages</span>
+        <div class="pthumb on"><img src="../../samples/application_form.png"><span>1</span></div>
+        <span class="label" style="margin-top:14px">Cleanup</span>
+        <div class="rail-note"><svg class="i sm" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>No changes needed</span></div>
+      </aside>
+      <section class="card docp">
+        <div class="doc-tools"><span class="seg"><span class="on"><svg class="i sm" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/></svg>Layout</span><span class=""><svg class="i sm" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>Confidence</span><span class=""><svg class="i sm" viewBox="0 0 24 24"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.53 13.53 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" x2="22" y1="2" y2="22"/></svg>Off</span></span><span class="zoom"><span class="icon-btn"><svg class="i sm" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M8 11h6"/></svg></span><span class="mono">Fit</span><span class="icon-btn"><svg class="i sm" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6"/><path d="M8 11h6"/></svg></span></span></div>
+        <div class="stage"><div class="paper"><img src="../../samples/application_form.png"><svg viewBox="0 0 1240 1600" preserveAspectRatio="none"><polygon points="81,75 787,75 787,117 81,117" fill="#7a5af814" stroke="#7a5af8" stroke-width="2.5"/><polygon points="81,137 524,137 524,160 81,160" fill="#2e90fa14" stroke="#2e90fa" stroke-width="2.5"/><polygon points="76,212 490,212 490,252 76,252" fill="#2e90fa14" stroke="#2e90fa" stroke-width="2.5"/><polygon points="75,280 467,280 467,322 75,322" fill="#2e90fa14" stroke="#2e90fa" stroke-width="2.5"/><polygon points="79,353 559,353 559,392 79,392" fill="#2e90fa14" stroke="#2e90fa" stroke-width="2.5"/><polygon points="76,418 649,418 649,463 76,463" fill="#2e90fa14" stroke="#2e90fa" stroke-width="2.5"/><polygon points="78,486 497,486 497,532 78,532" fill="#2e90fa14" stroke="#2e90fa" stroke-width="2.5"/><polygon points="79,590 317,590 317,622 79,622" fill="#2e90fa14" stroke="#2e90fa" stroke-width="2.5"/><polygon points="86,643 290,643 290,677 86,677" fill="#f7900914" stroke="#f79009" stroke-width="2.5" stroke-dasharray="10 6"/><polygon points="86,695 295,695 295,727 86,727" fill="#f7900914" stroke="#f79009" stroke-width="2.5" stroke-dasharray="10 6"/><polygon points="84,743 303,743 303,782 84,782" fill="#f7900914" stroke="#f79009" stroke-width="2.5" stroke-dasharray="10 6"/><polygon points="77,828 228,828 228,862 77,862" fill="#2e90fa14" stroke="#2e90fa" stroke-width="2.5"/><polygon points="80,881 1162,881 1162,1173 80,1173" fill="#16b36414" stroke="#16b364" stroke-width="2.5" stroke-dasharray="10 6"/><polygon points="79,1243 593,1243 593,1267 79,1267" fill="#2e90fa14" stroke="#2e90fa" stroke-width="2.5"/><polygon points="79,1316 358,1316 358,1364 79,1364" fill="#ee46bc14" stroke="#ee46bc" stroke-width="2.5" stroke-dasharray="10 6"/></svg></div></div>
+        <div class="doc-foot"><span class="legend"><i class="lg" style="background:var(--k-heading)"></i>Heading<i class="lg" style="background:var(--k-text)"></i>Text<i class="lg" style="background:var(--k-check)"></i>Checkbox<i class="lg" style="background:var(--k-table)"></i>Table<i class="lg" style="background:var(--k-sign)"></i>Signature</span><span class="muted">Hover a region to see its text. Click to jump to it.</span></div>
+      </section>
+      <section class="card textp"><div class="ttabs"><span class="ttab on"><svg class="i sm" viewBox="0 0 24 24"><path d="M17 6.1H3"/><path d="M21 12.1H3"/><path d="M15.1 18H3"/></svg>Text</span><span class="ttab"><svg class="i sm" viewBox="0 0 24 24"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/></svg>Lines<span class="badge">14</span></span><span class="ttab"><svg class="i sm" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Review<span class="badge warning">5</span></span><span class="ttab"><svg class="i sm" viewBox="0 0 24 24"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"/><path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/></svg>JSON</span></div>
+    <div class="subbar"><span class="seg"><span class="on">Preview</span><span>Markdown</span></span><span class="muted">Edits update every export</span></div>
+    <div class="tbody doc-text"><h3>College Scholarship Application</h3><p>Office of Student Affairs I Form SA-2026</p><p>Name: Ananya Iyer</p><p>Roll No: 21CS1047</p><p>Department: Computer Science</p><p class="fixed">Email: ananya.iyer@college.edu<span class="fix"><svg class="i sm" viewBox="0 0 24 24"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"/><path d="m14 7 3 3"/><path d="M5 6v4"/><path d="M19 14v4"/><path d="M10 2v2"/><path d="M7 8H3"/><path d="M21 16h-4"/><path d="M11 3H9"/></svg>auto-fixed</span></p><p>Date: 24/10/2026</p><p>Scholarship type:</p><p class="cb"><span class="box on"><svg class="i sm" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>Merit based</p><p class="cb"><span class="box "></span>Need based</p><p class="cb"><span class="box on"><svg class="i sm" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>Sports quota</p><p>Fee details</p><table><thead><tr><th>Item</th><th>Semester</th><th>Amount</th></tr></thead><tbody><tr><td>Tuition</td><td>Odd 2026</td><td>$1,250.00</td></tr><tr><td>Hostel</td><td>Odd 2026</td><td>$480.00</td></tr><tr><td>Library</td><td>Annual</td><td>$35.00</td></tr><tr><td>Total</td><td></td><td>$1,765.00</td></tr></tbody></table><p>I confirm the information above is correct</p><p>Signature: Ananya <span class="badge" style="background:#fdf2fa;color:#c11574"><svg class="i sm" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>Signature field</span></p></div>
+    <div class="tfoot"><span class="btn sm"><svg class="i sm" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>Copy</span><span class="btn sm">.txt</span><span class="btn sm">JSON</span><span class="btn sm primary"><svg class="i sm" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>Markdown</span></div></section>
+    </div></main></body></html>

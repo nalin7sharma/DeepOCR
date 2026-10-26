@@ -7,3 +7,4 @@
 | TrOCR Transformer (zero-shot) | ViT encoder + Transformer decoder | 6.97 | 16.40 | 40.67 | 20.37 | 54.68 | 53.83 | 377.3 |
 | TrOCR Transformer (fine-tuned) | ViT encoder + Transformer decoder | 6.73 | 16.79 | 37.83 | 2.59 | 10.81 | 84.33 | 415.2 |
 | PaddleOCR | PP-OCR recogniser | 28.84 | 72.50 | 1.50 | 3.89 | 21.09 | 66.17 | 139.2 |
+| Consensus vote (5 models) | ROVER word voting over all engines | 5.74 | 14.24 | 42.33 | 2.35 | 5.86 | 89.50 | 959.7 |

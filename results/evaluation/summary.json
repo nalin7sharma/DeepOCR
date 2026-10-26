@@ -213,6 +213,34 @@
         "ms_per_line": 365.81,
         "mean_confidence": 0.944
       }
+    },
+    "ensemble": {
+      "_info": {
+        "label": "Consensus vote (5 models)",
+        "architecture": "ROVER word voting over all engines",
+        "type": "ensemble of our models and the pretrained ones",
+        "weights": {
+          "trocr_ft": 3,
+          "trocr": 3,
+          "crnn": 1,
+          "cnn_bilstm": 2,
+          "paddle": 2
+        }
+      },
+      "iam": {
+        "cer": 5.744,
+        "wer": 14.239,
+        "accuracy": 42.333,
+        "samples": 600,
+        "ms_per_line": 959.7
+      },
+      "synthetic": {
+        "cer": 2.347,
+        "wer": 5.855,
+        "accuracy": 89.5,
+        "samples": 600,
+        "ms_per_line": 959.7
+      }
     }
   },
   "test_sets": {
@@ -232,6 +260,7 @@
     "CER/WER/accuracy are averaged per line on the held-out test partitions; lower CER/WER is better.",
     "Transcriptions are normalised (IAM's tokenised spacing before punctuation is removed) for every model alike; cer_raw keeps the original spacing.",
     "CNN-BiLSTM and CRNN were trained from scratch on CPU (IAM train + synthetic train only); TrOCR and PaddleOCR are pretrained by their authors.",
-    "TrOCR-small-handwritten was fine-tuned by Microsoft on IAM, so its IAM score may be optimistic if its training partition overlaps this test split."
+    "TrOCR-small-handwritten was fine-tuned by Microsoft on IAM, so its IAM score may be optimistic if its training partition overlaps this test split.",
+    "The consensus vote is scored with 2-fold cross-validation: weights tuned on one half of the test lines are measured on the other half."
   ]
 }

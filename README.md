@@ -29,11 +29,13 @@ CER, WER and accuracy are percentages averaged per line (lower CER/WER is better
 | TrOCR Transformer (zero-shot) | ViT encoder + Transformer decoder | 6.97 | 16.40 | 40.67 | 20.37 | 54.68 | 53.83 | 377.3 |
 | TrOCR Transformer (fine-tuned) | ViT encoder + Transformer decoder | 6.73 | 16.79 | 37.83 | 2.59 | 10.81 | 84.33 | 415.2 |
 | PaddleOCR | PP-OCR recogniser | 28.84 | 72.50 | 1.50 | 3.89 | 21.09 | 66.17 | 139.2 |
+| Consensus vote (5 models) | ROVER word voting over all engines | 5.74 | 14.24 | 42.33 | 2.35 | 5.86 | 89.50 | 959.7 |
 
 - CER/WER/accuracy are averaged per line on the held-out test partitions; lower CER/WER is better.
 - Transcriptions are normalised (IAM's tokenised spacing before punctuation is removed) for every model alike; cer_raw keeps the original spacing.
 - CNN-BiLSTM and CRNN were trained from scratch on CPU (IAM train + synthetic train only); TrOCR and PaddleOCR are pretrained by their authors.
 - TrOCR-small-handwritten was fine-tuned by Microsoft on IAM, so its IAM score may be optimistic if its training partition overlaps this test split.
+- The consensus vote is scored with 2-fold cross-validation: weights tuned on one half of the test lines are measured on the other half.
 
 Charts: `results/plots/model_comparison.png`, `results/plots/robustness.png` and
 `results/plots/*_training_curves.png`. All of them are interactive on the web app's **Research** page.
@@ -198,7 +200,7 @@ exact model. Training logs and curves go to `results/training/` and `results/plo
 
 | Method | Path | Purpose |
 | --- | --- | --- |
-| `POST` | `/api/v1/ocr` | OCR a multipart upload: `file`, optional `engine` (`paddle`, `crnn`, `cnn_bilstm`, `trocr`, `trocr_ft`), `preprocess` (`deskew,denoise,contrast,binarize`), `correct` (`true`/`false`) |
+| `POST` | `/api/v1/ocr` | OCR a multipart upload: `file`, optional `engine` (`paddle`, `crnn`, `cnn_bilstm`, `trocr`, `trocr_ft`, `ensemble`), `preprocess` (`deskew,denoise,contrast,binarize`), `correct` (`true`/`false`) |
 | `GET` | `/api/v1/engines` | Engine availability, model info and evaluation metrics |
 | `GET` | `/api/v1/metrics` | Evaluation summary, training histories, robustness and sample predictions |
 | `GET` | `/api/v1/samples` | Built-in demo documents |
@@ -244,6 +246,23 @@ DeepOCR/
 ├── start.ps1 / .bat  One-click launcher
 └── docker-compose.yml
 ```
+
+## Consensus vote (model ensemble)
+
+The `ensemble` engine ("Consensus · 5 models") runs every model on each detected line and
+combines the readings with **ROVER** word voting (`postprocessing/ensemble.py`):
+
+1. The readings are aligned word by word, matching similar words to the same slot.
+2. Each slot is decided by a weighted vote, where a vote counts *model weight × that model's
+   confidence on the line*.
+3. Words without a majority are flagged, and their alternatives are returned for review.
+
+The weights are tuned by grid search with 2-fold cross-validation on the held-out test
+predictions (`scripts/ensemble_eval.py`), so the reported scores are never measured on the
+lines used for tuning. The final weights are TrOCR fine-tuned 3, TrOCR 3, PaddleOCR 2,
+CNN-BiLSTM 2, CRNN 1. The vote reduces handwriting CER from 6.73% to **5.74%** (−15%) and
+printed-text WER from 10.81% to **5.86%** (−46%) compared with the best single model. The cost
+is speed: about 1 s per line on CPU, because every model runs.
 
 ## Robustness
 

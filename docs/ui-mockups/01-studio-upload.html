@@ -1,0 +1,164 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1440"><link rel="stylesheet" href="mockup.css"><style>
+    .hero { display: grid; grid-template-columns: 1fr 1.18fr; gap: 56px; align-items: start; }
+    .pitch { padding-top: 28px; }
+    h1 { margin: 18px 0 16px; font: 600 46px/1.08 var(--display); letter-spacing: -0.03em; }
+    .lead { margin: 0; color: var(--text-2); font-size: 17px; line-height: 28px; max-width: 520px; }
+    .proof { display: grid; grid-template-columns: repeat(3, 1fr); margin: 32px 0 28px; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface); }
+    .proof div { padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; }
+    .proof div + div { border-left: 1px solid var(--border); }
+    .proof b { font: 600 30px/1 var(--display); letter-spacing: -0.02em; color: var(--accent); }
+    .proof span { color: var(--text-3); font-size: 12.5px; line-height: 18px; }
+    .checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; color: var(--text-2); }
+    .checks li { display: flex; align-items: center; gap: 10px; }
+    .checks svg { color: var(--success); background: var(--success-soft); border-radius: 50%; padding: 3px; width: 20px; height: 20px; }
+    .flow { margin-top: 32px; padding: 18px 20px; box-shadow: none; }
+    .flow ol { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 0; }
+    .flow li { position: relative; display: grid; grid-template-columns: 32px 1fr; grid-template-rows: auto auto; column-gap: 12px; padding-bottom: 16px; }
+    .flow li:last-child { padding-bottom: 0; }
+    .flow li:not(:last-child)::before { content: ""; position: absolute; left: 15px; top: 32px; bottom: 0; width: 2px; background: var(--border); }
+    .fi { grid-row: 1 / 3; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); }
+    .flow li b { font-size: 14px; }
+    .flow li > span:last-child { color: var(--text-3); font-size: 13px; }
+    .extract { padding: 24px; }
+    .extract-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+    .extract-head h2 { margin: 0; font: 600 19px/1 var(--display); letter-spacing: -0.01em; }
+    .extract-head .muted { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; }
+    .step + .step { margin-top: 22px; }
+    .step-note { margin-left: auto; font-weight: 400; font-size: 12px; }
+    .drop { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 26px; border: 1.5px dashed var(--border-strong); border-radius: 12px; background: var(--subtle); text-align: center; }
+    .drop u { color: var(--accent); text-decoration: none; }
+    .drop-icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); color: var(--accent); box-shadow: var(--sh-xs); margin-bottom: 4px; }
+    .drop-actions { display: flex; gap: 8px; margin-top: 8px; }
+    .eng-list { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .eng { display: grid; grid-template-columns: 18px 4px minmax(0, 1fr) 84px 84px 64px; gap: 14px; align-items: center; padding: 12px 14px; }
+    .eng + .eng { border-top: 1px solid var(--border); }
+    .eng.on { background: var(--accent-soft); box-shadow: inset 0 0 0 1.5px var(--accent); border-radius: 12px; }
+    .radio { width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid var(--border-strong); background: #fff; }
+    .radio.on { border: 5px solid var(--accent); }
+    .eng-id { width: 4px; height: 30px; border-radius: 4px; background: var(--c); }
+    .eng-main { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+    .eng-name { display: flex; align-items: center; gap: 8px; font-weight: 650; white-space: nowrap; }
+    .eng-tag { font-weight: 600; color: var(--text-2); margin-right: 6px; }
+    .eng-tag.ours { color: var(--accent); }
+    .eng-tag::after { content: "·"; margin-left: 6px; color: var(--text-4); font-weight: 400; }
+    .eng-desc { color: var(--text-3); font-size: 12.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .eng-metric { display: flex; flex-direction: column; gap: 3px; font-size: 13px; }
+    .mlabel { color: var(--text-4); font-size: 11px; line-height: 14px; }
+    .eng-metric .mono { font-weight: 650; font-size: 14px; line-height: 16px; }
+    .meter { height: 4px; border-radius: 4px; background: var(--muted); overflow: hidden; }
+    .meter i { display: block; height: 100%; border-radius: 4px; }
+    .eng-speed { color: var(--text-3); font-size: 12px; text-align: right; line-height: 16px; }
+    .opts { display: grid; grid-template-columns: 1.25fr 1fr; gap: 16px; align-items: start; }
+    .opts > div { display: flex; flex-direction: column; gap: 8px; }
+    .opt-label { font-weight: 550; font-size: 13px; color: var(--text-2); }
+    .hint { display: block; color: var(--text-3); font-size: 12px; font-weight: 400; }
+    .opt-switch { flex-direction: row !important; gap: 12px !important; padding: 12px; border: 1px solid var(--border); border-radius: 12px; margin-top: 24px; }
+    .opt-switch b { display: block; font-size: 13.5px; }
+    .cta { margin-top: 24px; }
+    .cta .btn { width: 100%; }
+    .samples { margin-top: 48px; }
+    .sec-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px; }
+    .sec-head h3 { margin: 0; font: 600 18px/1 var(--display); }
+    .sample-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .sample { overflow: hidden; }
+    .thumb { height: 150px; background: var(--muted); border-bottom: 1px solid var(--border); overflow: hidden; }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .sample-body { padding: 14px; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+    .sample-body > span:not(.badge) { color: var(--text-3); font-size: 12.5px; line-height: 18px; }
+    </style></head><body><header class="topbar"><span class="brand"><svg width="28" height="28" viewBox="0 0 32 32"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs><rect x="2" y="2" width="28" height="28" rx="8" fill="url(#lg)"/><rect x="9" y="10" width="14" height="2.4" rx="1.2" fill="#fff"/><rect x="9" y="15" width="10" height="2.4" rx="1.2" fill="#fff" opacity=".8"/><rect x="9" y="20" width="12" height="2.4" rx="1.2" fill="#fff" opacity=".6"/></svg><span>Deep<b>OCR</b></span></span><nav class="tabs"><span class="tab on"><svg class="i " viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8h8"/><path d="M7 12h10"/><path d="M7 16h6"/></svg>Studio</span><span class="tab "><svg class="i " viewBox="0 0 24 24"><circle cx="5" cy="6" r="3"/><path d="M12 6h5a2 2 0 0 1 2 2v7"/><path d="m15 9-3-3 3-3"/><circle cx="19" cy="18" r="3"/><path d="M12 18H7a2 2 0 0 1-2-2V9"/><path d="m9 15 3 3-3 3"/></svg>Compare</span><span class="tab "><svg class="i " viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg>Research</span><span class="tab "><svg class="i " viewBox="0 0 24 24"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg>How it works</span></nav><div class="top-right"><span class="status"><i class="dot"></i>5 engines ready</span><span class="icon-btn" title="API docs"><svg class="i " viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span></div></header><main class="page">
+    <div class="hero">
+      <section class="pitch">
+        <span class="badge accent"><svg class="i sm" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>Deep learning OCR for handwriting &amp; complex documents</span>
+        <h1>Turn handwriting and messy scans into structured, editable text.</h1>
+        <p class="lead">Five recognition models read every line and <b>vote on each word</b>. A word several models agree on is far more likely to be right. Image cleanup, layout analysis and error correction are included, and every disputed word is flagged for review.</p>
+        <div class="proof">
+          <div><b class="mono">5.7%</b><span>character error on handwriting from unseen writers</span></div>
+          <div><b class="mono">2.4%</b><span>character error on printed &amp; degraded text</span></div>
+          <div><b class="mono">12 ms</b><span>per line with our fastest model, on a laptop CPU</span></div>
+        </div>
+        <ul class="checks">
+          <li><svg class="i sm" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>PDF, PNG, JPG, TIFF and WEBP, up to 100 pages</li>
+          <li><svg class="i sm" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Headings, tables, checkboxes and signature fields detected</li>
+          <li><svg class="i sm" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Export Markdown, plain text or JSON</li>
+        </ul>
+        <div class="flow card">
+          <span class="label">What happens to your document</span>
+          <ol>
+            <li><span class="fi"><svg class="i sm" viewBox="0 0 24 24"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"/><path d="m14 7 3 3"/><path d="M5 6v4"/><path d="M19 14v4"/><path d="M10 2v2"/><path d="M7 8H3"/><path d="M21 16h-4"/><path d="M11 3H9"/></svg></span><b>Clean up</b><span>Straighten, denoise, boost contrast</span></li>
+            <li><span class="fi"><svg class="i sm" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8h8"/><path d="M7 12h10"/><path d="M7 16h6"/></svg></span><b>Find &amp; read</b><span>Detect each line; up to five models read it</span></li>
+            <li><span class="fi"><svg class="i sm" viewBox="0 0 24 24"><circle cx="5" cy="6" r="3"/><path d="M12 6h5a2 2 0 0 1 2 2v7"/><path d="m15 9-3-3 3-3"/><circle cx="19" cy="18" r="3"/><path d="M12 18H7a2 2 0 0 1-2-2V9"/><path d="m9 15 3 3-3 3"/></svg></span><b>Vote</b><span>Words the models agree on win; disagreements are flagged</span></li>
+            <li><span class="fi"><svg class="i sm" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/></svg></span><b>Rebuild layout</b><span>Headings, tables, checkboxes, reading order</span></li>
+            <li><span class="fi"><svg class="i sm" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><b>Review</b><span>Fix flagged words, then export</span></li>
+          </ol>
+        </div>
+      </section>
+      <section class="card extract">
+        <div class="extract-head"><h2>New extraction</h2><span class="muted"><svg class="i sm" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg> Processed locally</span></div>
+        <div class="step"><div class="step-head"><span class="step-num">1</span>Document</div>
+          <div class="drop">
+            <span class="drop-icon"><svg class="i lg" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg></span>
+            <b>Drop a file here, or <u>browse</u></b>
+            <span class="muted">PDF, PNG, JPG, TIFF or WEBP · up to 100 MB</span>
+            <div class="drop-actions"><span class="btn sm"><svg class="i sm" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>Paste <span class="kbd light">Ctrl V</span></span><span class="btn sm"><svg class="i sm" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>Camera</span></div>
+          </div>
+        </div>
+        <div class="step"><div class="step-head"><span class="step-num">2</span>Recognition engine<span class="muted step-note">Error rates measured on held-out test sets. Lower is better.</span></div>
+          <div class="eng-list"><div class="eng on">
+          <span class="radio on"></span>
+          <span class="eng-id" style="--c:var(--accent)"></span>
+          <span class="eng-main"><span class="eng-name">Consensus · 5 models<span class="badge success"><svg class="i sm" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>Most accurate</span></span><span class="eng-desc"><span class="eng-tag ours">Ours · ensemble</span>All models read each line, then vote word by word</span></span>
+          <span class="eng-metric"><span class="mlabel">Handwriting</span><span class="mono">5.7%</span><span class="meter"><i style="width:19%;background:#17b26a"></i></span></span>
+          <span class="eng-metric"><span class="mlabel">Print</span><span class="mono">2.4%</span><span class="meter"><i style="width:8%;background:#17b26a"></i></span></span>
+          <span class="eng-speed mono">1.0 s<br><span class="mlabel">per line</span></span>
+        </div><div class="eng ">
+          <span class="radio "></span>
+          <span class="eng-id" style="--c:var(--m-trocrft)"></span>
+          <span class="eng-main"><span class="eng-name">TrOCR · fine-tuned<span class="badge accent"><svg class="i sm" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>Best balance</span></span><span class="eng-desc"><span class="eng-tag ours">Ours · fine-tuned</span>Vision Transformer tuned on our data</span></span>
+          <span class="eng-metric"><span class="mlabel">Handwriting</span><span class="mono">6.7%</span><span class="meter"><i style="width:22%;background:#17b26a"></i></span></span>
+          <span class="eng-metric"><span class="mlabel">Print</span><span class="mono">2.6%</span><span class="meter"><i style="width:9%;background:#17b26a"></i></span></span>
+          <span class="eng-speed mono">0.4 s<br><span class="mlabel">per line</span></span>
+        </div><div class="eng ">
+          <span class="radio "></span>
+          <span class="eng-id" style="--c:var(--m-crnn)"></span>
+          <span class="eng-main"><span class="eng-name">CRNN</span><span class="eng-desc"><span class="eng-tag ours">Ours · trained</span>CNN + BiLSTM + CTC, 2.8 M parameters</span></span>
+          <span class="eng-metric"><span class="mlabel">Handwriting</span><span class="mono">21.7%</span><span class="meter"><i style="width:72%;background:#f79009"></i></span></span>
+          <span class="eng-metric"><span class="mlabel">Print</span><span class="mono">5.2%</span><span class="meter"><i style="width:18%;background:#17b26a"></i></span></span>
+          <span class="eng-speed mono">16 ms<br><span class="mlabel">per line</span></span>
+        </div><div class="eng ">
+          <span class="radio "></span>
+          <span class="eng-id" style="--c:var(--m-cnn)"></span>
+          <span class="eng-main"><span class="eng-name">CNN-BiLSTM</span><span class="eng-desc"><span class="eng-tag ours">Ours · baseline</span>CNN features + BiLSTM + CTC, 2.4 M</span></span>
+          <span class="eng-metric"><span class="mlabel">Handwriting</span><span class="mono">21.8%</span><span class="meter"><i style="width:73%;background:#f79009"></i></span></span>
+          <span class="eng-metric"><span class="mlabel">Print</span><span class="mono">4.8%</span><span class="meter"><i style="width:16%;background:#17b26a"></i></span></span>
+          <span class="eng-speed mono">12 ms<br><span class="mlabel">per line</span></span>
+        </div><div class="eng ">
+          <span class="radio "></span>
+          <span class="eng-id" style="--c:var(--m-trocr)"></span>
+          <span class="eng-main"><span class="eng-name">TrOCR</span><span class="eng-desc"><span class="eng-tag ">Pretrained</span>Microsoft TrOCR-small, as released</span></span>
+          <span class="eng-metric"><span class="mlabel">Handwriting</span><span class="mono">7.0%</span><span class="meter"><i style="width:23%;background:#17b26a"></i></span></span>
+          <span class="eng-metric"><span class="mlabel">Print</span><span class="mono">20.4%</span><span class="meter"><i style="width:68%;background:#f79009"></i></span></span>
+          <span class="eng-speed mono">0.38 s<br><span class="mlabel">per line</span></span>
+        </div><div class="eng ">
+          <span class="radio "></span>
+          <span class="eng-id" style="--c:var(--m-paddle)"></span>
+          <span class="eng-main"><span class="eng-name">PaddleOCR</span><span class="eng-desc"><span class="eng-tag ">Reference</span>Industrial PP-OCR, strong on print</span></span>
+          <span class="eng-metric"><span class="mlabel">Handwriting</span><span class="mono">28.8%</span><span class="meter"><i style="width:96%;background:#f04438"></i></span></span>
+          <span class="eng-metric"><span class="mlabel">Print</span><span class="mono">3.9%</span><span class="meter"><i style="width:13%;background:#17b26a"></i></span></span>
+          <span class="eng-speed mono">0.14 s<br><span class="mlabel">per line</span></span>
+        </div></div>
+        </div>
+        <div class="step"><div class="step-head"><span class="step-num">3</span>Options</div>
+          <div class="opts">
+            <div><span class="opt-label">Image cleanup</span><span class="seg"><span class="on">Auto</span><span>Scan</span><span>Photo</span><span>Off</span></span><span class="hint">Straightens tilted pages and boosts faint text.</span></div>
+            <div class="opt-switch"><span class="switch"></span><span><b>Auto-correct</b><span class="hint">Fixes OCR typos; each change can be undone.</span></span></div>
+          </div>
+        </div>
+        <div class="cta"><span class="btn primary lg"><svg class="i " viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8h8"/><path d="M7 12h10"/><path d="M7 16h6"/></svg>Extract text<span class="kbd">Ctrl ↵</span></span></div>
+      </section>
+    </div>
+    <section class="samples"><div class="sec-head"><h3>Or try a sample document</h3><span class="muted">Runs instantly with the recommended settings</span></div><div class="sample-grid"><div class="sample card"><div class="thumb"><img src="../../samples/handwritten_note_thumb.jpg"></div>
+        <div class="sample-body"><b>Handwritten note</b><span>8 lines of real IAM handwriting from unseen writers</span><span class="badge outline"><svg class="i sm" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>TrOCR · fine-tuned</span></div></div><div class="sample card"><div class="thumb"><img src="../../samples/application_form_thumb.jpg"></div>
+        <div class="sample-body"><b>Application form</b><span>Fields, checkboxes, a ruled table and a signature</span><span class="badge outline"><svg class="i sm" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>PaddleOCR</span></div></div><div class="sample card"><div class="thumb"><img src="../../samples/noisy_scan_thumb.jpg"></div>
+        <div class="sample-body"><b>Noisy, skewed scan</b><span>4° tilt, speckle noise and uneven lighting</span><span class="badge outline"><svg class="i sm" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>Auto cleanup</span></div></div><div class="sample card"><div class="thumb"><img src="../../samples/report_thumb.png"></div>
+        <div class="sample-body"><b>Two-page PDF report</b><span>Printed report with a table, then a handwritten page</span><span class="badge outline"><svg class="i sm" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>Multi-page</span></div></div></div></section>
+    </main></body></html>

@@ -58,6 +58,9 @@ CATALOG: dict[str, EngineSpec] = {
         EngineSpec("trocr_ft", "TrOCR · fine-tuned", "Advanced · fine-tuned by us",
                    "The TrOCR Transformer further fine-tuned on our IAM + synthetic training data.",
                    "DBNet (PP-OCR)", "TrOCR-small fine-tuned"),
+        EngineSpec("ensemble", "Consensus · 5 models", "Ours · ensemble",
+                   "Every model reads each line; words are chosen by weighted vote, so words several models agree on win.",
+                   "DBNet (PP-OCR)", "ROVER vote over all models"),
     ]
 }
 
@@ -121,6 +124,67 @@ class DetectRecognizeEngine:
         ]
 
 
+DEFAULT_ENSEMBLE_WEIGHTS = {"trocr_ft": 3.0, "trocr": 3.0, "crnn": 1.0, "cnn_bilstm": 2.0, "paddle": 2.0}
+
+
+class EnsembleEngine:
+    """Consensus engine: every available model reads each detected line, then the
+    words are aligned and voted on (ROVER, postprocessing/ensemble.py). A model's
+    vote is its tuned weight times its confidence on that line."""
+
+    def __init__(self, registry: "EngineRegistry", weights: dict[str, float]) -> None:
+        self.registry = registry
+        self.weights = weights
+        self.name = "ensemble"
+
+    def members(self) -> list[tuple[str, float, Callable]]:
+        found = []
+        for engine_id, weight in self.weights.items():
+            if weight <= 0 or engine_id not in self.registry.ids() or not self.registry.is_installable(engine_id):
+                continue
+            try:
+                engine = self.registry.get(engine_id)
+            except OcrEngineError:
+                logger.warning("Consensus engine: %s unavailable, voting without it.", engine_id)
+                continue
+            if hasattr(engine, "recognize_crops"):
+                found.append((engine_id, weight, engine.recognize_crops))
+            elif getattr(engine, "recognizer", None) is not None:
+                found.append((engine_id, weight, engine.recognizer.recognize))
+        return found
+
+    def recognize(self, image: np.ndarray) -> list[TextRegion]:
+        from datasets.line_image import normalize_transcription
+        from postprocessing.ensemble import Hypothesis, rover
+
+        members = self.members()
+        if len(members) < 2:
+            raise OcrEngineError("The consensus engine needs at least two available models.")
+        polygons = self.registry._detector().detect(image)
+        if not polygons:
+            return []
+        crops = [crop_polygon(image, polygon) for polygon in polygons]
+        readings = {engine_id: (weight, read(crops)) for engine_id, weight, read in members}
+        regions = []
+        for index, polygon in enumerate(polygons):
+            hypotheses, confidences = [], []
+            for engine_id, (weight, outputs) in readings.items():
+                text, confidence = outputs[index]
+                text = normalize_transcription(text)
+                if text:
+                    hypotheses.append(Hypothesis(text, engine_id, weight * max(confidence, 0.01)))
+                    confidences.append((weight, confidence))
+            text, words = rover(hypotheses)
+            if not text:
+                continue
+            # Line confidence: the members' own confidence, weighted like their votes.
+            line_confidence = sum(w * c for w, c in confidences) / max(1e-9, sum(w for w, _ in confidences))
+            regions.append(TextRegion(polygon=polygon, text=text,
+                                      confidence=float(max(0.0, min(1.0, line_confidence))),
+                                      words=[word.to_dict() for word in words]))
+        return regions
+
+
 class EngineRegistry:
     """Lazily constructs engines, caches them, and reports their status."""
 
@@ -142,6 +206,7 @@ class EngineRegistry:
                 "cnn_bilstm": lambda: self._ctc_engine("cnn_bilstm"),
                 "trocr": self._trocr_engine,
                 "trocr_ft": lambda: self._trocr_engine(str(self.finetuned_trocr_dir()), "trocr_ft"),
+                "ensemble": lambda: EnsembleEngine(self, self.ensemble_weights()),
             })
 
     # -- construction --------------------------------------------------
@@ -174,6 +239,15 @@ class EngineRegistry:
         except Exception as exc:
             raise OcrEngineError(f"Could not load the {model_name} checkpoint: {exc}") from exc
         return DetectRecognizeEngine(self._detector, recognizer, model_name)
+
+    def ensemble_weights(self) -> dict[str, float]:
+        """Weights tuned by scripts/ensemble_eval.py, or the defaults when not run yet."""
+        path = self.settings.results_dir / "evaluation" / "ensemble.json"
+        try:
+            weights = json.loads(path.read_text(encoding="utf-8")).get("weights") or {}
+            return {k: float(v) for k, v in weights.items()} or dict(DEFAULT_ENSEMBLE_WEIGHTS)
+        except (OSError, ValueError):
+            return dict(DEFAULT_ENSEMBLE_WEIGHTS)
 
     def finetuned_trocr_dir(self) -> Path:
         return self.settings.checkpoints_dir / "trocr_finetuned"
@@ -248,6 +322,9 @@ class EngineRegistry:
             return self.checkpoint_path(engine_id).is_file() or engine_id in self._instances
         if engine_id == "trocr_ft":
             return (self.finetuned_trocr_dir() / "config.json").is_file() or engine_id in self._instances
+        if engine_id == "ensemble":
+            members = [m for m in self.ensemble_weights() if m in self._providers and m != "ensemble"]
+            return sum(1 for m in members if self.is_installable(m)) >= 2
         return True
 
     # -- reporting ---------------------------------------------------------

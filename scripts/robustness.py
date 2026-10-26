@@ -147,7 +147,7 @@ def main() -> None:
         matplotlib.use("Agg")
         import matplotlib.pyplot as plt
 
-        palette = {"cnn_bilstm": "#06b6d4", "crnn": "#8b5cf6", "trocr": "#65a30d", "trocr_ft": "#ca8a04", "paddle": "#64748b"}
+        palette = {"cnn_bilstm": "#06b6d4", "crnn": "#8b5cf6", "trocr": "#65a30d", "trocr_ft": "#ca8a04", "paddle": "#64748b", "ensemble": "#4f46e5"}
         fig, axes = plt.subplots(1, len(CONDITIONS), figsize=(4.2 * len(CONDITIONS), 3.6))
         for ax, condition in zip(axes, CONDITIONS):
             for model_name, curves in payload["models"].items():

@@ -52,7 +52,7 @@ from utils.logger import get_logger
 
 logger = get_logger(__name__)
 
-ALL_MODELS = ["cnn_bilstm", "crnn", "trocr", "trocr_ft", "paddle"]
+ALL_MODELS = ["cnn_bilstm", "crnn", "trocr", "trocr_ft", "paddle", "ensemble"]
 SET_LABELS = {
     "iam": ("IAM handwriting", "Official IAM writer-independent test lines (unseen writers)"),
     "synthetic": ("Synthetic printed + script", "Rendered lines with 32 fonts and realistic degradations"),
@@ -63,6 +63,8 @@ MODEL_INFO = {
     "trocr": {"label": "TrOCR Transformer (zero-shot)", "architecture": "ViT encoder + Transformer decoder", "type": "pretrained / transfer learning"},
     "trocr_ft": {"label": "TrOCR Transformer (fine-tuned)", "architecture": "ViT encoder + Transformer decoder", "type": "pretrained + fine-tuned on our data"},
     "paddle": {"label": "PaddleOCR", "architecture": "PP-OCR recogniser", "type": "pretrained reference"},
+    "ensemble": {"label": "Consensus vote (5 models)", "architecture": "ROVER word voting over all engines",
+                 "type": "ensemble (scripts/ensemble_eval.py)"},
 }
 
 
@@ -185,7 +187,7 @@ def write_report_tables(summary: dict, results_dir: Path) -> None:
         import matplotlib.pyplot as plt
 
         fig, axes = plt.subplots(1, len(sets), figsize=(6 * len(sets), 4.2), squeeze=False)
-        palette = {"cnn_bilstm": "#06b6d4", "crnn": "#8b5cf6", "trocr": "#65a30d", "trocr_ft": "#ca8a04", "paddle": "#64748b"}
+        palette = {"cnn_bilstm": "#06b6d4", "crnn": "#8b5cf6", "trocr": "#65a30d", "trocr_ft": "#ca8a04", "paddle": "#64748b", "ensemble": "#4f46e5"}
         for ax, set_name in zip(axes[0], sets):
             models = [m for m in ALL_MODELS if summary["models"].get(m, {}).get(set_name)]
             cers = [summary["models"][m][set_name]["cer"] for m in models]

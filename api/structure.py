@@ -28,6 +28,7 @@ class ExtractionBlock:
     raw_text: str | None = None
     cells: list[list[str]] | None = None
     checkbox_state: str | None = None
+    words: list[dict] | None = None
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -171,6 +172,7 @@ def reconstruct_page(
                 review_required=review,
                 raw_text=text if kind == "illegible" else None,
                 checkbox_state=state,
+                words=_line_words(line),
             )
         )
         index += 1
@@ -182,6 +184,17 @@ def reconstruct_page(
         markdown=document_text,
         blocks=blocks,
     )
+
+
+def _line_words(line: _Line) -> list[dict] | None:
+    """Concatenated per-word consensus votes of a line's regions (ensemble engine only)."""
+    if not any(region.words for region in line.regions):
+        return None
+    words: list[dict] = []
+    for region in line.regions:
+        words.extend(region.words or [{"text": w, "support": None, "sources": [], "alternatives": {}}
+                                      for w in region.text.split()])
+    return words
 
 
 def _glyph_width(line: _Line) -> float:

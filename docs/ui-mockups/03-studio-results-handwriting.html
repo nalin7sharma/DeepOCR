@@ -1,0 +1,90 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1440"><link rel="stylesheet" href="mockup.css"><style>
+.work { padding: 20px 28px 40px; }
+.work-head { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
+.wh-file { display: flex; align-items: center; gap: 10px; }
+.wh-file div { display: flex; flex-direction: column; }
+.wh-file b { font-size: 15px; }
+.wh-file .muted { font-size: 12.5px; }
+.file-ic { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); }
+.wh-actions { margin-left: auto; display: flex; gap: 8px; }
+.wh-actions .btn b { font-weight: 650; color: var(--accent); }
+.strip { display: grid; grid-template-columns: 1.3fr repeat(4, 1fr) 1.6fr; padding: 0; margin-bottom: 14px; }
+.sv { display: flex; flex-direction: column; gap: 6px; padding: 12px 18px; }
+.sv + .sv { border-left: 1px solid var(--border); }
+.sv b { font-size: 20px; line-height: 1; font-weight: 600; }
+.sv b.warn { color: var(--warning); }
+.mini, .stack { display: flex; height: 5px; border-radius: 5px; background: var(--muted); overflow: hidden; }
+.mini i { background: var(--success); border-radius: 5px; }
+.stack i { height: 100%; }
+.wgrid { display: grid; grid-template-columns: 120px minmax(0, 1fr) 470px; gap: 14px; align-items: start; }
+.rail { padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+.pthumb { position: relative; border-radius: 8px; overflow: hidden; border: 2px solid var(--accent); height: 110px; background: #fff; }
+.pthumb img { width: 100%; height: 100%; object-fit: cover; object-position: top left; }
+.pthumb span { position: absolute; right: 4px; bottom: 4px; background: var(--accent); color: #fff; font: 600 10px/1 var(--mono); padding: 3px 5px; border-radius: 4px; }
+.rail-note { display: flex; gap: 6px; align-items: flex-start; font-size: 12px; line-height: 16px; color: var(--text-3); }
+.doc-foot { display: flex; align-items: center; gap: 14px; justify-content: space-between; padding: 10px 14px; border-top: 1px solid var(--border); font-size: 12px; }
+.rail-note svg { color: var(--success); }
+.docp { overflow: hidden; }
+.doc-tools { display: flex; align-items: center; gap: 14px; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+.legend { display: flex; align-items: center; gap: 6px; color: var(--text-2); font-size: 12px; }
+.lg { width: 10px; height: 10px; border-radius: 3px; display: inline-block; margin-left: 10px; }
+.lg:first-child { margin-left: 0; }
+.lg.hi { background: #17b26a; } .lg.mid { background: #f79009; } .lg.lo { background: #f04438; }
+.zoom { margin-left: auto; display: flex; align-items: center; gap: 6px; color: var(--text-2); font-size: 12px; }
+.zoom .icon-btn { width: 30px; height: 30px; }
+.stage { background: var(--muted); padding: 28px; display: grid; place-items: center; min-height: 560px; }
+.paper { position: relative; background: #fff; box-shadow: var(--sh-lg); border-radius: 3px; }
+.paper img { display: block; width: 100%; }
+.paper svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.textp { display: flex; flex-direction: column; overflow: hidden; }
+.ttabs { display: flex; gap: 2px; padding: 0 10px; border-bottom: 1px solid var(--border); }
+.ttab { position: relative; display: inline-flex; align-items: center; gap: 7px; padding: 13px 10px; color: var(--text-3); font-weight: 550; font-size: 13.5px; }
+.ttab.on { color: var(--text); }
+.ttab.on::after { content: ""; position: absolute; left: 6px; right: 6px; bottom: -1px; height: 2px; background: var(--accent); border-radius: 2px; }
+.ttab .badge { height: 19px; font-size: 11px; padding: 0 6px; }
+.tbody { padding: 14px; flex: 1; }
+.tfoot { display: flex; gap: 8px; padding: 12px 14px; border-top: 1px solid var(--border); background: var(--subtle); }
+.tfoot .btn:last-child { margin-left: auto; }
+
+    .tb-head { margin-bottom: 8px; font-size: 12.5px; color: var(--text-3); line-height: 18px; }
+    .ln { display: grid; grid-template-columns: 22px 1fr auto; gap: 10px; align-items: start; padding: 10px; border-radius: 10px; border: 1px solid transparent; }
+    .ln + .ln { border-top-color: var(--border); border-radius: 0; }
+    .ln.sel { background: var(--accent-soft); border-color: #c7d2fe; border-radius: 10px; }
+    .ln-n { color: var(--text-4); font-size: 12px; padding-top: 2px; }
+    .ln-t { font-size: 13.5px; line-height: 22px; }
+    .dis { position: relative; text-decoration: underline wavy #f79009; text-underline-offset: 4px; cursor: pointer; }
+    .dis.open { background: #fffaeb; border-radius: 3px; }
+    .dis.demo { font-weight: 600; color: var(--text-2); }
+    .pop { position: absolute; z-index: 4; left: -8px; top: 26px; width: 260px; padding: 10px; border-radius: 12px; background: #fff; border: 1px solid var(--border); box-shadow: var(--sh-lg); display: block; font-size: 12.5px; line-height: 18px; text-decoration: none; }
+    .pop-h { display: block; font-weight: 650; color: var(--text); margin-bottom: 6px; }
+    .pop-row { display: grid; grid-template-columns: 1fr 40px 62px; gap: 8px; align-items: center; padding: 6px 8px; border-radius: 8px; }
+    .pop-row + .pop-row { margin-top: 2px; }
+    .pop-row b { font-weight: 600; color: var(--text); }
+    .pop-row span { color: var(--text-3); text-align: right; font-variant-numeric: tabular-nums; }
+    .pop-row em { font-style: normal; color: var(--accent); font-weight: 600; text-align: right; }
+    .pop-row.chosen { background: var(--muted); }
+    .pop-row.chosen em { color: var(--text-3); font-weight: 500; }
+    .pop-row:nth-child(3) { background: var(--success-soft); }
+    .pop-f { display: block; margin-top: 8px; color: var(--text-4); font-size: 11.5px; }
+    </style></head><body><header class="topbar"><span class="brand"><svg width="28" height="28" viewBox="0 0 32 32"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs><rect x="2" y="2" width="28" height="28" rx="8" fill="url(#lg)"/><rect x="9" y="10" width="14" height="2.4" rx="1.2" fill="#fff"/><rect x="9" y="15" width="10" height="2.4" rx="1.2" fill="#fff" opacity=".8"/><rect x="9" y="20" width="12" height="2.4" rx="1.2" fill="#fff" opacity=".6"/></svg><span>Deep<b>OCR</b></span></span><nav class="tabs"><span class="tab on"><svg class="i " viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8h8"/><path d="M7 12h10"/><path d="M7 16h6"/></svg>Studio</span><span class="tab "><svg class="i " viewBox="0 0 24 24"><circle cx="5" cy="6" r="3"/><path d="M12 6h5a2 2 0 0 1 2 2v7"/><path d="m15 9-3-3 3-3"/><circle cx="19" cy="18" r="3"/><path d="M12 18H7a2 2 0 0 1-2-2V9"/><path d="m9 15 3 3-3 3"/></svg>Compare</span><span class="tab "><svg class="i " viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg>Research</span><span class="tab "><svg class="i " viewBox="0 0 24 24"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg>How it works</span></nav><div class="top-right"><span class="status"><i class="dot"></i>5 engines ready</span><span class="icon-btn" title="API docs"><svg class="i " viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span></div></header><main class="work">
+    <div class="work-head">
+      <span class="btn ghost sm"><svg class="i sm" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>New document</span>
+      <div class="wh-file"><span class="file-ic"><svg class="i " viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg></span><div><b>handwritten_note.png</b><span class="muted">1 page · consensus of 5 models · auto-correct on</span></div></div>
+      <div class="wh-actions"><span class="btn"><svg class="i sm" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>Re-run with <b>Consensus · 5 models</b><svg class="i sm" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span><span class="btn primary"><svg class="i sm" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>Export<svg class="i sm" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></div>
+    </div>
+    <div class="card strip"><div class="sv"><span class="label">Agreement</span><b class="mono ">91%</b><span class="mini"><i style="width:91%"></i></span></div><div class="sv"><span class="label">Lines</span><b class="mono ">8</b></div><div class="sv"><span class="label">Words</span><b class="mono ">125</b></div><div class="sv"><span class="label">Disputed words</span><b class="mono warn">11</b></div><div class="sv"><span class="label">Models voting</span><b class="mono ">5</b></div><div class="sv"><span class="label">Time</span><b class="mono ">23.8 s</b><span class="stack"><i style="width:0.2%;background:#98a2b3" title="decode"></i><i style="width:99.4%;background:#4f46e5" title="recognition"></i><i style="width:0.1%;background:#06aed4" title="layout"></i></span></div></div>
+    
+    <div class="wgrid">
+      <aside class="rail card">
+        <span class="label">Pages</span>
+        <div class="pthumb on"><img src="../../samples/handwritten_note.png"><span>1</span></div>
+        <span class="label" style="margin-top:14px">Cleanup</span>
+        <div class="rail-note"><svg class="i sm" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>No changes needed</span></div>
+      </aside>
+      <section class="card docp">
+        <div class="doc-tools"><span class="seg"><span class=""><svg class="i sm" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/></svg>Layout</span><span class="on"><svg class="i sm" viewBox="0 0 24 24"><circle cx="5" cy="6" r="3"/><path d="M12 6h5a2 2 0 0 1 2 2v7"/><path d="m15 9-3-3 3-3"/><circle cx="19" cy="18" r="3"/><path d="M12 18H7a2 2 0 0 1-2-2V9"/><path d="m9 15 3 3-3 3"/></svg>Agreement</span><span class=""><svg class="i sm" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>Confidence</span><span class=""><svg class="i sm" viewBox="0 0 24 24"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.53 13.53 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" x2="22" y1="2" y2="22"/></svg>Off</span></span><span class="zoom"><span class="icon-btn"><svg class="i sm" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M8 11h6"/></svg></span><span class="mono">Fit</span><span class="icon-btn"><svg class="i sm" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6"/><path d="M8 11h6"/></svg></span></span></div>
+        <div class="stage"><div class="paper"><img src="../../samples/handwritten_note.png"><svg viewBox="0 0 2330 1112" preserveAspectRatio="none"><polygon points="70,84 1692,84 1692,169 70,169" fill="rgba(247,144,9,0.14)" stroke="rgba(247,144,9,0.85)" stroke-width="3"/><polygon points="70,84 1692,84 1692,169 70,169" fill="rgba(79,70,229,.10)" stroke="#4f46e5" stroke-width="7"/><polygon points="75,193 1575,193 1575,283 75,283" fill="rgba(23,178,106,0.14)" stroke="rgba(23,178,106,0.85)" stroke-width="3"/><polygon points="85,323 2245,323 2245,400 85,400" fill="rgba(23,178,106,0.14)" stroke="rgba(23,178,106,0.85)" stroke-width="3"/><polygon points="61,437 1811,437 1811,524 61,524" fill="rgba(247,144,9,0.14)" stroke="rgba(247,144,9,0.85)" stroke-width="3"/><polygon points="75,558 2107,558 2107,643 75,643" fill="rgba(23,178,106,0.14)" stroke="rgba(23,178,106,0.85)" stroke-width="3"/><polygon points="82,680 1682,680 1682,757 82,757" fill="rgba(247,144,9,0.14)" stroke="rgba(247,144,9,0.85)" stroke-width="3"/><polygon points="73,792 2090,792 2090,889 73,889" fill="rgba(23,178,106,0.14)" stroke="rgba(23,178,106,0.85)" stroke-width="3"/><polygon points="80,911 2124,911 2124,995 80,995" fill="rgba(23,178,106,0.14)" stroke="rgba(23,178,106,0.85)" stroke-width="3"/></svg></div></div>
+        <div class="doc-foot"><span class="legend"><i class="lg hi"></i>Models agree<i class="lg mid"></i>Partly<i class="lg lo"></i>Disputed</span><span class="muted">Hover a region to see its text. Click to jump to it.</span></div>
+      </section>
+      <section class="card textp"><div class="ttabs"><span class="ttab"><svg class="i sm" viewBox="0 0 24 24"><path d="M17 6.1H3"/><path d="M21 12.1H3"/><path d="M15.1 18H3"/></svg>Text</span><span class="ttab on"><svg class="i sm" viewBox="0 0 24 24"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/></svg>Lines<span class="badge">8</span></span><span class="ttab"><svg class="i sm" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Review<span class="badge warning">11</span></span><span class="ttab"><svg class="i sm" viewBox="0 0 24 24"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"/><path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/></svg>JSON</span></div><div class="tbody"><div class="tb-head"><span class="dis demo">Underlined</span> words: the five models disagreed. Click one to see the alternatives and replace it in one click.</div><div class="ln sel"><span class="ln-n mono">1</span><span class="ln-t">assurances &quot; Bella Bella Marie &quot; <span class="dis">(Karlophane),</span> a lively song that <span class="dis open">donges<span class="pop"><span class="pop-h">The models disagreed here</span><div class="pop-row chosen"><b>donges</b><span>29%</span><em>picked</em></div><div class="pop-row"><b>changes</b><span>27%</span><em>Use this</em></div><div class="pop-row"><b>danger</b><span>26%</span><em>Use this</em></div><div class="pop-row"><b>cionges</b><span>19%</span><em>Use this</em></div><span class="pop-f">Vote share = model weight × its confidence</span></span></span> tempo <span class="dis">mid</span></span><span class="conf mid" title="Share of words the models agree on">79%</span></div><div class="ln"><span class="ln-n mono">2</span><span class="ln-t">I don&#x27;t think he will storm the charts with this one, but it&#x27;s a good start.</span><span class="conf hi" title="Share of words the models agree on">100%</span></div><div class="ln"><span class="ln-n mono">3</span><span class="ln-t">CHRIS CHARLES, 39, who lives in Stockton - on - Tees, is an accountant.</span><span class="conf hi" title="Share of words the models agree on">100%</span></div><div class="ln"><span class="ln-n mono">4</span><span class="ln-t">Become a success with a dise and hey <span class="dis">presto.</span> You&#x27;re a <span class="dis">star...</span> <span class="dis">Rolly</span> sings with</span><span class="conf mid" title="Share of words the models agree on">80%</span></div><div class="ln"><span class="ln-n mono">5</span><span class="ln-t">Tolch, as he is <span class="dis">unown</span> in Tin Pan Alley, <span class="dis">lives</span> songs with a month in the title. He wrote</span><span class="conf hi" title="Share of words the models agree on">89%</span></div><div class="ln"><span class="ln-n mono">6</span><span class="ln-t"><span class="dis">My</span> September <span class="dis">Love</span> &quot;, the big David Whitfield hit of 1956.</span><span class="conf mid" title="Share of words the models agree on">82%</span></div><div class="ln"><span class="ln-n mono">7</span><span class="ln-t">He is also a director of a couple of garages. And he finds time as well to be a lyric</span><span class="conf hi" title="Share of words the models agree on">100%</span></div><div class="ln"><span class="ln-n mono">8</span><span class="ln-t">writer. He writes with Tolchard Evans, composer of &quot; Lady of <span class="dis">Spain&quot;</span> and other big hits.</span><span class="conf hi" title="Share of words the models agree on">94%</span></div></div><div class="tfoot"><span class="btn sm"><svg class="i sm" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>Copy</span><span class="btn sm">.txt</span><span class="btn sm">JSON</span><span class="btn sm primary"><svg class="i sm" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>Markdown</span></div></section>
+    </div></main></body></html>

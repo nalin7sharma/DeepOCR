@@ -6,3 +6,4 @@ CRNN + post-processing,CRNN (VGG + BiLSTM + CTC),20.546,50.99,3.167,5.005,16.128
 TrOCR Transformer (zero-shot),ViT encoder + Transformer decoder,6.975,16.4,40.667,20.366,54.68,53.833,377.27
 TrOCR Transformer (fine-tuned),ViT encoder + Transformer decoder,6.732,16.785,37.833,2.588,10.815,84.333,415.24
 PaddleOCR,PP-OCR recogniser,28.84,72.503,1.5,3.891,21.093,66.167,139.19
+Consensus vote (5 models),ROVER word voting over all engines,5.744,14.239,42.333,2.347,5.855,89.5,959.7

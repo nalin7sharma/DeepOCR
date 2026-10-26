@@ -21,6 +21,8 @@ class TextRegion:
     polygon: list[list[float]]
     text: str
     confidence: float
+    # Per-word consensus details from the ensemble engine (text, support, sources, alternatives).
+    words: list[dict] | None = None
 
 
 class OcrEngine(Protocol):
@@ -56,6 +58,23 @@ class PaddleOcrEngine:
         except Exception as exc:
             raise OcrEngineError("PaddleOCR failed to process the page.") from exc
         return _normalize_result(result)
+
+    def recognize_crops(self, crops: list[np.ndarray]) -> list[tuple[str, float]]:
+        """Recognition only, on pre-cut text-line images (used by the consensus engine)."""
+        results: list[tuple[str, float]] = []
+        try:
+            with self._lock:
+                for crop in crops:
+                    bgr = crop if crop.ndim == 3 else np.stack([crop] * 3, axis=-1)
+                    output = self._ocr.ocr(bgr, det=False, cls=False)
+                    try:
+                        text, score = output[0][0]
+                    except (IndexError, TypeError, ValueError):
+                        text, score = "", 0.0
+                    results.append((" ".join(str(text).split()), float(score)))
+        except Exception as exc:
+            raise OcrEngineError("PaddleOCR recognition failed.") from exc
+        return results
 
     def detect(self, image: np.ndarray) -> list[list[list[float]]]:
         """Text-line detection only (DB detector); returns quadrilateral polygons."""

@@ -176,3 +176,50 @@ def test_skew_estimation_survives_shading_and_noise():
     tilted += np.random.default_rng(1).normal(0, 14, tilted.shape)
     degraded = np.clip(tilted, 0, 255).astype(np.uint8)
     assert abs(estimate_skew(degraded) + 4.0) < 1.0
+
+
+def test_corrector_leaves_names_alone():
+    corrector = TextCorrector()
+    text, _ = corrector.correct_with_report("Name: Ananya Iyer wrote to Tolch about the paymnet")
+    assert text == "Name: Ananya Iyer wrote to Tolch about the payment"
+
+
+def test_consensus_engine_votes_across_models(tmp_path):
+    from api.engines import EngineRegistry, EnsembleEngine
+
+    class Paddle(FakePaddle):
+        def recognize_crops(self, crops):
+            return [("the quick brown fox", 0.9) for _ in crops]
+
+    class Reader:
+        def __init__(self, text, conf):
+            self.text, self.conf = text, conf
+
+        def recognize(self, crops):
+            return [(self.text, self.conf) for _ in crops]
+
+    paddle = Paddle()
+    settings = Settings(results_dir=tmp_path / "results", checkpoints_dir=tmp_path / "ckpt",
+                        samples_dir=tmp_path / "samples", web_dist_dir=tmp_path / "dist")
+    registry = EngineRegistry(settings, {
+        "paddle": lambda: paddle,
+        "trocr": lambda: DetectRecognizeEngine(lambda: paddle, Reader("the quick brown fax", 0.95), "trocr"),
+        "cnn_bilstm_like": lambda: DetectRecognizeEngine(lambda: paddle, Reader("the quick brown fox", 0.8), "x"),
+    })
+    engine = EnsembleEngine(registry, {"trocr": 3, "paddle": 2, "cnn_bilstm_like": 2})
+    regions = engine.recognize(np.full((100, 300, 3), 255, np.uint8))
+    assert regions[0].text == "the quick brown fox"
+    last = regions[0].words[-1]
+    assert last["text"] == "fox" and set(last["sources"]) == {"paddle", "cnn_bilstm_like"}
+    assert "fax" in last["alternatives"]
+
+
+def test_consensus_needs_two_models(tmp_path):
+    from api.engines import EngineRegistry, EnsembleEngine
+    from api.ocr_engine import OcrEngineError
+    import pytest
+
+    settings = Settings(results_dir=tmp_path / "r", checkpoints_dir=tmp_path / "c")
+    registry = EngineRegistry(settings, {"paddle": FakePaddle})
+    with pytest.raises(OcrEngineError):
+        EnsembleEngine(registry, {"paddle": 1}).recognize(np.zeros((10, 10, 3), np.uint8))

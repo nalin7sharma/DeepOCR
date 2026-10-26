@@ -1,0 +1,118 @@
+{
+  "method": "ROVER word voting, vote = model weight x line confidence",
+  "objective": "overall CER",
+  "lines": 1200,
+  "fold_weights": [
+    {
+      "trocr_ft": 3,
+      "trocr": 3,
+      "crnn": 1,
+      "cnn_bilstm": 3,
+      "paddle": 1
+    },
+    {
+      "trocr_ft": 3,
+      "trocr": 3,
+      "crnn": 2,
+      "cnn_bilstm": 2,
+      "paddle": 2
+    }
+  ],
+  "weights": {
+    "trocr_ft": 3,
+    "trocr": 3,
+    "crnn": 1,
+    "cnn_bilstm": 2,
+    "paddle": 2
+  },
+  "sets": {
+    "iam": {
+      "trocr_ft": {
+        "cer": 6.732,
+        "wer": 16.785,
+        "accuracy": 37.833,
+        "samples": 600
+      },
+      "trocr": {
+        "cer": 6.975,
+        "wer": 16.4,
+        "accuracy": 40.667,
+        "samples": 600
+      },
+      "crnn": {
+        "cer": 21.662,
+        "wer": 61.474,
+        "accuracy": 0.5,
+        "samples": 600
+      },
+      "cnn_bilstm": {
+        "cer": 21.793,
+        "wer": 61.966,
+        "accuracy": 1.0,
+        "samples": 600
+      },
+      "paddle": {
+        "cer": 28.84,
+        "wer": 72.503,
+        "accuracy": 1.5,
+        "samples": 600
+      },
+      "ensemble_cv": {
+        "cer": 5.744,
+        "wer": 14.239,
+        "accuracy": 42.333,
+        "samples": 600
+      },
+      "oracle_best_line": {
+        "cer": 4.268,
+        "wer": 12.185,
+        "accuracy": 48.833,
+        "samples": 600
+      }
+    },
+    "synthetic": {
+      "trocr_ft": {
+        "cer": 2.588,
+        "wer": 10.815,
+        "accuracy": 84.333,
+        "samples": 600
+      },
+      "trocr": {
+        "cer": 20.366,
+        "wer": 54.68,
+        "accuracy": 53.833,
+        "samples": 600
+      },
+      "crnn": {
+        "cer": 5.253,
+        "wer": 18.541,
+        "accuracy": 63.167,
+        "samples": 600
+      },
+      "cnn_bilstm": {
+        "cer": 4.848,
+        "wer": 17.49,
+        "accuracy": 66.667,
+        "samples": 600
+      },
+      "paddle": {
+        "cer": 3.891,
+        "wer": 21.093,
+        "accuracy": 66.167,
+        "samples": 600
+      },
+      "ensemble_cv": {
+        "cer": 2.347,
+        "wer": 5.855,
+        "accuracy": 89.5,
+        "samples": 600
+      },
+      "oracle_best_line": {
+        "cer": 0.49,
+        "wer": 2.306,
+        "accuracy": 95.167,
+        "samples": 600
+      }
+    }
+  }
+}

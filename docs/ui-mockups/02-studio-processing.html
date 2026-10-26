@@ -1,0 +1,54 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1440"><link rel="stylesheet" href="mockup.css"><style>
+    .proc-page { padding-top: 56px; }
+    .proc { display: grid; grid-template-columns: 1fr 500px; gap: 0; overflow: hidden; width: 1160px; margin: 0 auto; }
+    .proc-doc { background: var(--muted); padding: 36px; display: grid; place-items: center; border-right: 1px solid var(--border); }
+    .paper { position: relative; background: #fff; box-shadow: var(--sh-lg); border-radius: 4px; overflow: hidden; }
+    .paper img { display: block; width: 560px; }
+    .paper svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .found { fill: rgba(79,70,229,.10); stroke: #4f46e5; stroke-width: 4; }
+    .beam { position: absolute; left: 0; right: 0; top: 62%; height: 3px; background: #4f46e5; box-shadow: 0 0 0 1px rgba(79,70,229,.2), 0 0 24px 6px rgba(79,70,229,.25); }
+    .proc-side { padding: 28px; display: flex; flex-direction: column; gap: 18px; }
+    .proc-file { display: flex; align-items: center; gap: 12px; }
+    .proc-file div { display: flex; flex-direction: column; flex: 1; }
+    .file-ic { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); }
+    h2 { margin: 0; font: 600 24px/1.2 var(--display); letter-spacing: -0.02em; }
+    .psteps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+    .ps { display: grid; grid-template-columns: 24px 1fr auto; gap: 12px; padding: 10px 0; position: relative; }
+    .ps:not(:last-child)::before { content: ""; position: absolute; left: 11px; top: 34px; bottom: -10px; width: 2px; background: var(--border); }
+    .ps.done:not(:last-child)::before { background: var(--accent); }
+    .ps-dot { width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; border: 2px solid var(--border-strong); background: #fff; color: #fff; }
+    .ps.done .ps-dot { background: var(--accent); border-color: var(--accent); }
+    .ps.active .ps-dot { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-ring); }
+    .ps.active .ps-dot::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+    .ps-main { display: flex; flex-direction: column; gap: 2px; }
+    .ps-main span { color: var(--text-3); font-size: 13px; }
+    .ps.wait b { color: var(--text-3); font-weight: 550; }
+    .ps-time { color: var(--text-3); font-size: 12.5px; }
+    .bar { height: 4px; border-radius: 4px; background: var(--muted); margin-top: 8px; overflow: hidden; }
+    .bar i { display: block; width: 80%; height: 100%; background: var(--accent); border-radius: 4px; }
+    .members { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .mem { display: inline-flex; align-items: center; gap: 5px; height: 24px; padding: 0 8px; border-radius: 999px; border: 1px solid var(--border); font-size: 12px; color: var(--text-2); background: #fff; }
+    .mem.done svg { color: var(--success); }
+    .mem.active { border-color: #c7d2fe; background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+    .mem.active i { width: 8px; height: 8px; border-radius: 50%; border: 2px solid var(--accent); border-right-color: transparent; }
+    .ps-main > span { display: block; }
+    .proc-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 16px; border-top: 1px solid var(--border); }
+    .proc-foot .muted { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; }
+    </style></head><body><header class="topbar"><span class="brand"><svg width="28" height="28" viewBox="0 0 32 32"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs><rect x="2" y="2" width="28" height="28" rx="8" fill="url(#lg)"/><rect x="9" y="10" width="14" height="2.4" rx="1.2" fill="#fff"/><rect x="9" y="15" width="10" height="2.4" rx="1.2" fill="#fff" opacity=".8"/><rect x="9" y="20" width="12" height="2.4" rx="1.2" fill="#fff" opacity=".6"/></svg><span>Deep<b>OCR</b></span></span><nav class="tabs"><span class="tab on"><svg class="i " viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8h8"/><path d="M7 12h10"/><path d="M7 16h6"/></svg>Studio</span><span class="tab "><svg class="i " viewBox="0 0 24 24"><circle cx="5" cy="6" r="3"/><path d="M12 6h5a2 2 0 0 1 2 2v7"/><path d="m15 9-3-3 3-3"/><circle cx="19" cy="18" r="3"/><path d="M12 18H7a2 2 0 0 1-2-2V9"/><path d="m9 15 3 3-3 3"/></svg>Compare</span><span class="tab "><svg class="i " viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg>Research</span><span class="tab "><svg class="i " viewBox="0 0 24 24"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg>How it works</span></nav><div class="top-right"><span class="status"><i class="dot"></i>5 engines ready</span><span class="icon-btn" title="API docs"><svg class="i " viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span></div></header><main class="page proc-page">
+    <div class="card proc">
+      <div class="proc-doc"><div class="paper"><img src="../../samples/handwritten_note.png">
+        <svg viewBox="0 0 2330 1112" preserveAspectRatio="none"><polygon points="70,84 1692,84 1692,169 70,169" class="found" style="animation-delay:0.0s"/><polygon points="75,193 1575,193 1575,283 75,283" class="found" style="animation-delay:0.1s"/><polygon points="85,323 2245,323 2245,400 85,400" class="found" style="animation-delay:0.2s"/><polygon points="61,437 1811,437 1811,524 61,524" class="found" style="animation-delay:0.30000000000000004s"/><polygon points="75,558 2107,558 2107,643 75,643" class="found" style="animation-delay:0.4s"/></svg><span class="beam"></span></div></div>
+      <div class="proc-side">
+        <div class="proc-file"><span class="file-ic"><svg class="i " viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></svg></span><div><b>handwritten_note.png</b><span class="muted">1 page · 0.9 MB</span></div><span class="badge accent">Consensus · 5 models</span></div>
+        <h2>Reading your document…</h2>
+        <ol class="psteps"><li class="ps done"><span class="ps-dot"><svg class="i sm" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <span class="ps-main"><b>Read file</b><span>1 page decoded</span></span><span class="ps-time mono">0.07 s</span></li><li class="ps done"><span class="ps-dot"><svg class="i sm" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <span class="ps-main"><b>Clean up image</b><span>Page already straight, no changes</span></span><span class="ps-time mono">0.02 s</span></li><li class="ps done"><span class="ps-dot"><svg class="i sm" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <span class="ps-main"><b>Find text lines</b><span>8 lines detected</span></span><span class="ps-time mono">0.31 s</span></li><li class="ps active"><span class="ps-dot"></span>
+        <span class="ps-main"><b>Read with 5 models</b><span>4 of 5 models have read all 8 lines<div class="members"><span class="mem done"><svg class="i sm" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>TrOCR · fine-tuned</span><span class="mem done"><svg class="i sm" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>TrOCR</span><span class="mem done"><svg class="i sm" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>PaddleOCR</span><span class="mem done"><svg class="i sm" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>CRNN</span><span class="mem active"><i></i>CNN-BiLSTM</span></div></span><span class="bar"><i></i></span></span><span class="ps-time mono">18.4 s</span></li><li class="ps wait"><span class="ps-dot"></span>
+        <span class="ps-main"><b>Vote on each word</b><span>Align the five readings and keep the words they agree on</span></span><span class="ps-time mono"></span></li><li class="ps wait"><span class="ps-dot"></span>
+        <span class="ps-main"><b>Rebuild layout</b><span>Reading order, headings, tables</span></span><span class="ps-time mono"></span></li><li class="ps wait"><span class="ps-dot"></span>
+        <span class="ps-main"><b>Correct errors</b><span>Spelling and character fixes</span></span><span class="ps-time mono"></span></li></ol>
+        <div class="proc-foot"><span class="muted"><svg class="i sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 18.8 s elapsed · Consensus runs every model: slowest, most accurate</span><span class="btn sm"><svg class="i sm" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>Cancel</span></div>
+      </div>
+    </div></main></body></html>
