@@ -258,15 +258,43 @@ function chapterHeading(text, first = true) {
 /* ------------------------------------------------------------ document */
 numberItems();
 
+/** Names and roll numbers on the title page: a centred two-column table without borders. */
+function teamTable() {
+  const none = { style: D.BorderStyle.NONE, size: 0, color: "FFFFFF" };
+  const widths = [3600, 2800];
+  const left = Math.round((TEXT_W - widths[0] - widths[1]) / 2);
+  return new D.Table({
+    width: { size: widths[0] + widths[1], type: D.WidthType.DXA },
+    columnWidths: widths,
+    indent: { size: left, type: D.WidthType.DXA },
+    borders: { top: none, bottom: none, left: none, right: none, insideHorizontal: none, insideVertical: none },
+    rows: meta.team.map(([name, roll]) => new D.TableRow({
+      children: [[name, false], [roll, true]].map(([value, isRoll], i) => new D.TableCell({
+        width: { size: widths[i], type: D.WidthType.DXA },
+        borders: { top: none, bottom: none, left: none, right: none },
+        margins: { top: 40, bottom: 40, left: 80, right: 80 },
+        children: [new D.Paragraph({
+          alignment: isRoll ? D.AlignmentType.RIGHT : D.AlignmentType.LEFT,
+          spacing: { after: 0, line: 276 },
+          children: [new D.TextRun({ text: value, font: FONT, size: 24, bold: !isRoll, color: isRoll ? "475467" : "101828" })],
+        })],
+      })),
+    })),
+  });
+}
+
 const titlePage = [
-  new D.Paragraph({ spacing: { before: 2200, after: 240 }, alignment: D.AlignmentType.CENTER, children: [new D.TextRun({ text: "PROJECT REPORT", font: FONT, size: 26, bold: true, characterSpacing: 60, color: "4F46E5" })] }),
+  new D.Paragraph({ spacing: { before: 1400, after: 240 }, alignment: D.AlignmentType.CENTER, children: [new D.TextRun({ text: "PROJECT REPORT", font: FONT, size: 26, bold: true, characterSpacing: 60, color: "4F46E5" })] }),
   new D.Paragraph({ spacing: { after: 360 }, alignment: D.AlignmentType.CENTER, children: [new D.TextRun({ text: meta.title, font: FONT, size: 40, bold: true })] }),
   new D.Paragraph({
     alignment: D.AlignmentType.CENTER,
-    spacing: { after: 1600 },
+    spacing: { after: 900 },
     border: { bottom: { style: D.BorderStyle.SINGLE, size: 8, color: "4F46E5", space: 12 } },
     children: [new D.TextRun({ text: meta.subtitle, font: FONT, size: 26, italics: true, color: "475467" })],
   }),
+  new D.Paragraph({ alignment: D.AlignmentType.CENTER, spacing: { after: 160 }, children: [new D.TextRun({ text: "Submitted by", font: FONT, size: 24, bold: true })] }),
+  teamTable(),
+  new D.Paragraph({ spacing: { after: 900 }, children: [] }),
   ...meta.titleLines.map((line) => new D.Paragraph({ alignment: D.AlignmentType.CENTER, spacing: { after: 120 }, children: [new D.TextRun({ text: line, font: FONT, size: 24 })] })),
 ];
 

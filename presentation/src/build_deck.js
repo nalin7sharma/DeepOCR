@@ -43,6 +43,13 @@ const HEX = THEME.colors;
 const SOFT_ON_DARK = "C7D2FE"; // secondary text on the dark slides
 const MODEL = { ensemble: HEX.accent1, trocr_ft: HEX.accent2, trocr: HEX.accent3, crnn: HEX.accent4, cnn_bilstm: HEX.accent5, paddle: HEX.accent6 };
 
+const TEAM = [
+  ["Nalin Sharma", "CSJMA23001390292"],
+  ["Amritansh Singh Gaur", "CSJMA23001390309"],
+  ["Vineet Kumar Singh", "CSJMA23001390311"],
+  ["Rajyavardhan Radhey", "CSJMA23001390322"],
+];
+
 const W = 13.333;
 const pres = new pptxgen();
 pres.layout = "LAYOUT_WIDE";
@@ -153,14 +160,16 @@ async function build() {
     x: 11.15 - 1.25, y: 3.18 + i * 0.5, w, h: 0.3, rectRadius: 0.15, objectName: `!!mark${i + 1}`,
     fill: { color: C.background1, transparency: t }, line: { type: "none" },
   }));
-  text(s, "PROJECT PRESENTATION", { x: 0.7, y: 1.45, w: 7, h: 0.4, fontSize: 14, bold: true, charSpacing: 4, color: SOFT_ON_DARK });
+  text(s, "PROJECT PRESENTATION  ·  OCTOBER 2026", { x: 0.7, y: 1.45, w: 7.2, h: 0.4, fontSize: 14, bold: true, charSpacing: 4, color: SOFT_ON_DARK });
   s.addText("DeepOCR", { placeholder: "title" });
-  text(s, "Deep Learning-Based Intelligent OCR System for Handwritten and Complex Document Recognition", { x: 0.7, y: 3.45, w: 7.2, h: 1.25, fontSize: 22, color: C.background1 });
-  ["5 recognition models", "Consensus voting", "Review studio"].forEach((label, i) => {
-    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.7 + i * 2.35, y: 5.1, w: 2.15, h: 0.5, rectRadius: 0.25, fill: { color: C.background1, transparency: 88 }, line: { color: SOFT_ON_DARK, width: 0.75 } });
-    text(s, label, { x: 0.7 + i * 2.35, y: 5.1, w: 2.15, h: 0.5, fontSize: 13, color: C.background1, align: "center", valign: "middle" });
+  text(s, "Deep Learning-Based Intelligent OCR System for Handwritten and Complex Document Recognition", { x: 0.7, y: 3.35, w: 7.2, h: 1.0, fontSize: 22, color: C.background1 });
+  text(s, "PRESENTED BY", { x: 0.7, y: 4.75, w: 7.2, h: 0.3, fontSize: 12, bold: true, charSpacing: 3, color: SOFT_ON_DARK });
+  TEAM.forEach(([name, roll], i) => {
+    const x = 0.7 + (i % 2) * 3.7;
+    const y = 5.2 + Math.floor(i / 2) * 0.82;
+    text(s, name, { x, y, w: 3.5, h: 0.36, fontSize: 16, bold: true, color: C.background1 });
+    text(s, roll, { x, y: y + 0.36, w: 3.5, h: 0.3, fontSize: 12, color: SOFT_ON_DARK });
   });
-  text(s, "October 2026", { x: 0.7, y: 6.45, w: 4, h: 0.35, fontSize: 13, color: SOFT_ON_DARK });
   s.addNotes("DeepOCR is an end-to-end OCR system for handwritten and complex documents. It cleans the page, finds every text line, reads it with deep-learning models, rebuilds the layout and lets a person review the result. Its key idea is that five different models vote on every word.");
 
   /* ---------------------------------------------------------------- 2 problem */

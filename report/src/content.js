@@ -39,6 +39,12 @@ const meta = {
   subtitle: "DeepOCR: preprocessing, text detection, deep-learning recognition, consensus voting, layout analysis and error correction in one system",
   runningHead: "DeepOCR: Intelligent OCR for Handwritten and Complex Documents",
   titleLines: ["October 2026"],
+  team: [
+    ["Nalin Sharma", "CSJMA23001390292"],
+    ["Amritansh Singh Gaur", "CSJMA23001390309"],
+    ["Vineet Kumar Singh", "CSJMA23001390311"],
+    ["Rajyavardhan Radhey", "CSJMA23001390322"],
+  ],
 };
 
 /* ====================================================================== front matter */
