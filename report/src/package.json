@@ -1,0 +1,11 @@
+{
+  "name": "deepocr-report",
+  "private": true,
+  "description": "Builds the DeepOCR project report (Word) from the project's results.",
+  "scripts": {
+    "build": "node build_report.js"
+  },
+  "dependencies": {
+    "docx": "9.5.1"
+  }
+}

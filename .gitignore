@@ -59,3 +59,6 @@ htmlcov/
 
 # TypeScript incremental build info
 *.tsbuildinfo
+
+# Report builder dependencies
+report/src/node_modules/
