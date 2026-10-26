@@ -3,6 +3,6 @@ CNN + BiLSTM (baseline),CNN-BiLSTM-CTC,21.793,61.966,1.0,4.848,17.49,66.667,12.1
 CNN + BiLSTM (baseline) + post-processing,CNN-BiLSTM-CTC,20.607,51.373,4.833,4.599,15.365,69.833,42.55
 CRNN,CRNN (VGG + BiLSTM + CTC),21.662,61.474,0.5,5.253,18.541,63.167,15.87
 CRNN + post-processing,CRNN (VGG + BiLSTM + CTC),20.546,50.99,3.167,5.005,16.128,67.0,40.52
-TrOCR Transformer (zero-shot),ViT encoder + Transformer decoder,6.975,16.4,40.667,20.366,54.68,53.833,1829.21
+TrOCR Transformer (zero-shot),ViT encoder + Transformer decoder,6.975,16.4,40.667,20.366,54.68,53.833,377.27
 TrOCR Transformer (fine-tuned),ViT encoder + Transformer decoder,6.732,16.785,37.833,2.588,10.815,84.333,415.24
-PaddleOCR,PP-OCR recogniser,28.84,72.503,1.5,3.891,21.093,66.167,478.12
+PaddleOCR,PP-OCR recogniser,28.84,72.503,1.5,3.891,21.093,66.167,139.19

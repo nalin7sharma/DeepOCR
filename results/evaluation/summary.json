@@ -13,7 +13,7 @@
         "accuracy": 1.5,
         "cer_raw": 30.409,
         "samples": 600,
-        "ms_per_line": 509.66,
+        "ms_per_line": 157.27,
         "mean_confidence": 0.7951
       },
       "synthetic": {
@@ -22,7 +22,7 @@
         "accuracy": 66.167,
         "cer_raw": 3.9,
         "samples": 600,
-        "ms_per_line": 446.59,
+        "ms_per_line": 121.12,
         "mean_confidence": 0.9546
       }
     },
@@ -41,7 +41,7 @@
         "accuracy": 40.667,
         "cer_raw": 7.066,
         "samples": 600,
-        "ms_per_line": 2187.97,
+        "ms_per_line": 405.96,
         "mean_confidence": 0.8889
       },
       "synthetic": {
@@ -50,7 +50,7 @@
         "accuracy": 53.833,
         "cer_raw": 23.615,
         "samples": 600,
-        "ms_per_line": 1470.46,
+        "ms_per_line": 348.58,
         "mean_confidence": 0.8565
       }
     },
@@ -227,7 +227,7 @@
       "samples": 600
     }
   },
-  "generated_at": "2026-10-26T16:13:52",
+  "generated_at": "2026-10-26T16:54:32",
   "notes": [
     "CER/WER/accuracy are averaged per line on the held-out test partitions; lower CER/WER is better.",
     "Transcriptions are normalised (IAM's tokenised spacing before punctuation is removed) for every model alike; cer_raw keeps the original spacing.",

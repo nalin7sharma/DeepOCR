@@ -17,7 +17,7 @@ The project trains and compares three recognition approaches, as planned in the 
 <!-- RESULTS:START -->
 ## Results
 
-Measured with `scripts/evaluate.py` (2026-10-26T16:13:52) on **IAM handwriting**: 600 held-out test lines; **Synthetic printed + script**: 600 held-out test lines.
+Measured with `scripts/evaluate.py` (2026-10-26T16:54:32) on **IAM handwriting**: 600 held-out test lines; **Synthetic printed + script**: 600 held-out test lines.
 CER, WER and accuracy are percentages averaged per line (lower CER/WER is better). ms/line is CPU time.
 
 | Model | Architecture | IAM handwriting CER | WER | Acc | Synthetic printed + script CER | WER | Acc | ms/line |
@@ -26,9 +26,9 @@ CER, WER and accuracy are percentages averaged per line (lower CER/WER is better
 | CNN + BiLSTM (baseline) + post-processing | CNN-BiLSTM-CTC | 20.61 | 51.37 | 4.83 | 4.60 | 15.37 | 69.83 | 42.5 |
 | CRNN | CRNN (VGG + BiLSTM + CTC) | 21.66 | 61.47 | 0.50 | 5.25 | 18.54 | 63.17 | 15.9 |
 | CRNN + post-processing | CRNN (VGG + BiLSTM + CTC) | 20.55 | 50.99 | 3.17 | 5.00 | 16.13 | 67.00 | 40.5 |
-| TrOCR Transformer (zero-shot) | ViT encoder + Transformer decoder | 6.97 | 16.40 | 40.67 | 20.37 | 54.68 | 53.83 | 1829.2 |
+| TrOCR Transformer (zero-shot) | ViT encoder + Transformer decoder | 6.97 | 16.40 | 40.67 | 20.37 | 54.68 | 53.83 | 377.3 |
 | TrOCR Transformer (fine-tuned) | ViT encoder + Transformer decoder | 6.73 | 16.79 | 37.83 | 2.59 | 10.81 | 84.33 | 415.2 |
-| PaddleOCR | PP-OCR recogniser | 28.84 | 72.50 | 1.50 | 3.89 | 21.09 | 66.17 | 478.1 |
+| PaddleOCR | PP-OCR recogniser | 28.84 | 72.50 | 1.50 | 3.89 | 21.09 | 66.17 | 139.2 |
 
 - CER/WER/accuracy are averaged per line on the held-out test partitions; lower CER/WER is better.
 - Transcriptions are normalised (IAM's tokenised spacing before punctuation is removed) for every model alike; cer_raw keeps the original spacing.
@@ -159,7 +159,11 @@ cut its printed-text CER from 20.4% to 2.6% while keeping its handwriting accura
 Training details: Adam (lr 1e-3, weight decay 1e-4), cosine schedule, gradient
 clipping 5, batch 32, early stopping on validation CER, and on-the-fly augmentation
 (rotation, brightness, contrast, Gaussian noise, blur, scaling without cropping,
-perspective).
+perspective). CNN-BiLSTM trained for 11 epochs (best validation CER 11.8%) and CRNN for
+9 epochs (12.2%), about 2.5 hours each, running side by side.
+
+Hardware: all training, fine-tuning and timing ran on a laptop CPU (Intel Core i7-1255U,
+10 cores, 16 GB RAM, no GPU).
 
 ## Datasets
 
@@ -240,6 +244,19 @@ DeepOCR/
 ├── start.ps1 / .bat  One-click launcher
 └── docker-compose.yml
 ```
+
+## Robustness
+
+`scripts/robustness.py` re-reads 80 IAM test lines under controlled degradation
+(`results/evaluation/robustness.json`, `results/plots/robustness.png`):
+
+- The CTC models barely change with heavy Gaussian noise, contrast down to 15% or JPEG
+  quality 8, which reflects the training augmentation and the shared line normalisation.
+- Rotation is the main weakness. An 8° tilt raises CNN-BiLSTM CER from 19.6% to 65.5%
+  and PaddleOCR's from 27.8% to 80.8%. With DeepOCR's projection-profile deskew it
+  returns to 18.9% and 28.5%, which quantifies the value of the preprocessing stage.
+- TrOCR is the most robust to rotation (6.5% CER at 8°) but the most sensitive to strong
+  blur (10.2% CER at σ = 3).
 
 ## Limitations
 
