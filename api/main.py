@@ -20,6 +20,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 from PIL import Image
 
+from api import progress
 from api.documents import DocumentError, decode_document
 from api.engines import CATALOG, EngineRegistry
 from api.ocr_engine import OcrEngine, OcrEngineError, TextRegion
@@ -196,7 +197,9 @@ def _process_document(
     correct: bool,
 ) -> OcrResponse:
     started = time.perf_counter()
+    progress.report("decode")
     pages = decode_document(content, settings)
+    progress.report(pages=len(pages))
     decode_ms = (time.perf_counter() - started) * 1000
     corrector = None
     if correct:
@@ -210,6 +213,7 @@ def _process_document(
     for page in pages:
         timings: dict[str, float] = {}
         mark = time.perf_counter()
+        progress.report("preprocess", page=page.page_number)
         image, report = preprocess_page(
             page.image, steps, with_previews=page.page_number <= MAX_STAGE_PREVIEW_PAGES
         )
@@ -220,11 +224,13 @@ def _process_document(
         timings["recognition"] = (time.perf_counter() - mark) * 1000
 
         mark = time.perf_counter()
+        progress.report("layout")
         extraction = reconstruct_page(image, regions, review_threshold=settings.review_confidence_threshold)
         blocks = [block.to_dict() for block in extraction.blocks]
         timings["layout"] = (time.perf_counter() - mark) * 1000
 
         mark = time.perf_counter()
+        progress.report("postprocess")
         markdown = extraction.markdown
         if corrector is not None:
             correction_count += _apply_corrections(blocks, corrector)
@@ -351,6 +357,7 @@ def create_app(
             "evaluation": _read_json(results / "evaluation" / "summary.json"),
             "samples": _read_json(results / "evaluation" / "samples.json"),
             "robustness": _read_json(results / "evaluation" / "robustness.json"),
+            "ensemble": _read_json(results / "evaluation" / "ensemble.json"),
             "training": training,
         }
 
@@ -444,6 +451,96 @@ def create_app(
                 app.state.processing_lock.release()
         finally:
             await file.close()
+
+    # ---------------------------------------------------------------- jobs
+    store = progress.JobStore()
+    app.state.jobs = store
+
+    def _engine_error_detail(engine_id: str, exc: Exception) -> str:
+        if engine_id == "paddle":
+            return "OCR processing failed. Check the server's model cache and logs."
+        return f"The {engine_id} engine is unavailable: {exc}"
+
+    @app.post("/api/v1/jobs", status_code=202, tags=["ocr"])
+    async def create_job(
+        file: UploadFile = File(...),
+        engine: str | None = Form(None),
+        preprocess: str | None = Form(None),
+        correct: bool = Form(False),
+    ) -> dict:
+        """Start OCR in the background; poll ``GET /api/v1/jobs/{id}`` for live progress and the result."""
+        engine_id = (engine or settings.default_engine).strip().lower()
+        try:
+            if engine_id not in registry.ids():
+                raise HTTPException(
+                    status_code=422,
+                    detail=f"Unknown engine '{engine_id}'. Available: {', '.join(registry.ids())}.",
+                )
+            steps = _parse_steps(preprocess)
+            content = bytearray()
+            while True:
+                chunk = await file.read(64 * 1024)
+                if not chunk:
+                    break
+                content.extend(chunk)
+                if len(content) > settings.max_upload_bytes:
+                    raise HTTPException(
+                        status_code=413,
+                        detail=f"The upload exceeds the {settings.max_upload_bytes}-byte limit.",
+                    )
+            if not content:
+                raise HTTPException(status_code=400, detail="The uploaded file is empty.")
+            filename = _safe_filename(file.filename)
+        finally:
+            await file.close()
+        if not app.state.processing_lock.acquire(blocking=False):
+            raise HTTPException(
+                status_code=429,
+                detail="Another document is being processed. Retry shortly.",
+                headers={"Retry-After": "3"},
+            )
+        job = store.add(progress.Job(filename=filename, engine=engine_id))
+        payload = bytes(content)
+
+        def run() -> None:
+            progress.bind(job)
+            try:
+                selected = registry.get(engine_id)
+                result = _process_document(filename, payload, settings, selected, engine_id, steps, correct)
+                job.finish("done", result=result.model_dump())
+            except progress.JobCancelled:
+                job.finish("cancelled")
+            except DocumentError as exc:
+                job.finish("error", error=str(exc), error_status=exc.status_code)
+            except OcrEngineError as exc:
+                logger.exception("OCR job failed.")
+                job.finish("error", error=_engine_error_detail(engine_id, exc), error_status=503)
+            except Exception:  # pragma: no cover - unexpected failure must not leak details
+                logger.exception("Unexpected OCR job failure.")
+                job.finish("error", error="Unexpected processing error. See the server log.", error_status=500)
+            finally:
+                progress.bind(None)
+                app.state.processing_lock.release()
+
+        threading.Thread(target=run, daemon=True, name=f"ocr-job-{job.id[:8]}").start()
+        return job.snapshot(include_result=False)
+
+    @app.get("/api/v1/jobs/{job_id}", tags=["ocr"])
+    def job_status(job_id: str) -> dict:
+        job = store.get(job_id)
+        if job is None:
+            raise HTTPException(status_code=404, detail="Job not found or expired.")
+        return job.snapshot()
+
+    @app.delete("/api/v1/jobs/{job_id}", tags=["ocr"])
+    def cancel_job(job_id: str) -> dict:
+        job = store.get(job_id)
+        if job is None:
+            raise HTTPException(status_code=404, detail="Job not found or expired.")
+        with job.lock:
+            if job.status in ("queued", "running"):
+                job.cancelled = True
+        return job.snapshot(include_result=False)
 
     _mount_frontend(app, settings.web_dist_dir)
     return app

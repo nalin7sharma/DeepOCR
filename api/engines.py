@@ -24,6 +24,7 @@ from typing import Callable
 import cv2
 import numpy as np
 
+from api import progress
 from api.ocr_engine import OcrEngine, OcrEngineError, TextRegion, get_ocr_engine
 from api.settings import Settings
 
@@ -99,6 +100,20 @@ class ContourDetector:
         return polygons
 
 
+CHUNK = 4  # lines per recognition batch between progress reports
+
+
+def read_in_chunks(read: Callable, crops: list[np.ndarray], member: str | None = None) -> list[tuple[str, float]]:
+    """Run a recogniser over crops in small batches, reporting lines done after each."""
+    results: list[tuple[str, float]] = []
+    total = len(crops)
+    progress.report("recognize", 0, total, member=member)
+    for start in range(0, total, CHUNK):
+        results.extend(read(crops[start:start + CHUNK]))
+        progress.report("recognize", len(results), total, member=member)
+    return results
+
+
 class DetectRecognizeEngine:
     """Two-stage engine: text-line detection followed by a line recogniser."""
 
@@ -109,12 +124,15 @@ class DetectRecognizeEngine:
 
     def recognize(self, image: np.ndarray) -> list[TextRegion]:
         detector = self._detector_provider()
+        progress.report("detect")
         polygons = detector.detect(image)
         if not polygons:
             return []
         crops = [crop_polygon(image, polygon) for polygon in polygons]
         try:
-            results = self.recognizer.recognize(crops)
+            results = read_in_chunks(self.recognizer.recognize, crops)
+        except progress.JobCancelled:
+            raise
         except Exception as exc:  # pragma: no cover - model runtime failure
             raise OcrEngineError(f"{self.name} recognition failed.") from exc
         return [
@@ -160,11 +178,16 @@ class EnsembleEngine:
         members = self.members()
         if len(members) < 2:
             raise OcrEngineError("The consensus engine needs at least two available models.")
-        polygons = self.registry._detector().detect(image)
+        detector = self.registry._detector()
+        progress.report("detect")
+        polygons = detector.detect(image)
         if not polygons:
             return []
         crops = [crop_polygon(image, polygon) for polygon in polygons]
-        readings = {engine_id: (weight, read(crops)) for engine_id, weight, read in members}
+        for engine_id, _, _ in members:
+            progress.report("recognize", 0, len(crops), member=engine_id)
+        readings = {engine_id: (weight, read_in_chunks(read, crops, member=engine_id)) for engine_id, weight, read in members}
+        progress.report("vote")
         regions = []
         for index, polygon in enumerate(polygons):
             hypotheses, confidences = [], []
@@ -291,6 +314,7 @@ class EngineRegistry:
             mtime = self._checkpoint_mtime(engine_id)
             if mtime is not None and time.time() - mtime < 3:
                 time.sleep(3)  # let an in-progress torch.save finish writing
+            progress.report("loading")
             started = time.perf_counter()
             try:
                 engine = self._providers[engine_id]()

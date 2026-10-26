@@ -52,6 +52,9 @@ class PaddleOcrEngine:
         self._lock = threading.Lock()
 
     def recognize(self, image: np.ndarray) -> list[TextRegion]:
+        from api import progress
+
+        progress.report("recognize")  # PP-OCR detects and recognises in one call
         try:
             with self._lock:
                 result = self._ocr.ocr(image, cls=True)

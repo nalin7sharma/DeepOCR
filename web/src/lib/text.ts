@@ -110,9 +110,73 @@ export function saveFile(name: string, contents: BlobPart, type: string) {
   window.setTimeout(() => URL.revokeObjectURL(url), 1500);
 }
 
-/** Map a 0..1 confidence to a heat colour (red → amber → green). */
-export function confidenceColor(confidence: number, alpha = 1) {
-  const c = Math.max(0, Math.min(1, confidence));
-  const hue = c < 0.5 ? 8 + c * 2 * 32 : 40 + (c - 0.5) * 2 * 105;
-  return `hsla(${hue.toFixed(0)}, 92%, 58%, ${alpha})`;
+/** Three-step quality scale used for confidence and agreement (0..1). */
+export type Level = "hi" | "mid" | "lo";
+export const level = (value: number): Level => (value >= 0.85 ? "hi" : value >= 0.6 ? "mid" : "lo");
+const LEVEL_RGB: Record<Level, string> = { hi: "23,178,106", mid: "247,144,9", lo: "240,68,56" };
+export const levelColor = (value: number, alpha = 1) => `rgba(${LEVEL_RGB[level(value)]},${alpha})`;
+
+export type WordToken = { type: "ok" | "wrong" | "miss"; text: string; expected?: string; br?: boolean };
+
+/**
+ * Whole-document word diff of a prediction against the reference text.
+ * Aligning the whole document (not line by line) keeps the comparison correct when
+ * an engine splits or merges lines differently. Line breaks of the prediction are kept.
+ */
+export function wordDiff(predictionLines: string[], reference: string): WordToken[] {
+  const pred: string[] = [];
+  const lineOf: number[] = [];
+  predictionLines.forEach((line, n) => line.split(/\s+/).filter(Boolean).forEach((w) => { pred.push(w); lineOf.push(n); }));
+  const ref = reference.split(/\s+/).filter(Boolean);
+  const n = pred.length;
+  const m = ref.length;
+  if (n * m > 400_000) return pred.map((w, i) => ({ type: "ok", text: w, br: i > 0 && lineOf[i] !== lineOf[i - 1] }));
+  // Levenshtein table over words.
+  const d = Array.from({ length: n + 1 }, (_, i) => {
+    const row = new Uint32Array(m + 1);
+    row[0] = i;
+    return row;
+  });
+  for (let j = 0; j <= m; j += 1) d[0][j] = j;
+  for (let i = 1; i <= n; i += 1) {
+    for (let j = 1; j <= m; j += 1) {
+      d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (pred[i - 1] === ref[j - 1] ? 0 : 1));
+    }
+  }
+  const ops: { i: number | null; j: number | null }[] = [];
+  let i = n;
+  let j = m;
+  while (i > 0 || j > 0) {
+    if (i > 0 && j > 0 && d[i][j] === d[i - 1][j - 1] + (pred[i - 1] === ref[j - 1] ? 0 : 1)) {
+      ops.push({ i: i - 1, j: j - 1 });
+      i -= 1;
+      j -= 1;
+    } else if (i > 0 && d[i][j] === d[i - 1][j] + 1) {
+      ops.push({ i: i - 1, j: null });
+      i -= 1;
+    } else {
+      ops.push({ i: null, j: j - 1 });
+      j -= 1;
+    }
+  }
+  ops.reverse();
+  const tokens: WordToken[] = [];
+  let lastLine = 0;
+  for (const op of ops) {
+    if (op.i === null) {
+      tokens.push({ type: "miss", text: "‸", expected: ref[op.j as number] });
+      continue;
+    }
+    const br = tokens.length > 0 && lineOf[op.i] !== lastLine;
+    lastLine = lineOf[op.i];
+    if (op.j !== null && pred[op.i] === ref[op.j]) tokens.push({ type: "ok", text: pred[op.i], br });
+    else tokens.push({ type: "wrong", text: pred[op.i], expected: op.j === null ? undefined : ref[op.j], br });
+  }
+  // Merge consecutive "missing" markers into one caret listing every missing word.
+  return tokens.reduce<WordToken[]>((out, token) => {
+    const last = out[out.length - 1];
+    if (token.type === "miss" && last?.type === "miss") last.expected = `${last.expected} ${token.expected}`;
+    else out.push(token);
+    return out;
+  }, []);
 }

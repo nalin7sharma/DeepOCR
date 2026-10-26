@@ -1,18 +1,25 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { motion } from "framer-motion";
-import { Camera, ClipboardPaste, FileText, ImageUp, X } from "lucide-react";
+import { Camera, ClipboardPaste, Upload, X } from "lucide-react";
 
 export const MAX_UPLOAD_BYTES = 100 * 1024 * 1024;
 export const ACCEPTED_TYPES = ".pdf,.png,.jpg,.jpeg,.bmp,.tif,.tiff,.webp";
 const ACCEPTED = /\.(pdf|png|jpe?g|bmp|tiff?|webp)$/i;
 
 export function validateFile(file: File): string {
-  if (file.size > MAX_UPLOAD_BYTES) return "This file exceeds the 100 MB upload limit. Try a smaller scan.";
+  if (file.size > MAX_UPLOAD_BYTES) return "This file is larger than 100 MB. Try a smaller scan or fewer pages.";
   if (file.size === 0) return "This file is empty.";
   if (!ACCEPTED.test(file.name) && !file.type.startsWith("image/") && file.type !== "application/pdf") {
-    return "Unsupported file type. Use a PDF, PNG, JPG, BMP, TIFF or WEBP.";
+    return "Unsupported file type. Use a PDF, PNG, JPG, TIFF or WEBP.";
   }
   return "";
+}
+
+export function useFilePreview(file: File | null) {
+  const url = useMemo(() => (file && file.type.startsWith("image/") ? URL.createObjectURL(file) : ""), [file]);
+  useEffect(() => () => {
+    if (url) URL.revokeObjectURL(url);
+  }, [url]);
+  return url;
 }
 
 interface Props {
@@ -23,34 +30,41 @@ interface Props {
 
 export function Dropzone({ file, onFile, compact }: Props) {
   const [dragging, setDragging] = useState(false);
-  const inputRef = useRef<HTMLInputElement>(null);
   const cameraRef = useRef<HTMLInputElement>(null);
-  const preview = useMemo(() => (file && file.type.startsWith("image/") ? URL.createObjectURL(file) : ""), [file]);
-  useEffect(() => () => {
-    if (preview) URL.revokeObjectURL(preview);
-  }, [preview]);
+  const preview = useFilePreview(file);
 
-  // Paste an image from the clipboard anywhere on the page (Ctrl+V).
+  // Paste a screenshot anywhere on the page with Ctrl+V.
   useEffect(() => {
     const onPaste = (event: ClipboardEvent) => {
       const item = [...(event.clipboardData?.items ?? [])].find((entry) => entry.kind === "file");
       const pasted = item?.getAsFile();
       if (pasted) {
-        const named = new File([pasted], pasted.name && pasted.name !== "image.png" ? pasted.name : `pasted-${Date.now()}.png`, { type: pasted.type });
-        onFile(named);
+        const name = pasted.name && pasted.name !== "image.png" ? pasted.name : `pasted-${new Date().toISOString().slice(11, 19).replace(/:/g, "")}.png`;
+        onFile(new File([pasted], name, { type: pasted.type }));
       }
     };
     window.addEventListener("paste", onPaste);
     return () => window.removeEventListener("paste", onPaste);
   }, [onFile]);
 
-  const isPdf = file?.name.toLowerCase().endsWith(".pdf");
+  if (file) {
+    const isPdf = file.name.toLowerCase().endsWith(".pdf");
+    return (
+      <div className="drop has-file">
+        <div className="file-thumb">{preview ? <img src={preview} alt="" /> : isPdf ? "PDF" : "FILE"}</div>
+        <div className="file-meta">
+          <b title={file.name}>{file.name}</b>
+          <span>{(file.size / 1024 / 1024).toFixed(2)} MB · ready</span>
+        </div>
+        <button type="button" className="icon-btn sm" aria-label="Remove file" onClick={() => onFile(null)}><X size={15} /></button>
+      </div>
+    );
+  }
 
   return (
-    <motion.label
-      layout
-      className={`dropzone ${compact ? "compact" : ""} ${file ? "has-file" : ""} ${dragging ? "dragging" : ""}`}
-      htmlFor="document-upload"
+    <label
+      className={`drop ${dragging ? "drag" : ""}`}
+      style={compact ? { padding: 16 } : undefined}
       onDragOver={(event) => {
         event.preventDefault();
         setDragging(true);
@@ -65,8 +79,6 @@ export function Dropzone({ file, onFile, compact }: Props) {
       }}
     >
       <input
-        id="document-upload"
-        ref={inputRef}
         type="file"
         accept={ACCEPTED_TYPES}
         aria-label="Choose document"
@@ -80,7 +92,7 @@ export function Dropzone({ file, onFile, compact }: Props) {
         type="file"
         accept="image/*"
         capture="environment"
-        className="visually-hidden"
+        className="sr-only"
         tabIndex={-1}
         aria-hidden="true"
         onChange={(event) => {
@@ -88,51 +100,24 @@ export function Dropzone({ file, onFile, compact }: Props) {
           event.target.value = "";
         }}
       />
-      <div className="dz-ring" aria-hidden="true" />
-      {file ? (
-        <div className="dz-file">
-          <div className="dz-thumb">
-            {preview ? <img src={preview} alt="Selected document preview" /> : <span className="dz-pdf"><FileText size={28} />{isPdf ? "PDF" : "FILE"}</span>}
-            <span className="dz-scan" aria-hidden="true" />
-          </div>
-          <div className="dz-meta">
-            <strong title={file.name}>{file.name}</strong>
-            <span>{(file.size / 1024 / 1024).toFixed(2)} MB · ready to read</span>
-          </div>
+      {!compact && <span className="drop-icon"><Upload size={20} /></span>}
+      <b>{dragging ? "Release to add the file" : <>Drop a file here, or <span className="browse">browse</span></>}</b>
+      <span className="muted">PDF, PNG, JPG, TIFF or WEBP · up to 100 MB</span>
+      {!compact && (
+        <span className="drop-actions">
+          <span className="btn sm" aria-hidden="true"><ClipboardPaste size={14} />Paste <span className="kbd light">Ctrl V</span></span>
           <button
             type="button"
-            className="dz-clear"
-            aria-label="Remove file"
+            className="btn sm"
             onClick={(event) => {
               event.preventDefault();
-              onFile(null);
+              cameraRef.current?.click();
             }}
           >
-            <X size={16} />
+            <Camera size={14} />Camera
           </button>
-        </div>
-      ) : (
-        <div className="dz-empty">
-          <motion.span className="dz-icon" animate={{ y: dragging ? -6 : [0, -4, 0] }} transition={{ repeat: dragging ? 0 : Infinity, duration: 2.6 }}>
-            <ImageUp size={30} />
-          </motion.span>
-          <strong>{dragging ? "Release to drop it in" : "Drop a document, or click to browse"}</strong>
-          <span>PDF · PNG · JPG · TIFF · WEBP — up to 100 MB, 100 pages</span>
-          <div className="dz-actions">
-            <span className="kbd-hint"><ClipboardPaste size={14} /> Paste with <kbd>Ctrl</kbd>+<kbd>V</kbd></span>
-            <button
-              type="button"
-              className="ghost-button small"
-              onClick={(event) => {
-                event.preventDefault();
-                cameraRef.current?.click();
-              }}
-            >
-              <Camera size={14} /> Camera
-            </button>
-          </div>
-        </div>
+        </span>
       )}
-    </motion.label>
+    </label>
   );
 }

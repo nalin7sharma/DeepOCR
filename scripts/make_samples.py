@@ -25,6 +25,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from api.preprocess import rotate_page  # noqa: E402
+from datasets.line_image import normalize_transcription  # noqa: E402
 
 OUT = ROOT / "samples"
 FONT_DIRS = [Path("C:/Windows/Fonts"), Path("/usr/share/fonts/truetype/dejavu"), Path("/usr/share/fonts/truetype/liberation")]
@@ -51,15 +52,26 @@ def thumb(source: Path, target: Path, width: int = 300) -> None:
     image.save(target, quality=82)
 
 
-def handwritten_page(lines: int = 8, start: int = 1) -> Image.Image:
-    test_dir = ROOT / "data" / "processed" / "iam"
-    manifest = test_dir / "test.txt"
+IAM_TEST = ROOT / "data" / "processed" / "iam"
+
+
+def iam_rows(lines: int, start: int) -> list[list[str]]:
+    manifest = IAM_TEST / "test.txt"
     if not manifest.exists():
         raise SystemExit("IAM test data missing: run python scripts/download_iam_hf.py first.")
     rows = [line.split("\t", 1) for line in manifest.read_text(encoding="utf-8").splitlines() if "\t" in line]
+    return rows[start - 1:start - 1 + lines]
+
+
+def iam_transcript(lines: int, start: int) -> str:
+    """Ground truth of a composed handwritten page, one line per IAM line."""
+    return "\n".join(normalize_transcription(text) for _, text in iam_rows(lines, start))
+
+
+def handwritten_page(lines: int = 8, start: int = 1) -> Image.Image:
     crops = []
-    for rel, _ in rows[start - 1:start - 1 + lines]:
-        img = Image.open(test_dir / rel).convert("L")
+    for rel, _ in iam_rows(lines, start):
+        img = Image.open(IAM_TEST / rel).convert("L")
         crops.append(img.resize((int(img.width * 0.62), int(img.height * 0.62))))
     width = max(c.width for c in crops) + 160
     height = sum(c.height for c in crops) + 40 * len(crops) + 160
@@ -122,24 +134,27 @@ def application_form() -> Image.Image:
     return page
 
 
+NOTICE_TITLE = "Notice of Annual Meeting"
+NOTICE_LINES = [
+    "Dear Members,",
+    "The annual general meeting of the Computer Society will be held",
+    "on Friday, 14 November 2026 at 10:30 AM in the Main Auditorium.",
+    "All members are requested to attend. The agenda includes the",
+    "treasurer's report, election of new office bearers and plans for",
+    "the upcoming technical festival. Light refreshments will be served.",
+    "Please confirm your attendance by replying to this notice.",
+    "Sincerely,",
+    "The Secretary",
+]
+
+
 def noisy_scan() -> np.ndarray:
     W, H = 1240, 1100
     page = Image.new("RGB", (W, H), (246, 244, 236))
     d = ImageDraw.Draw(page)
-    d.text((90, 80), "Notice of Annual Meeting", font=font(SERIF, 44), fill="#1a1a1a")
-    paragraph = [
-        "Dear Members,",
-        "The annual general meeting of the Computer Society will be held",
-        "on Friday, 14 November 2026 at 10:30 AM in the Main Auditorium.",
-        "All members are requested to attend. The agenda includes the",
-        "treasurer's report, election of new office bearers and plans for",
-        "the upcoming technical festival. Light refreshments will be served.",
-        "Please confirm your attendance by replying to this notice.",
-        "Sincerely,",
-        "The Secretary",
-    ]
+    d.text((90, 80), NOTICE_TITLE, font=font(SERIF, 44), fill="#1a1a1a")
     y = 170
-    for line in paragraph:
+    for line in NOTICE_LINES:
         d.text((90, y), line, font=font(SERIF, 30), fill="#202020")
         y += 66 if line.endswith(",") else 54
     img = cv2.cvtColor(np.array(page), cv2.COLOR_RGB2BGR)
@@ -193,8 +208,9 @@ def main() -> None:
     note.save(OUT / "handwritten_note.png")
     thumb(OUT / "handwritten_note.png", OUT / "handwritten_note_thumb.jpg")
     manifest.append({"id": "handwritten", "file": "handwritten_note.png", "thumb": "handwritten_note_thumb.jpg",
-                     "title": "Handwritten note", "subtitle": "Real IAM handwriting (unseen test writers)",
-                     "kind": "handwriting", "suggested_engine": "crnn", "preprocess": []})
+                     "title": "Handwritten note", "subtitle": "Real IAM handwriting from unseen writers, read by all 5 models",
+                     "kind": "handwriting", "suggested_engine": "ensemble", "preprocess": [],
+                     "ground_truth": iam_transcript(8, start=1)})
 
     form = application_form()
     form.save(OUT / "application_form.png")
@@ -207,7 +223,8 @@ def main() -> None:
     thumb(OUT / "noisy_scan.jpg", OUT / "noisy_scan_thumb.jpg")
     manifest.append({"id": "noisy", "file": "noisy_scan.jpg", "thumb": "noisy_scan_thumb.jpg",
                      "title": "Noisy skewed scan", "subtitle": "4° skew, noise, blur and shadows",
-                     "kind": "degraded", "suggested_engine": "paddle", "preprocess": ["deskew", "denoise", "contrast"]})
+                     "kind": "degraded", "suggested_engine": "paddle", "preprocess": ["deskew", "denoise", "contrast"],
+                     "ground_truth": "\n".join([NOTICE_TITLE, *NOTICE_LINES])})
 
     report_pdf(OUT / "report.pdf", handwritten_page(6, start=40))
     import fitz

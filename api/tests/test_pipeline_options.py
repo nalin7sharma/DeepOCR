@@ -223,3 +223,55 @@ def test_consensus_needs_two_models(tmp_path):
     registry = EngineRegistry(settings, {"paddle": FakePaddle})
     with pytest.raises(OcrEngineError):
         EnsembleEngine(registry, {"paddle": 1}).recognize(np.zeros((10, 10, 3), np.uint8))
+
+
+def _wait(client, job_id, timeout=10.0):
+    import time as _time
+    deadline = _time.time() + timeout
+    while _time.time() < deadline:
+        body = client.get(f"/api/v1/jobs/{job_id}").json()
+        if body["status"] in ("done", "error", "cancelled"):
+            return body
+        _time.sleep(0.05)
+    raise AssertionError("job did not finish")
+
+
+def test_job_api_reports_progress_and_returns_result(tmp_path):
+    client, _ = make_client(tmp_path)
+    started = client.post("/api/v1/jobs", files={"file": ("a.png", png_bytes(), "image/png")}, data={"engine": "crnn"})
+    assert started.status_code == 202
+    body = _wait(client, started.json()["id"])
+    assert body["status"] == "done"
+    assert body["result"]["engine"] == "crnn"
+    assert body["pages"] == 1 and body["lines_total"] == 1 and body["lines_done"] == 1
+    assert {"decode", "detect", "recognize", "layout"} <= set(body["stage_times"])
+
+
+def test_job_api_reports_document_errors(tmp_path):
+    client, _ = make_client(tmp_path)
+    started = client.post("/api/v1/jobs", files={"file": ("a.txt", b"not an image", "text/plain")})
+    body = _wait(client, started.json()["id"])
+    assert body["status"] == "error" and body["error_status"] == 415
+
+
+def test_job_can_be_cancelled_between_line_batches(tmp_path):
+    import threading
+    gate = threading.Event()
+
+    class SlowReader:
+        def recognize(self, crops):
+            gate.wait(5)
+            return [("slow text", 0.9) for _ in crops]
+
+    class ManyLines(FakePaddle):
+        def detect(self, image):
+            return [[[10.0, 10 + 30 * i], [200.0, 10 + 30 * i], [200.0, 30 + 30 * i], [10.0, 30 + 30 * i]] for i in range(9)]
+
+    paddle = ManyLines()
+    client, _ = make_client(tmp_path, slow=lambda: DetectRecognizeEngine(lambda: paddle, SlowReader(), "slow"))
+    job_id = client.post("/api/v1/jobs", files={"file": ("a.png", png_bytes(), "image/png")}, data={"engine": "slow"}).json()["id"]
+    assert client.delete(f"/api/v1/jobs/{job_id}").status_code == 200
+    gate.set()
+    assert _wait(client, job_id)["status"] == "cancelled"
+    # The worker released the lock: a new job can start.
+    assert client.post("/api/v1/jobs", files={"file": ("a.png", png_bytes(), "image/png")}).status_code == 202

@@ -4,10 +4,11 @@
     "file": "handwritten_note.png",
     "thumb": "handwritten_note_thumb.jpg",
     "title": "Handwritten note",
-    "subtitle": "Real IAM handwriting (unseen test writers)",
+    "subtitle": "Real IAM handwriting from unseen writers, read by all 5 models",
     "kind": "handwriting",
-    "suggested_engine": "crnn",
-    "preprocess": []
+    "suggested_engine": "ensemble",
+    "preprocess": [],
+    "ground_truth": "assuredness \" Bella Bella Marie \" (Parlophone), a lively song that changes tempo mid-way.\nI don't think he will storm the charts with this one, but it's a good start.\nCHRIS CHARLES, 39, who lives in Stockton-on-Tees, is an accountant.\nBecome a success with a disc and hey presto! You're a star.... Rolly sings with\nTolch, as he is known in Tin Pan Alley, likes songs with a month in the title. He wrote\n\" My September Love, \" the big David Whitfield hit of 1956.\nHe is also a director of a couple of garages. And he finds time as well to be a lyric\nwriter. He writes with Tolchard Evans, composer of \" Lady of Spain \" and other big hits."
   },
   {
     "id": "form",
@@ -31,7 +32,8 @@
       "deskew",
       "denoise",
       "contrast"
-    ]
+    ],
+    "ground_truth": "Notice of Annual Meeting\nDear Members,\nThe annual general meeting of the Computer Society will be held\non Friday, 14 November 2026 at 10:30 AM in the Main Auditorium.\nAll members are requested to attend. The agenda includes the\ntreasurer's report, election of new office bearers and plans for\nthe upcoming technical festival. Light refreshments will be served.\nPlease confirm your attendance by replying to this notice.\nSincerely,\nThe Secretary"
   },
   {
     "id": "report",

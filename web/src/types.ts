@@ -1,8 +1,17 @@
+export interface WordVote {
+  text: string;
+  /** Share of the total vote this word won (0..1); null when not from the consensus engine. */
+  support: number | null;
+  sources: string[];
+  alternatives: Record<string, number>;
+}
+
 export interface TextRegion {
   polygon: number[][];
   text: string;
   confidence: number;
   review_required: boolean;
+  words?: WordVote[] | null;
 }
 
 export interface Correction {
@@ -23,9 +32,10 @@ export interface StructuredBlock {
   review_required: boolean;
   raw_text?: string | null;
   cells?: string[][] | null;
-  checkbox_state?: "checked" | "unchecked" | "uncertain" | string | null;
+  checkbox_state?: string | null;
   original_text?: string | null;
   corrections?: Correction[];
+  words?: WordVote[] | null;
 }
 
 export interface PreprocessStage {
@@ -75,6 +85,25 @@ export interface OcrResponse {
   options?: { engine?: string; preprocess?: string[]; correct?: boolean };
 }
 
+export interface JobSnapshot {
+  id: string;
+  filename: string;
+  engine: string;
+  status: "queued" | "running" | "done" | "error" | "cancelled";
+  stage: string;
+  stage_label: string;
+  page: number;
+  pages: number;
+  lines_done: number;
+  lines_total: number;
+  members: Record<string, { done: number; total: number }>;
+  stage_times: Record<string, number>;
+  elapsed_ms: number;
+  error?: string | null;
+  error_status?: number | null;
+  result?: OcrResponse;
+}
+
 export interface EvalSetMetrics {
   cer: number;
   wer: number;
@@ -103,7 +132,6 @@ export interface EngineInfo {
     val_cer?: number | null;
     datasets?: string[] | null;
     training?: boolean;
-    pretrained?: string;
   };
   metrics?: Record<string, EvalSetMetrics> | null;
 }
@@ -124,7 +152,17 @@ export interface TrainingRun {
   epoch_seconds: number[];
   elapsed_seconds: number;
   meta: Record<string, unknown>;
-  history: { train_loss: number[]; val_loss: number[]; train_cer: number[]; val_cer: number[]; val_wer: number[]; lr?: number[] };
+  history: {
+    train_loss: (number | null)[];
+    val_loss?: number[];
+    train_cer?: number[];
+    val_cer: number[];
+    val_wer?: number[];
+    lr?: number[];
+    step?: number[];
+    val_cer_iam?: number[];
+    val_cer_synthetic?: number[];
+  };
 }
 
 export interface EvaluationSummary {
@@ -147,21 +185,32 @@ export interface RobustnessResult {
   samples: number;
 }
 
+export interface EnsembleReport {
+  method: string;
+  lines: number;
+  weights: Record<string, number>;
+  sets: Record<string, Record<string, { cer: number; wer: number; accuracy: number; samples: number }>>;
+}
+
 export interface MetricsResponse {
   evaluation: EvaluationSummary | null;
   samples: SamplePrediction[] | null;
   robustness: RobustnessResult | null;
+  ensemble: EnsembleReport | null;
   training: Record<string, TrainingRun>;
 }
 
 export interface SampleDoc {
   id: string;
   file: string;
+  thumb?: string;
   title: string;
   subtitle?: string;
   kind?: string;
   suggested_engine?: string;
   preprocess?: string[];
+  /** Exact text of the sample, used to score engines on the Compare page. */
+  ground_truth?: string;
 }
 
 export interface OcrOptions {

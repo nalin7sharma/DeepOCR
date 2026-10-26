@@ -13,5 +13,7 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: ["./src/test-setup.ts"],
     restoreMocks: true,
+    // Studio tests poll the job API (350 ms per poll) and render the full workspace in jsdom.
+    testTimeout: 20000,
   },
 });
