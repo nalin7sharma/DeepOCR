@@ -1,0 +1,26 @@
+dataset:
+  # Training mixes real handwriting (IAM) with synthetic printed/handwriting-font lines.
+  name: mixed
+  train_sets:
+  - iam
+  - synthetic
+  # IAM characters plus $ % @ for document-style text (receipts, e-mails, amounts).
+  charset: ' !"#$%&''()*+,-./0123456789:;?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+  image_height: 32
+  image_width: 512
+  max_label_length: 96
+  num_workers: 4
+# Used only for legacy single-file datasets without explicit train/val/test files.
+splits:
+  train: 0.8
+  val: 0.1
+  test: 0.1
+iam:
+  processed_dir: data/processed/iam
+  # Manual IAM download (lines.txt format) is still supported:
+  data_dir: data/raw/IAM
+  lines_dir: data/raw/IAM/lines
+  gt_file: data/raw/IAM/ascii/lines.txt
+synthetic:
+  processed_dir: data/processed/synthetic
+  data_dir: data/raw/synthetic

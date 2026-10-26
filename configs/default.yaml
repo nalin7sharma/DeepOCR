@@ -1,0 +1,16 @@
+project:
+  name: DeepOCR
+  version: 1.0.0
+  seed: 42
+  device: auto
+paths:
+  data_dir: data
+  raw_dir: data/raw
+  processed_dir: data/processed
+  checkpoints_dir: checkpoints
+  results_dir: results
+  logs_dir: results/logs
+logging:
+  level: INFO
+  log_to_file: true
+  log_filename: results/logs/ocr_system.log

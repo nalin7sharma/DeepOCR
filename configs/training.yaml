@@ -1,0 +1,28 @@
+training:
+  model: cnn_bilstm
+  batch_size: 32
+  epochs: 30
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  lr_scheduler: cosine
+  lr_step_size: 10
+  lr_gamma: 0.5
+  gradient_clip: 5.0
+  early_stopping_patience: 8
+  save_every_n_epochs: 10
+  best_metric: val_cer
+  seed: 42
+  num_workers: 4
+  pin_memory: false
+  # Wall-clock budget per run on CPU (minutes); training stops cleanly before it.
+  max_minutes: 90
+augmentation:
+  enabled: true
+  rotation_degrees: 1.5
+  brightness_range: [0.6, 1.4]
+  contrast_range: [0.6, 1.4]
+  noise_std: 0.04
+  blur_probability: 0.3
+  blur_kernel_max: 2
+  scale_range: [0.8, 1.15]
+  perspective_distortion: 0.08

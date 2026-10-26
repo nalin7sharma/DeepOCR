@@ -1,0 +1,143 @@
+{
+  "conditions": [
+    {
+      "id": "noise",
+      "label": "Gaussian noise (\u03c3)",
+      "levels": [
+        0,
+        15,
+        30,
+        50
+      ]
+    },
+    {
+      "id": "blur",
+      "label": "Blur (\u03c3 px)",
+      "levels": [
+        0,
+        1.0,
+        2.0,
+        3.0
+      ]
+    },
+    {
+      "id": "rotation",
+      "label": "Rotation (\u00b0)",
+      "levels": [
+        0,
+        2,
+        5,
+        8
+      ]
+    },
+    {
+      "id": "rotation_deskew",
+      "label": "Rotation + our deskew (\u00b0)",
+      "levels": [
+        0,
+        2,
+        5,
+        8
+      ]
+    },
+    {
+      "id": "contrast",
+      "label": "Contrast remaining",
+      "levels": [
+        1.0,
+        0.5,
+        0.3,
+        0.15
+      ]
+    },
+    {
+      "id": "jpeg",
+      "label": "JPEG quality",
+      "levels": [
+        100,
+        40,
+        20,
+        8
+      ]
+    }
+  ],
+  "samples": 120,
+  "models": {
+    "cnn_bilstm": {
+      "noise": [
+        20.45,
+        20.39,
+        20.24,
+        20.88
+      ],
+      "blur": [
+        20.45,
+        19.21,
+        17.63,
+        17.6
+      ],
+      "rotation": [
+        20.45,
+        27.27,
+        49.51,
+        65.27
+      ],
+      "rotation_deskew": [
+        20.45,
+        20.17,
+        20.46,
+        20.83
+      ],
+      "contrast": [
+        20.45,
+        20.43,
+        20.4,
+        20.28
+      ],
+      "jpeg": [
+        20.45,
+        20.32,
+        20.66,
+        20.39
+      ]
+    },
+    "crnn": {
+      "noise": [
+        19.78,
+        20.03,
+        20.29,
+        21.04
+      ],
+      "blur": [
+        19.78,
+        18.85,
+        18.17,
+        18.57
+      ],
+      "rotation": [
+        19.78,
+        28.61,
+        49.06,
+        64.45
+      ],
+      "rotation_deskew": [
+        19.78,
+        20.62,
+        20.33,
+        20.86
+      ],
+      "contrast": [
+        19.78,
+        19.72,
+        19.66,
+        19.81
+      ],
+      "jpeg": [
+        19.78,
+        19.9,
+        19.95,
+        20.64
+      ]
+    }
+  }
+}

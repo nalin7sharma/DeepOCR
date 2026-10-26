@@ -1,0 +1,55 @@
+{
+  "model": "trocr_ft",
+  "epoch": 3,
+  "epochs_planned": 4,
+  "finished": false,
+  "best_val_cer": 0.04213107264442586,
+  "epoch_seconds": [],
+  "elapsed_seconds": 2027.1,
+  "meta": {
+    "base": "microsoft/trocr-small-handwritten",
+    "steps": 225,
+    "batch_size": 8,
+    "lr": 3e-05,
+    "parameters": 61596672,
+    "datasets": [
+      "iam",
+      "synthetic"
+    ]
+  },
+  "history": {
+    "step": [
+      0,
+      75,
+      150,
+      225
+    ],
+    "train_loss": [
+      null,
+      0.9548746915658315,
+      0.7098785222570101,
+      0.5904641286532084
+    ],
+    "val_cer": [
+      0.13127370053168547,
+      0.05548791347195701,
+      0.04885688142628247,
+      0.04213107264442586
+    ],
+    "val_cer_iam": [
+      3.2601194044980333,
+      7.433526975307221,
+      6.463742472860446,
+      4.3941920135652435
+    ],
+    "val_cer_synthetic": [
+      22.99462070183906,
+      3.664055719084182,
+      3.3076338123960483,
+      4.0320225153199285
+    ],
+    "val_loss": [],
+    "train_cer": [],
+    "val_wer": []
+  }
+}

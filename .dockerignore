@@ -1,0 +1,16 @@
+.git
+.venv
+venv
+__pycache__
+*.py[cod]
+.pytest_cache
+.coverage
+htmlcov
+node_modules
+web/node_modules
+web/dist
+data/raw
+data/processed
+checkpoints/**/*_epoch*.pth
+results/logs
+.env

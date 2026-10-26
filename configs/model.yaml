@@ -1,0 +1,29 @@
+# Architectures are sized for CPU training (no GPU on the development machine).
+# The topology follows the papers; only the channel widths are reduced.
+cnn_bilstm:
+  cnn_channels: [32, 64, 128, 256]
+  lstm_hidden: 192
+  lstm_layers: 2
+  lstm_dropout: 0.25
+  num_classes: null
+crnn:
+  # Shi et al. (2016) use [64, 128, 256, 256, 512, 512, 512]; halved for CPU.
+  cnn_channels: [32, 64, 128, 128, 256, 256, 256]
+  lstm_hidden: 192
+  lstm_layers: 2
+  dropout: 0.25
+  num_classes: null
+transformer_ocr:
+  # Advanced model: pretrained TrOCR (ViT/DeiT encoder + Transformer decoder),
+  # used through transfer learning. See models/recognizer.py::TrOCRRecognizer.
+  encoder: microsoft/trocr-small-handwritten
+  use_pretrained: true
+  custom_vit:
+    patch_size: 16
+    embed_dim: 256
+    num_heads: 4
+    encoder_layers: 4
+    decoder_layers: 3
+    dropout: 0.1
+  max_target_length: 96
+  num_classes: null

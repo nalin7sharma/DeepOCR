@@ -1,0 +1,48 @@
+[
+  {
+    "id": "handwritten",
+    "file": "handwritten_note.png",
+    "thumb": "handwritten_note_thumb.jpg",
+    "title": "Handwritten note",
+    "subtitle": "Real IAM handwriting (unseen test writers)",
+    "kind": "handwriting",
+    "suggested_engine": "crnn",
+    "preprocess": []
+  },
+  {
+    "id": "form",
+    "file": "application_form.png",
+    "thumb": "application_form_thumb.jpg",
+    "title": "Application form",
+    "subtitle": "Fields, checkboxes, ruled table and signature",
+    "kind": "form",
+    "suggested_engine": "paddle",
+    "preprocess": []
+  },
+  {
+    "id": "noisy",
+    "file": "noisy_scan.jpg",
+    "thumb": "noisy_scan_thumb.jpg",
+    "title": "Noisy skewed scan",
+    "subtitle": "4\u00b0 skew, noise, blur and shadows",
+    "kind": "degraded",
+    "suggested_engine": "paddle",
+    "preprocess": [
+      "deskew",
+      "denoise",
+      "contrast"
+    ]
+  },
+  {
+    "id": "report",
+    "file": "report.pdf",
+    "thumb": "report_thumb.png",
+    "title": "Two-page PDF report",
+    "subtitle": "Printed page with a table, plus a handwritten page",
+    "kind": "pdf",
+    "suggested_engine": "paddle",
+    "preprocess": [
+      "deskew"
+    ]
+  }
+]

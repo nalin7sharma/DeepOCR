@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Checkpoints: keep only the final trained weights (best_model.pth, a deliverable).
+# The fine-tuned TrOCR (~250 MB) exceeds GitHub's file limit; regenerate it with
+# python scripts/finetune_trocr.py.
+checkpoints/**/*_epoch*.pth
+checkpoints/trocr_finetuned/
+
+# Data (raw data should not be committed)
+data/raw/
+data/processed/
+
+# Results: evaluation JSON/CSV/plots are deliverables; logs are not
+results/logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Streamlit
+.streamlit/
+
+# Web frontend
+web/node_modules/
+web/dist/
+npm-debug.log*
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment
+*.env
+.env
+
+# TypeScript incremental build info
+*.tsbuildinfo

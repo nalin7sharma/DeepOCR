@@ -1,0 +1,209 @@
+{
+  "models": {
+    "paddle": {
+      "_info": {
+        "label": "PaddleOCR",
+        "architecture": "PP-OCR recogniser",
+        "type": "pretrained reference",
+        "input": "48x320 RGB"
+      },
+      "iam": {
+        "cer": 28.84,
+        "wer": 72.503,
+        "accuracy": 1.5,
+        "cer_raw": 30.409,
+        "samples": 600,
+        "ms_per_line": 509.66,
+        "mean_confidence": 0.7951
+      },
+      "synthetic": {
+        "cer": 3.891,
+        "wer": 21.093,
+        "accuracy": 66.167,
+        "cer_raw": 3.9,
+        "samples": 600,
+        "ms_per_line": 446.59,
+        "mean_confidence": 0.9546
+      }
+    },
+    "trocr": {
+      "_info": {
+        "label": "TrOCR Transformer (zero-shot)",
+        "architecture": "ViT encoder + Transformer decoder",
+        "type": "pretrained / transfer learning",
+        "parameters": 61596672,
+        "input": "384x384 RGB",
+        "pretrained": "microsoft/trocr-small-handwritten"
+      },
+      "iam": {
+        "cer": 6.975,
+        "wer": 16.4,
+        "accuracy": 40.667,
+        "cer_raw": 7.066,
+        "samples": 600,
+        "ms_per_line": 2187.97,
+        "mean_confidence": 0.8889
+      },
+      "synthetic": {
+        "cer": 20.366,
+        "wer": 54.68,
+        "accuracy": 53.833,
+        "cer_raw": 23.615,
+        "samples": 600,
+        "ms_per_line": 1470.46,
+        "mean_confidence": 0.8565
+      }
+    },
+    "cnn_bilstm": {
+      "_info": {
+        "label": "CNN + BiLSTM (baseline)",
+        "architecture": "CNN-BiLSTM-CTC",
+        "type": "trained from scratch",
+        "parameters": 2392979,
+        "input": "32x512",
+        "epoch": 11,
+        "val_cer": 0.11836954988801308,
+        "datasets": [
+          "iam",
+          "synthetic"
+        ]
+      },
+      "iam": {
+        "cer": 21.793,
+        "wer": 61.966,
+        "accuracy": 1.0,
+        "cer_raw": 23.292,
+        "samples": 600,
+        "ms_per_line": 16.47,
+        "mean_confidence": 0.8068
+      },
+      "synthetic": {
+        "cer": 4.848,
+        "wer": 17.49,
+        "accuracy": 66.667,
+        "cer_raw": 4.848,
+        "samples": 600,
+        "ms_per_line": 7.87,
+        "mean_confidence": 0.9294
+      }
+    },
+    "crnn": {
+      "_info": {
+        "label": "CRNN",
+        "architecture": "CRNN (VGG + BiLSTM + CTC)",
+        "type": "trained from scratch",
+        "parameters": 2780115,
+        "input": "32x512",
+        "epoch": 8,
+        "val_cer": 0.12232475112696915,
+        "datasets": [
+          "iam",
+          "synthetic"
+        ]
+      },
+      "iam": {
+        "cer": 21.662,
+        "wer": 61.474,
+        "accuracy": 0.5,
+        "cer_raw": 23.258,
+        "samples": 600,
+        "ms_per_line": 21.24,
+        "mean_confidence": 0.8137
+      },
+      "synthetic": {
+        "cer": 5.253,
+        "wer": 18.541,
+        "accuracy": 63.167,
+        "cer_raw": 5.253,
+        "samples": 600,
+        "ms_per_line": 10.5,
+        "mean_confidence": 0.9265
+      }
+    },
+    "cnn_bilstm_pp": {
+      "_info": {
+        "label": "CNN + BiLSTM (baseline) + post-processing",
+        "architecture": "CNN-BiLSTM-CTC",
+        "type": "trained from scratch, with error correction",
+        "parameters": 2392979,
+        "input": "32x512",
+        "epoch": 11,
+        "val_cer": 0.11836954988801308,
+        "datasets": [
+          "iam",
+          "synthetic"
+        ]
+      },
+      "iam": {
+        "cer": 20.607,
+        "wer": 51.373,
+        "accuracy": 4.833,
+        "cer_raw": 22.121,
+        "samples": 600,
+        "ms_per_line": 52.06,
+        "mean_confidence": 0.8068
+      },
+      "synthetic": {
+        "cer": 4.599,
+        "wer": 15.365,
+        "accuracy": 69.833,
+        "cer_raw": 4.599,
+        "samples": 600,
+        "ms_per_line": 33.04,
+        "mean_confidence": 0.9294
+      }
+    },
+    "crnn_pp": {
+      "_info": {
+        "label": "CRNN + post-processing",
+        "architecture": "CRNN (VGG + BiLSTM + CTC)",
+        "type": "trained from scratch, with error correction",
+        "parameters": 2780115,
+        "input": "32x512",
+        "epoch": 8,
+        "val_cer": 0.12232475112696915,
+        "datasets": [
+          "iam",
+          "synthetic"
+        ]
+      },
+      "iam": {
+        "cer": 20.546,
+        "wer": 50.99,
+        "accuracy": 3.167,
+        "cer_raw": 22.149,
+        "samples": 600,
+        "ms_per_line": 53.76,
+        "mean_confidence": 0.8137
+      },
+      "synthetic": {
+        "cer": 5.005,
+        "wer": 16.128,
+        "accuracy": 67.0,
+        "cer_raw": 5.005,
+        "samples": 600,
+        "ms_per_line": 27.29,
+        "mean_confidence": 0.9265
+      }
+    }
+  },
+  "test_sets": {
+    "iam": {
+      "label": "IAM handwriting",
+      "description": "Official IAM writer-independent test lines (unseen writers)",
+      "samples": 600
+    },
+    "synthetic": {
+      "label": "Synthetic printed + script",
+      "description": "Rendered lines with 32 fonts and realistic degradations",
+      "samples": 600
+    }
+  },
+  "generated_at": "2026-10-26T15:16:04",
+  "notes": [
+    "CER/WER/accuracy are averaged per line on the held-out test partitions; lower CER/WER is better.",
+    "Transcriptions are normalised (IAM's tokenised spacing before punctuation is removed) for every model alike; cer_raw keeps the original spacing.",
+    "CNN-BiLSTM and CRNN were trained from scratch on CPU (IAM train + synthetic train only); TrOCR and PaddleOCR are pretrained by their authors.",
+    "TrOCR-small-handwritten was fine-tuned by Microsoft on IAM, so its IAM score may be optimistic if its training partition overlaps this test split."
+  ]
+}

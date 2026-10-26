@@ -1,0 +1,71 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    init: true
+    restart: unless-stopped
+    environment:
+      PADDLE_HOME: /home/deepocr/.cache/paddle
+      OCR_MAX_UPLOAD_BYTES: ${OCR_MAX_UPLOAD_BYTES:-104857600}
+      OCR_MAX_PAGES: ${OCR_MAX_PAGES:-100}
+      OCR_MAX_IMAGE_DIMENSION: ${OCR_MAX_IMAGE_DIMENSION:-10000}
+      OCR_MAX_PIXELS_PER_PAGE: ${OCR_MAX_PIXELS_PER_PAGE:-40000000}
+      OCR_MAX_TOTAL_PIXELS: ${OCR_MAX_TOTAL_PIXELS:-100000000}
+      OCR_PDF_RENDER_SCALE: ${OCR_PDF_RENDER_SCALE:-2}
+      OCR_REVIEW_CONFIDENCE_THRESHOLD: ${OCR_REVIEW_CONFIDENCE_THRESHOLD:-0.45}
+      OCR_LANGUAGE: ${OCR_LANGUAGE:-en}
+      OCR_DEFAULT_ENGINE: ${OCR_DEFAULT_ENGINE:-paddle}
+      OCR_TROCR_MODEL: ${OCR_TROCR_MODEL:-microsoft/trocr-small-handwritten}
+      OCR_WARMUP: ${OCR_WARMUP:-1}
+      HF_HOME: /home/deepocr/.cache/huggingface
+    volumes:
+      - paddle-model-cache:/home/deepocr/.paddleocr
+      - paddle-model-cache:/home/deepocr/.cache/paddle
+      - hf-model-cache:/home/deepocr/.cache/huggingface
+    expose:
+      - "8000"
+    mem_limit: ${API_MEMORY_LIMIT:-6g}
+    cpus: ${API_CPU_LIMIT:-4.0}
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=256m
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health/ready', timeout=8)"
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 180s
+
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    init: true
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "${DEEP_OCR_BIND_ADDRESS:-127.0.0.1}:${DEEP_OCR_PORT:-8080}:8080"
+    mem_limit: ${WEB_MEMORY_LIMIT:-128m}
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:8080/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  paddle-model-cache:
+  hf-model-cache:
